@@ -1,0 +1,92 @@
+﻿@model List<ProductQAListModel>
+@if(Model.Count != null && Model.Count > 0)
+{
+    <div class="product-comments">
+        <h5 class="bottom-line quicksand font-weight-bold border-bottom pb-1">Soru Cevaplar</h5>
+        <div class="comments mt-3">
+            @for(int i = 0; i < Model.Count; i++)
+            {  
+            <div class="comment mb-3 p-3">
+                <div class="space-between">
+                    <div class="row">
+                        <div class="col quicksand">
+                            <p class="font-weight-bold mb-1">@Model[i].FullName</p>
+                        </div>
+                        @if (User.IsInRole("Admin") || User.Identity.Name == ViewData["publisher"])
+                        {
+                        <div class="col" style="text-align:right">
+                            <a style="color: #a5a5a5!important;font-family: 'Quicksand';text-decoration: underline;"
+                                id="dropdownMenuButton" data-toggle="dropdown">Yanıtla
+                            </a>
+                            <form action="/user/sendQaResponse" method="post" 
+                                class="mt-2 dropdown-menu quicksand dropdown-menu-right p-2" aria-labelledby="dropdownMenuButton">
+                                <p class="font-weight-bold mb-1">Soruyu Yanıtla</p>
+                                <input hidden name="qaId" value="@Model[i].Id"/>
+                                <input hidden name="productId" value='@ViewData["productId"]'/>
+                                <textarea style="height: 150px;" name="QAResponse" class="user-input w-100"></textarea>
+                                <button class="user-button-dark mt-2 w-100">Gönder</button>
+                            </form>
+                        </div>
+                        }
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="mb-0">@Model[i].Message</p>
+                        </div>
+                        <div class="col" style="text-align:right">
+                            <p class="mb-0">@Model[i].PublishDate.Day.@Model[i].PublishDate.Month.@Model[i].PublishDate.Year
+                                @Model[i].PublishDate.Hour:@Model[i].PublishDate.Minute</p>
+                        </div>
+                    </div>
+                    @if (Model[i].Responses?.Count > 0)
+                    {
+                        @foreach(ProductQAListModel responseModel in Model[i].Responses)
+                        {
+                            <div class="row border-top mt-2">
+                                <div class="col quicksand mt-2">
+                                    <span style="color: #a5a5a5!important">Yanıtlayan: </span>
+                                    <span class="ml-1 font-weight-bold mb-1">@responseModel.FullName</span>
+                                </div>
+                                @if (User.IsInRole("Admin") || User.Identity.Name == ViewData["publisher"])
+                                {
+                                <div class="col mt-2" style="text-align:right">
+                                    <a style="color: #a5a5a5!important;font-family: 'Quicksand';text-decoration: underline;"
+                                        id="dropdownMenuButton" data-toggle="dropdown">Yanıtla
+                                    </a>
+                                    <form action="/user/sendQaResponse" method="post" 
+                                        class="mt-2 dropdown-menu quicksand dropdown-menu-right p-2" aria-labelledby="dropdownMenuButton">
+                                        <p class="font-weight-bold mb-1">Soruyu Yanıtla</p>
+                                        <input hidden name="qaId" value="@Model[i].Id"/>
+                                        <input hidden name="productId" value='@ViewData["productId"]'/>
+                                        <textarea style="height: 150px;" name="QAResponse" class="user-input w-100"></textarea>
+                                        <button class="user-button-dark mt-2 w-100">Gönder</button>
+                                    </form>
+                                </div>
+                                }
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <span style="color: #a5a5a5!important">Yanıt: </span>
+                                    <span class="ml-1 mb-0">@responseModel.Message</span>
+                                </div>
+                                <div class="col" style="text-align:right">
+                                    <p class="mb-0">@responseModel.PublishDate.Day.@responseModel.PublishDate.Month.@responseModel.PublishDate.Year
+                                        @responseModel.PublishDate.Hour:@responseModel.PublishDate.Minute</p>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+                <div class="space-between align-center mt-1">
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+}
+
+else{
+    <div class="product-comments container mt-3 pl-0 ml-0">
+        <p class="similar-products_title quicksand">Henüz Bir Soru Yok</p>
+    </div>
+}

@@ -1,0 +1,339 @@
+﻿@using eticaret.entity.PageEntities
+@model AdminStatisticsModel
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Arite Admin";
+}
+
+@section Scripts{
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="~/admin/assets/libs/chartjs/chart.min.js"></script>
+    <script src="~/admin/dist/js/statistics/adminchart.js"></script>
+    <script src="~/admin/dist/js/statistics/statistic.js"></script>
+    <script src="~/admin/assets/libs/chartjs/chart-geo.min.js"></script>
+    <script>const statistics = new AdminStatistics()</script>
+}
+
+<div class="econtent-35"></div>
+<div class="statistics">
+    <div class="statistic-boxs row mt-4 m-auto">
+        @*Günlük Satış Tutarı İstatistik Kutusu*@
+        <div class="statistic-box col-sm">
+            <div class="d-flex" style="justify-content:space-between;align-items:center">
+                <div>
+                    <p id="dailySalary" style="font-weight:bold;font-size:1rem">36.999,94 TL</p>
+                    <small>Günlük Satış Tutarı</small>
+                </div>
+                <div style="text-align:right">
+                    <div><i class="mdi mdi-diamond"></i></div>
+                </div>
+            </div>
+        </div>
+        @*Günlük Sipariş Sayısı İstatistik Kutusu*@
+        <div class="statistic-box col-sm">
+            <div class="d-flex" style="justify-content:space-between;align-items:center">
+                <div>
+                    <p id="dailyOrderCount" style="font-weight:bold;font-size:1rem">26</p>
+                    <small>Günlük Sipariş Sayısı</small>
+                </div>
+                <div style="text-align:right">
+                    <div><i class="mdi mdi-cube-send" style="background-color:#ffe79385;color:#c98918"></i></div>
+                </div>
+            </div>
+        </div>
+        @*Yeni Kaydolan Kullanıcı Sayısı İstatistik Kutusu*@
+        <div class="statistic-box col-sm">
+            <div class="d-flex" style="justify-content:space-between;align-items:center">
+                <div>
+                    <p id="dailyRegister" style="font-weight:bold;font-size:1rem">57</p>
+                    <small>Yeni Kaydolan Kullanıcı Sayısı</small>
+                </div>
+                <div style="text-align:right">
+                    <div><i class="mdi mdi-account-multiple" style="background-color:#b1f5a5ab;color:#35b73b"></i></div>
+                </div>
+            </div>
+        </div>
+        @*Toplam Ziyaret Sayısı İstatistik Kutusu*@
+        <div class="statistic-box col-sm">
+            <div class="d-flex" style="justify-content:space-between;align-items:center">
+                <div>
+                    <p id="dailtyVisitCount" style="font-weight:bold;font-size:1rem">246</p>
+                    <small>Toplam Ziyaret Sayısı</small>
+                </div>
+                <div style="text-align:right">
+                    <div><i class="mdi mdi-eye" style="background-color:#ffcaca94;color:#e84c4c"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="charts">
+
+        @*Son Satılan Ürünler*@
+        <div class="row m-auto" style="margin-top:1rem!important;">
+            <div class="col-sm last-registers form-group border-dashed" style="margin-right:.5rem">
+                <div class="row">
+                    <div class="col">
+                        <h4>Satışlar</h4>
+                    </div>
+                    <div class="col" style="text-align:right">
+                        <a target="_blank" href="/admin/activesales" class="btn btn-sm btn-primary text-white">Hepsini Gör</a>
+                    </div>
+                </div>
+                <table class="table table-hover products">
+                  <thead>
+                    <tr>
+                      <th scope="col">Ürün</th>
+                      <th scope="col" class="max-125">Başlık</th>
+                      <th scope="col">Seçenek</th>
+                      <th scope="col">Adet</th>
+                      <th scope="col">Fiyat</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @foreach(ProductListModel item in Model.RecentlySoldItems){
+                        <tr>
+                          <th scope="row"><img src="@item.MainImageUrl" width="50"/></th>
+                          <td class="ellipsis max-125">@item.Name</td>
+                          <td>@item.SelectedSizeName</td>
+                          <td>@item.Quantity</td>
+                          <td>@item.SelectedSizePrice</td>
+                        </tr>
+                    }
+                  </tbody>
+                </table>
+            </div>
+            @*Çok Satan Ürünler*@
+            <div class="col-sm last-registers form-group border-dashed" style="margin-left:.5rem">
+                <div class="row">
+                    <div class="col">
+                        <h4>Çok Satan Ürünler</h4>
+                    </div>
+                    <div class="col" style="text-align:right">
+                        <a href="/admin/addcategory" class="btn btn-sm btn-primary text-white">Ürün Raporları</a>
+                    </div>
+                </div>
+                <table class="table table-hover products">
+                  <thead>
+                    <tr>
+                      <th scope="col">Ürün</th>
+                      <th scope="col" class="max-125">Başlık</th>
+                      <th scope="col">Fiyat</th>
+                      <th scope="col">Detay</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @foreach(ProductListModel item in Model.TopSellingItems){
+                        <tr>
+                          <th scope="row"><img src="@item.MainImageUrl" width="50"/></th>
+                          <td class="ellipsis max-125">@item.Name</td>
+                          <td>@item.Price</td>
+                          <td><a href="#" class="btn btn-sm btn-success text-white">Detay</a></td>
+                        </tr>
+                    }
+                  </tbody>
+                </table>
+            </div>
+        </div>
+
+        @*<div class="mb-2 chart-div" style="margin-top:1rem!important;border: 1px dashed #dfdfdf;">
+            <h4 class="changeAmount chart mb-1" style="margin-bottom:.75rem">
+                Ülkelere Göre Ağ Trafiği
+            </h4>
+            <div class="chart">
+                <canvas id="mapChart"></canvas>
+            </div>
+        </div>*@
+        <div class="row m-auto form-group" style="margin-top:1rem!important">
+            <div class="row border-bottom pb-2">
+                <div class="col">
+                    <h4>Son Kaydolan Kullanıcılar</h4>
+                </div>
+                <div class="col" style="text-align:right">
+                    <a target="_blank" href="/admin/mailInbox" class="btn btn-sm btn-primary text-white">Hepsini Gör</a>
+                </div>
+            </div>
+            <table class="table table-hover products">
+                <thead>
+                <tr>
+                    <th scope="col" class="max-100">Tam İsim</th>
+                    <th scope="col" class="max-150">E-Posta Adresi</th>
+                    <th scope="col">Cinsiyet</th>
+                    <th scope="col">Tarih</th>
+                    <th scope="col">Kayıt Tipi</th>
+                    <th scope="col">Detay</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach(UserModel item in Model.RecentRegisters){
+                    <tr>
+                        <td class="max-100">@item.FirstName @item.LastName</td>
+                        <td class="max-150 ellipsis">@item.Email</td>
+                        <td>@item.Gender</td>
+                        <td>@item.CreateDate.Day.@item.CreateDate.Month.@item.CreateDate.Year</td>
+                        <td>@(item.isExternal ? "Dış Kayıt" : "Normal")</td>
+                        <td><a href="#" class="btn btn-sm btn-success text-white">Detay</a></td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+        <div class="d-flex m-auto" style="margin-top:1rem!important;">
+            <div class="col-md-7 last-registers form-group border-dashed" style="margin-rigth:.5rem">
+                <div class="row border-bottom pb-2">
+                    <div class="col">
+                        <h4>Kullanıcı Girişleri</h4>
+                    </div>
+                    <div class="col" style="text-align:right">
+                        <a href="/admin/inbox" class="btn btn-sm btn-primary text-white">Hepsini Gör</a>
+                    </div>
+                </div>
+                <table class="table table-hover products">
+                    <thead>
+                    <tr>
+                        <th scope="col" class="max-100">Tam İsim</th>
+                        <th scope="col" class="max-150">E-Posta Adresi</th>
+                        <th scope="col">Cinsiyet</th>
+                        <th scope="col">Tarih</th>
+                        <th scope="col">Kayıt Tipi</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="max-100">Gökhan Üstünyer</td>
+                        <td class="max-150 ellipsis">gokhan74_ustunyer@hotmail.com</td>
+                        <td>Erkek</td>
+                        <td>25.02.2023</td>
+                        <td>Normal</td>
+                    </tr>
+                    <tr>
+                        <td class="max-100">Gökhan Üstünyer</td>
+                        <td class="max-150 ellipsis">gokhan74_ustunyer@hotmail.com</td>
+                        <td>Erkek</td>
+                        <td>25.02.2023</td>
+                        <td>Normal</td>
+                    </tr>
+                    <tr>
+                        <td class="max-100">Gökhan Üstünyer</td>
+                        <td class="max-150 ellipsis">gokhan74_ustunyer@hotmail.com</td>
+                        <td>Erkek</td>
+                        <td>25.02.2023</td>
+                        <td>Normal</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-5 form-group" style="margin-left:.5rem">
+                <h4 class="changeAmount chart mb-1" style="margin-bottom:.75rem">
+                    Haftalık Ziyaret Sayısı
+                </h4>
+                <div>
+                    <canvas id="visitCountWeek" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+        @*Aylık Satış Grafiği (Ciro)*@
+        <div class="mb-2 chart-div" style="margin-top:1rem!important;border: 1px dashed #dfdfdf;">
+            <h4 class="changeAmount chart mb-1" style="margin-bottom:.75rem">
+                Aylık Satış Grafiği (Ciro)
+            </h4>
+            <div class="chart">
+                <canvas id="salePrices"></canvas>
+            </div>
+        </div>
+        @*Son Destek Mesajları*@
+        <div class="row m-auto" style="margin-top:1rem!important;">
+            <div class="col-sm last-registers form-group border-dashed" style="margin-right:.5rem">
+                <div class="row border-bottom pb-2">
+                    <div class="col">
+                        <h4>Kullanıcı Mesajları</h4>
+                    </div>
+                    <div class="col" style="text-align:right">
+                        <a target="_blank" href="/admin/mailInbox" class="btn btn-sm btn-primary text-white">Hepsini Gör</a>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush">
+                    @foreach(SupportFormModel item in Model.LastUserMessages)
+                    {
+                        <li class="list-group-item">
+                            <div class="mail">
+                                <div class="d-flex">
+                                    <span style="font-weight:700">@item.Name</span>
+                                    <div class="col" style="text-align:right">
+                                        <small>@item.CreateDate.Day.@item.CreateDate.Month.@item.CreateDate.Year</small>
+                                    </div>
+                                </div>
+                                <span style="font-weight:600">@item.Subject</span>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            </div>
+            <div class="col-sm last-registers form-group border-dashed" style="margin-left:.5rem">
+                <div class="row border-bottom pb-2">
+                    <div class="col">
+                        <h4>Değerlendirmeler</h4>
+                    </div>
+                    <div class="col" style="text-align:right">
+                        <a href="/admin/inbox" class="btn btn-sm btn-primary text-white">Hepsini Gör</a>
+                    </div>
+                </div>
+                <table class="table table-hover products">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="max-75">Kullanıcı</th>
+                      <th scope="col" class="max-100">Yorum</th>
+                      <th scope="col">Puan</th>
+                      <th scope="col">Ürün</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @foreach(ProductCommentModel item in Model.RecentlyReviews){
+                        <tr>
+                          <td class="max-75 ellipsis"><a title="@item.FullName">@item.FullName</a></td>
+                          <td class="max-100 ellipsis">@item.Comment</td>
+                          <td>
+                                @for (int j = 0; j < @item.Rate; j++)
+                                {
+                                    <i style="color:orange" class="mdi mdi-star"></i>            
+                                }
+                                @for (int j = 0; j < 5 - @item.Rate; j++)
+                                {            
+                                    <i style="color:orange" class="mdi mdi-star-outline"></i>
+                                }
+                          </td>
+                          <td><a href="#" class="btn btn-sm btn-success text-white">Detay</a></td>
+                        </tr>
+                    }
+                  </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row m-auto" style="margin-top:1rem!important;">
+            <div class="col-sm last-registers form-group border-dashed" style="margin-right:.5rem">
+                <h4 class="changeAmount chart mb-1" style="margin-bottom:.75rem">
+                    Kategoriye Göre Aylık Satış (Ciro)
+                </h4>
+                <div>
+                    <canvas id="salesByCategoryPrice"></canvas>
+                </div>
+            </div>
+            <div class="col-sm last-registers form-group border-dashed" style="margin-left:.5rem">
+                <h4 class="changeAmount chart mb-1" style="margin-bottom:.75rem">
+                    Kategoriye Göre Aylık Satış (Miktar)
+                </h4>
+                <div>
+                    <canvas id="salesByCategoryCount"></canvas>
+                </div>
+            </div>
+        </div>
+        @*Aylık Satış Grafiği (Miktar)*@
+        <div class="mb-2 chart-div" style="margin-top:1rem!important;border: 1px dashed #dfdfdf;">
+            <h4 class="changeAmount chart mb-1" style="margin-bottom:.75rem">
+                Aylık Satış Grafiği (Miktar)</h4>
+            <div class="chart">
+                <canvas id="saleCounts"></canvas>
+            </div>
+        </div>
+    </div>
+</div>

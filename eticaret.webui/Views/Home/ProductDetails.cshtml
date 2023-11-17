@@ -1,0 +1,406 @@
+﻿@using System.Globalization
+@using eticaret.business.Abstract.Service
+@using eticaret.data.Abstract.Logs
+@using eticaret.data.Abstract.Product
+@using eticaret.entity.Log
+@model ProductDetailsModel
+@inject IPageLogRepository _pageLogRepository
+@inject IHttpContextAccessor _accessor
+@inject IProductRepository _productRepository
+@{
+    ViewData["Title"] = @Model.Name;
+    string ipAddress = _accessor.HttpContext.Connection.RemoteIpAddress.ToString();
+    string visitedUrl = _accessor.HttpContext.Request.Path;
+    if ((!visitedUrl.ToLower().Contains("admin")) &&  (!visitedUrl.ToLower().Contains("log")))
+    {
+        string userName = (User.Identity.Name != null) ? User.Identity.Name : "Guest";
+        PageLog pageLog = _pageLogRepository.Table.FirstOrDefault(pl => pl.IpAddress == ipAddress && pl.VisitedUrl == visitedUrl && pl.UserName == userName);
+        if (pageLog != null)
+        {
+            int year = DateTime.Now.Year;
+            int month = DateTime.Now.Month;
+            int day = DateTime.Now.Day;
+            if (pageLog.CreateDate.Year == year && pageLog.CreateDate.Month == month && pageLog.CreateDate.Day == day)
+            {
+                pageLog.NumberOfClicks += 1;
+                _pageLogRepository.Update(pageLog);
+            }
+        }
+        else
+        {
+            await _pageLogRepository.AddAsync(new()
+                {
+                    CreateDate = DateTime.Now,
+                    UpdateDate = DateTime.Now,
+                    Id = Guid.NewGuid(),
+                    IpAddress = ipAddress,
+                    UserName = userName,
+                    VisitedUrl = visitedUrl,
+                    NumberOfClicks = 1,
+                    Product = await _productRepository.GetByIdAsync(Model.Id.ToString())
+                });
+        }
+        await _pageLogRepository.SaveAsync();
+    }
+}
+
+@section Styles{
+<link rel="stylesheet" href="~/css/ui/product-details.css">
+<link rel="stylesheet" href="~/css/ui/product-cart.css">
+<link rel="stylesheet" type="text/css" href="~/css/ui/lightbox.min.css"/>
+<style>
+.desc img{
+    padding: .5rem;
+}
+a:hover{
+    text-decoration: none;
+}
+</style>
+}
+
+@section Scripts{
+<script>const activePrId = "@Model.Id"</script>
+<script src="~/js/ui/lightbox-plus-jquery.min.js"></script>
+<script src="~/js/ui/lightbox.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="~/js/pDetails.js"></script>
+<script>
+    addToLogs('@Model.Id');
+</script>
+<script src="~/js/ui/scroller.js"></script>
+<script src="~/js/ui/rate.js"></script>
+<script src="~/js/ui/swiper.js"></script>
+<script>
+    setPrice(@Model.DiscountRate);
+    var select_box = document.querySelector("#optionSb");
+    let id = select_box.options[select_box.selectedIndex].id;
+    document.querySelector(".current-price").innerHTML = `${id} TL`;
+    var openDesc = (obj) => {
+        const desc_content = document.querySelector('.desc-content');
+
+        if (desc_content.style.height != "100%") {
+            desc_content.setAttribute("style", "height: 100%");
+        }
+        else {
+            desc_content.setAttribute("style", "height: 0px");
+        }
+    }
+
+    const desc_images = document.querySelectorAll(".fr-dii");
+    desc_images.forEach((image) => {
+        image.setAttribute("style", "width: 100%;padding: 1rem;");
+        if (image.nextElementSibling.src != null) {
+            image.parentElement.setAttribute("style", "display: grid;grid-template-columns: 1fr 1fr;");
+        }
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $(".docTitle").first().addClass("active");
+        $(".docContent").first().addClass("show active");
+    })
+
+    $(".thumbnails img").click(function(e) {
+    e.preventDefault();
+    $imgURL = $(this).attr("src");
+    $(".main-image")
+        .fadeOut(300, function() {
+            $(".main-image img").attr('src',$imgURL);
+        })
+        .fadeIn(300);
+    });
+</script>
+}
+
+<div class="sub-header">
+    <div class="sub-header-content">
+        <span class="category col-lg-8 col-sm-12 col-md-8">
+            <h3 class="category-title">
+                @Model.Name
+            </h3>
+            <p class="category-tree">
+                @for(var i = 0; i < Model.Categories.Count; i++)
+                {
+                    <span><a style="color:#444453!important" href="/@Model.Categories[i].Url">@Model.Categories[i].Name</a> <span class="mx-1">></span></span> 
+                }
+                <span>@Model.Name</span>
+            </p>
+        </span>
+        <div class="col-lg-4 col-sm-12 col-md-4 text-right">
+            <div class="pr-stars">
+                @for (int j = 0; j < Model.Rate; j++)
+                {
+                    <i style="color:#444453" class="fa-solid fa-star"></i>            
+                }
+                @for (int j = 0; j < 5 - Model.Rate; j++)
+                {            
+                    <i style="color:#444453" class="fa-regular fa-star"></i>
+                }
+            </div>
+            <small class="font-weight-bold" style="color:#444453">
+                @Model.RateCount Değerlendirme
+            </small>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="max-width:1370px;margin: 2rem auto;">
+    <div class="col-lg-8 col-md-8 col-sm-12 d-flex">
+        <div class="thumbnails flex-column d-flex flex-nowrap">
+            @for (var i = 0; i < Model.ImagePaths.Count; i++)
+            {
+                <img src="@Model.ImagePaths[i]" class="thumbnail mb-2"/>
+            }
+        </div>
+        <div class="images">
+            <div class="main-image">
+                <img src="@Model.MainImagePath" class="w-100"/>
+            </div>
+        </div>
+    </div>
+    <div class="pr-info col-lg-4 col-md-4 col-sm-12">
+        <div class="row">
+            <div class="col">
+                <h4 class="text-444 quicksand font-weight-bold">@Model.Name</h4>
+            </div>
+            <div style="text-align:right">
+                <a class="fav ml-auto"><i class=" fa-regular fa-heart"></i></a>
+            </div>
+        </div>
+        <h4 class="text-444 quicksand font-weight-bold">
+        @if (Model.DiscountRate != null && Model.DiscountRate > 0){
+            <span class="current-price" style="text-decoration: line-through;color: #93939396;">@Model.Options[0].Price TL</span>
+            <span style="color:#d4121e" class="discounted-price ml-1 text-444 quicksand font-weight-bold">@(Math.Round((decimal)(Model.Options[0].Price*(100-Model.DiscountRate)/100),2)) TL</span>
+        }
+        else{
+            <span class="current-price">@Model.Options[0].Price TL</span>
+        }
+        </h4>
+        <small class="pb-2">Ürün Kodu: Y7687AZNM39</small>
+            <form action="/user/AddToCart" method="post">
+        <div class="d-flex mt-4">
+                <select onchange="setPrice(@Model.DiscountRate)" id="optionSb" class="info-options quicksand" name="size"
+                    style="outline:none;width:100%;padding:.75rem 1rem;
+                            height:50px;border:none;box-shadow:rgba(0, 0, 0, 0.02) 
+                            0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;">
+                            @for(var i = 0; i < Model.Options.Count; i++)
+                            {
+                                @if(Model.Options[i].Count == 0 || Model.Options[i].Count == null)
+                                {
+                                    <option id="@Model.Options[i].Price" 
+                                        value="@Model.Options[i].Size.Id" stock="@((Model.Options[i].Count > 10) ? 10 : Model.Options[i].Count)" 
+                                    class="size" disabled>@Model.Options[i].Name</option>
+                                }
+                                else{
+                                    <option id="@Model.Options[i].Price"
+                                        value="@Model.Options[i].Size.Id" stock="@((Model.Options[i].Count > 10) ? 10 : Model.Options[i].Count)" 
+                                    class="size non-stock">@Model.Options[i].Name</option>
+                                }
+                            }
+                </select>
+                <div class="info-piece" style="height: 50px">
+                    <select name="Quantity"  class="quicksand"
+                        style="padding:.75rem 1rem;outline:none;height: 50px;width: 100px;
+                        border:none;box-shadow:rgba(0, 0, 0, 0.02) 0px 1px 3px 
+                        0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;">
+                        @for(int i = 1; i < 11; i++)
+                        {
+                            @if(i==1){ <option selected id="@(i)">@(i)</option> }
+                            else { <option id="@(i)">@(i)</option> }
+                        }
+                    </select>
+                </div>
+        </div>
+        <div class="d-flex">
+            @if (Model.TotalStock == 0)
+            {
+                <input hidden value="@Model.Id" name="productId"/>
+                <input hidden id="sizeId" name="sizeId"
+                    value="@Model.Options[0].Size.Id"/>
+                <a class="user-button-light w-100 mt-2">Stokta Yok</a>
+            }
+            else
+            {
+                <input hidden value="@Model.Id" name="productId"/>
+                <input hidden id="sizeId" name="sizeId"
+                    value="@Model.Options[0].Size.Id"/>
+                <input type="submit" class="user-button-dark w-50 mt-2 mr-1" value="Sepete Ekle" formaction="/user/AddToCart">
+                <input type="submit" class="user-button-dark w-50 mt-2 ml-1" value="Hemen Al" formaction="/user/buyNow">
+            }
+        </div>
+            </form>
+        @if(Model.RelatedProducts.Count > 0){
+        <div class="mb-2 mt-1" style="max-width: 470px;">
+            <div class="swiper">
+            <div class="prev"> &#60 </div>
+            <div class="next"> &#62 </div>
+            <div class="color-images" style="overflow-x: hidden;scroll-behavior: smooth;padding: .3rem .1rem;gap:10px!important">
+            @for (int i = 0; i < Model.RelatedProducts.Count; i++)
+            {
+                <a href="/@Model.QuestionedCategoryUrl/@Model.RelatedProducts[i].Url" class="color" style="padding:.3rem">
+                    <img src="@Model.RelatedProducts[i].MainImageUrl" 
+                    alt="" class="color_thumb">
+                </a> 
+            }
+            </div>
+            </div>
+        </div>
+        }
+        <div class="short-desc mt-3" id="heading1">
+            <a class="d-flex justify-content-between mt-4 border-top py-2" data-toggle="collapse" data-target="#shortDesc">
+                <p class="filter-title">Ön Bilgiler</p>
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <div class="collapse show short-description mt-1" id="shortDesc" aria-labelledby="heading1" data-parent="#heading1">
+                @(Html.Raw(Model.ShortDescription))
+            </div>
+        </div>
+        <div class="short-desc mt-2" id="heading2">
+            <a class="d-flex justify-content-between border-top py-2" data-toggle="collapse" data-target="#cargo">
+                <p class="filter-title">Paketleme</p>
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <div class="collapse short-description mt-1" id="cargo"
+                aria-labelledby="heading2" data-parent="#heading2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dolore adipisci repellendus molestias animi facilis at consectetur tempora aliquid, sed totam repellat itaque non delectus.</p>
+            </div>
+        </div>
+        <div class="short-desc mt-2" id="heading3">
+            <a class="d-flex justify-content-between border-top py-2" data-toggle="collapse" data-target="#payment">
+                <p class="filter-title">Ödeme Bilgileri</p>
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <div class="collapse short-description mt-1" id="payment"
+                aria-labelledby="heading3" data-parent="#heading3">
+                Ödeme Yöntemleri
+                <br>
+                Kredi/Debit Kart ile ödeme
+                Ödeme adımında kart bilgilerinizi girerek siparişinizi tamamlayabilirsiniz.
+                <br>
+                <br>
+                Kapıda Ödeme
+                Kapıda ödeme seçeneğinden 2000 TL’ye kadar olan siparişlerinizde faydalanabilirsiniz.
+                <br>
+                <br>
+                Kapıda ödeme hizmet bedeli 9,99 TL’dir.
+                <br>
+                <br>
+                Garanti Pay İle Ödeme
+                Banka sayfasında GSM veya TC Kimlik Numaranız ile ödeme işleminiz BonusFlaş Uygulamasına aktarılacaktır.
+                <br>
+                <br>
+                Ödeme işlemini tamamladıktan sonra, otomatik olarak sipariş özeti sayfasına yönlendirileceksiniz.
+            </div>
+        </div>
+        <div class="short-desc mt-2" id="heading4">
+            <a class="d-flex justify-content-between border-top py-2" data-toggle="collapse" data-target="#return">
+                <p class="filter-title">İade ve Değişim</p>
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <div class="collapse short-description mt-1" id="return"
+                aria-labelledby="heading4" data-parent="#heading4">
+                İade Koşulları
+                <br>
+                Siparişinizdeki kullanılmamış ürünleri orijinal paketleri ile 30 gün içinde size en yakın mağazalarımızdan iade edebilir, 90 gün içerisinde mağazalarımızda değişim yapabilir ya da aşağıdaki adımları izleyerek sitemiz üzerinden iade edebilirsiniz.
+                <br>
+                <br>
+                “Hesabım” alanında yer alan “Siparişlerim” listesinden iade etmek istediğiniz siparişinizi seçiniz.
+                <br>
+                <br>
+                “Sipariş Detayı” sayfasından “ İade Talebi” butonuna basınız.
+                Ekranda çıkan iade kodu ile birlikte ücretsiz olarak PTT Kargo ile iade gönderiminizi tamamlayınız. Diğer tüm kargo şirketleri ile yapılan iadelerde kargo ücreti göndericiye aittir.
+                Daha fazla bilgi için tıklayınız.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4 text-center text-white prDetailsLine">
+    <span style="font-family:'dancing script';font-size:1.25rem">Arite</span>
+</div>
+
+<div class="row mt-4 border-bottom w-100" style="max-width:1370px;margin:auto;">
+    <ul class="nav d-block d-lg-flex nav-tabs text-center glass quicksand" style="display: grid!important;grid-template-columns: 1fr 1fr 1fr 1fr;width: 100%;" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link docTitle text-dark" style="padding: .5rem 2rem!important;;border-top-right-radius:0" id="prDesc" data-toggle="tab" href="#document-1" role="tab" aria-controls="document-1" aria-selected="false">Ürün Bilgileri</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link docTitle text-dark" style="padding: .5rem 2rem!important;border-radius:0" id="comments" data-toggle="tab" href="#document-3" role="tab" aria-controls="document-3" aria-selected="false">Soru Cevaplar</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link docTitle text-dark" style="padding: .5rem 2rem!important;border-radius:0" id="comments" data-toggle="tab" href="#document-2" role="tab" aria-controls="document-2" aria-selected="false">Yorumlar</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link docTitle text-dark" style="padding: .5rem 2rem!important;border-top-left-radius:0" id="comments" data-toggle="tab" href="#document-4" role="tab" aria-controls="document-2" aria-selected="false">Fotoğraflı Yorumlar</a>
+        </li>
+    </ul>
+</div>
+<div id="content-text" style="border:1px solid #dfdfdf;border-top:0;padding:1rem;border-bottom-left-radius: 0.25rem;border-bottom-right-radius: 0.25rem;max-width:1370px;margin: auto;">
+    <div class="tab-content" id="myTabContent box-shadow">
+        <div class="tab-pane fade docContent" id="document-1" role="tabpanel">
+            <div class="tab-pane p-4 docContent fade desc docContent show active" id="document-1" role="tabpanel" aria-labelledby="prDesc">
+                @Html.Raw(@Model.Description)
+            </div>
+        </div>
+        <div class="tab-pane fade docContent" id="document-2" role="tabpanel">
+            <div class="tab-pane fade w-100 docContent active show" id="document-8" role="tabpanel" aria-labelledby="comments">
+                @await Component.InvokeAsync("ProductComments", new { productId = Model.Id.ToString() })
+                <div class="product-comments mt-5">
+                    <div class="row">
+                        <div class="col">
+                            <p style="font-size:1.15rem" class="mb-0 quicksand">Yorum Ekle +</p>
+                        </div>
+                        <div class="rates col" style="text-align:right">
+                            @for (int i = 0; i < 5; i++)
+                            {
+                                <i style="color:orange;cursor:pointer" class="mb-0 fa-regular fa-star rate"></i>        
+                            }
+                        </div>
+                    </div>
+                    <div class="add-comment mt-1">
+                        <form action="/user/getComment" method="post" enctype="multipart/form-data">
+                            <div class="upload-file-div mb-2">
+                                <input class="custom-file-input-custom w-100" multiple type="file" accept="image/*"  name="CommentImages"/>
+                                <div class="custom-file-input-before w-100 text-center mb-2">Ürünün Resimlerini Yükleyin</div>
+                            </div>
+                            <input type="text" hidden name="ProductId" value="@Model.Id">
+                            <input type="number" name="Rate" hidden value="3" id="product-rate">
+                            <textarea style="height: 150px;" name="Comment" class="user-input w-100"></textarea>
+                            <button class="user-button-dark mt-2 w-100">Değerlendirmemi Gönder</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+       </div>
+        <div class="tab-pane fade docContent" id="document-3" role="tabpanel">
+            @await Component.InvokeAsync("ProductQA", new {productId = Model.Id.ToString(), isImage = false })
+            <div class="col pl-0 mt-4">
+                <p stlye="font-size:1.15rem" class="mt-3 mb-0 pl-0 quicksand">Ürün ile İlgili Soru Sor</p>
+            </div>
+            <div class="add-comment mt-1">
+                <form action="/user/newProductQa" method="post">
+                    <input type="text" hidden name="ProductId" value="@Model.Id">
+                    <textarea style="height: 150px;" name="QA" class="user-input w-100"></textarea>
+                    <button class="user-button-dark mt-2 w-100">Sorumu Gönder</button>
+                </form>
+            </div>
+        </div>
+        <div class="tab-pane fade docContent" id="document-4" role="tabpanel">
+            @await Component.InvokeAsync("ProductComments", new { productId = Model.Id.ToString(), isImage = true })
+        </div>
+    </div>
+</div>
+
+<div class="mt-4 text-center text-white prDetailsLine">
+    <span style="font-family:'dancing script';font-size:1.25rem"><a href="/@Model.Categories[1].Url" class="text-white">Daha Fazla Ürün</a></span>
+</div>
+
+
+@await Component.InvokeAsync("SimilarProducts", new 
+{ 
+    categoryId = Model.Categories[Model.Categories.Count-1].Id.ToString(),
+    productId = Model.Id.ToString()
+})
+@await Component.InvokeAsync("SiblingCategories", new { categoryId = Model.Categories[Model.Categories.Count-1].Id.ToString() })
+@await Component.InvokeAsync("LastVisitedProducts")
+

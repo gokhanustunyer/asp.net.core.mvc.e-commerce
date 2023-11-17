@@ -1,0 +1,118 @@
+﻿@using eticaret.business.Abstract.Service
+@using eticaret.data.Abstract.Logs
+@using eticaret.entity.Log
+@using mkiyafetleri.webui.SiteOperations
+@inject IPageLogRepository _pageLogRepository
+@inject IHttpContextAccessor _accessor
+@{
+    ViewBag.Links = new List<string>();
+}
+
+@{
+    string ipAddress = _accessor.HttpContext.Connection.RemoteIpAddress.ToString();
+    string visitedUrl = _accessor.HttpContext.Request.Path;
+    if ((!visitedUrl.ToLower().Contains("admin")) &&  (!visitedUrl.ToLower().Contains("log")))
+    {
+        string userName = (User.Identity.Name != null) ? User.Identity.Name : "Guest";
+        PageLog pageLog = _pageLogRepository.Table.FirstOrDefault(pl => pl.IpAddress == ipAddress && pl.VisitedUrl == visitedUrl && pl.UserName == userName && pl.CreateDate.Year == DateTime.Now.Year && pl.CreateDate.Month == DateTime.Now.Month && pl.CreateDate.Day == DateTime.Now.Day);
+        if (pageLog != null)
+        {
+            int year = DateTime.Now.Year;
+            int month = DateTime.Now.Month;
+            int day = DateTime.Now.Day;
+            if (pageLog.CreateDate.Year == year && pageLog.CreateDate.Month == month && pageLog.CreateDate.Day == day)
+            {
+                pageLog.NumberOfClicks += 1;
+                _pageLogRepository.Update(pageLog);
+            }
+        }
+        else
+        {           
+            await _pageLogRepository.AddAsync(new()
+                    {
+                        CreateDate = DateTime.Now,
+                        UpdateDate = DateTime.Now,
+                        Id = Guid.NewGuid(),
+                        IpAddress = ipAddress,
+                        UserName = userName,
+                        VisitedUrl = visitedUrl,
+                        NumberOfClicks = 1,
+                    });
+        }
+        await _pageLogRepository.SaveAsync();
+    }
+}
+
+
+@if (PageSettings.isOffline)
+{
+    @await Component.InvokeAsync("Maintenance");
+    RenderBody();
+}
+else
+{
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio&family=Combo&family=Dancing+Script&family=Fira+Sans+Condensed:wght@400;500&family=Heebo:wght@600;700&family=IBM+Plex+Sans:wght@300;400;500&family=Lato:wght@300;400&family=Open+Sans&family=Oswald:wght@300;400&family=Poppins:wght@400;500;600;700&family=Prompt:wght@200;300;400&family=Quicksand:wght@400;500;600&family=Raleway:wght@400;500&family=Roboto:wght@300;400&family=The+Nautigal&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio&family=Combo&family=Dancing+Script&family=Fira+Sans+Condensed:wght@400;500&family=Heebo:wght@600;700&family=IBM+Plex+Sans:wght@300;400;500&family=Josefin+Sans:wght@200;300;400;600&family=Lato:wght@300;400&family=Open+Sans&family=Oswald:wght@300;400&family=Poppins:wght@400;500;600;700&family=Prompt:wght@200;300;400&family=Quicksand:wght@400;500;600&family=Raleway:wght@400;500&family=Roboto:wght@300;400&family=Schibsted+Grotesk:wght@800&family=The+Nautigal&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2245e9a8b0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/ui/layout.css">
+    <link rel="stylesheet" href="~/css/utilities.css">
+    <link rel="stylesheet" href="~/css/common/alert.css">
+    @RenderSection("Styles", required:false)
+    <style>
+        nav .dropdown-toggle:after { content: none }
+        nav .dropdown-item:active {
+            color: #fff!important;
+            text-decoration: none;
+            background-color: #444453;
+        }
+        nav .dropdown-menu{border-radius: 0px;}
+    </style>
+    </head>
+<body>
+    <div class="loader-screen">
+        <div class="loader"></div>
+    </div>
+    <div class="alerts" id="alerts"></div>
+   <div class="header_notice"></div>
+    @await Html.PartialAsync("_navbar")
+
+    <main class="main-content-div">
+        @RenderBody()
+    </main>
+
+
+    @await Html.PartialAsync("_footer")
+
+
+    @RenderSection("Scripts", required:false)
+    <script>
+        Object.defineProperty(String.prototype, 'capitalize', {
+          value: function() {
+            return this.charAt(0).toUpperCase() + this.slice(1);
+          },
+          enumerable: false
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>   
+    <script src="~/js/site.js"></script>
+    <script src="~/js/common/alert.js"></script>
+    <script>
+        CreateAlert('@Html.Raw(TempData["Alert"])');
+    </script>
+</body>
+</html>
+}

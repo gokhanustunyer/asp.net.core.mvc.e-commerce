@@ -1,0 +1,212 @@
+﻿@model EditDiscountCodeModel
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "İndirim Kodu Düzenle";
+}
+
+@section Styles{
+    <style>
+        .search-results{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .search-result {
+            max-width: 115px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: rgb(0 0 0 / 2%) 0px 1px 3px 0px, rgb(27 31 35 / 15%) 0px 0px 0px 1px;
+            border-radius: 4px;
+        }
+
+        .search-img{
+            width:115px;
+            object-fit:cover;
+        }
+
+        .search-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: .75rem .35rem;
+            font-size: .8rem
+        }
+        li{
+            list-style: none;
+        }
+        li label{
+            margin-bottom: 0
+        }
+        li ul{
+            margin-left:.6rem;
+        }
+        ul .form-check{
+            margin-bottom:0;
+        }
+        ol, ul{
+            padding-left: 0;
+        }
+        .relateds-search-results{
+            display: flex;
+            gap: 10px;
+        }
+        .selectRelated{
+            position: absolute;
+            top: -10px;
+            font-size: 24px;
+            right: 0;
+            color: green;
+            display: none;
+        }
+        .relateds-s-r{
+            position: relative;
+        }
+        .code-search-result{
+            background-color: #fff;
+            overflow-y: scroll;
+            width: 100%;
+            max-height: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+    </style>
+}
+@section Scripts{
+    <script src="~/admin/dist/js/discount/EditDiscountCode.js"></script>
+    <script> const editDiscountCode = new EditDiscountCode("adminsearch", "selectedProductIds", "searchInput", "addPrSearchResult"); </script>
+}
+
+<div class="econtent-65"></div>
+<div class="create-product mt-4 mb-3">
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="validation-box mb-2" asp-validation-summary="All"></div>
+    }
+    <div class="row" style="margin-top:2rem">
+        <div class="col">
+            <h2 class="border-bottom mb-2">Kodu Düzenle @Model.Code</h2>
+        </div>
+        <div class="col" style="text-align:right">
+            <form method="post" action="/admin/deleteFilterBox">
+                <input hidden asp-for="Id">
+                <button class="btn btn-danger btn-sm text-white">Kodu Sil</button>
+            </form>
+        </div>
+    </div>
+    <form method="post" enctype="multipart/form-data" id="form">
+        <input hidden name="CodeId" value="@Model.Id"/>
+        <div class="form">
+            <div class="form-group mt-3">
+                <label asp-for="Code" class="col-md-12">Kod</label>
+                <div class="col-md-12">
+                    <input type="text" placeholder="YY2023" asp-for="Code" class="form-control form-control-line">
+                </div>
+            </div>
+
+            @if (Model.CodeStartDate.Year < 2)
+            {
+                <div class="form-group mt-3">
+                    <label asp-for="CodeLimitNumber" class="col-md-12">Kupon Kullanım Limiti (Adet)</label>
+                    <div class="col-md-12">
+                        <input type="number" asp-for="CodeLimitNumber" placeholder="50" step="1" class="form-control form-control-line">
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div id="numberOrDateDiv">
+                    <div class="row mt-3">
+                        <div class="col form-group mx-2">
+                            <label asp-for="CodeStartDate" class="col-md-12">Başlangıç Tarihi</label>
+                            <div class="col-md-12">
+                                <input asp-for="CodeStartDate" type="datetime-local" id="code" class="form-control form-control-line">
+                            </div>
+                        </div>
+                        <div class="col form-group mx-2">
+                            <label asp-for="CodeEndDate" class="col-md-12">Bitiş Tarihi</label>
+                            <div class="col-md-12">
+                                <input asp-for="CodeEndDate" type="datetime-local" id="code" class="form-control form-control-line">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @if (Model.DiscountRate < 1)
+            {
+                <div id="rateOrPriceDiv">
+                    <div class="form-group mt-3">
+                        <label asp-for="DiscountNumber" class="col-md-12">İndirim Miktarı (Fiyat)</label>
+                        <div class="col-md-12">
+                            <input asp-for="DiscountNumber" type="number" placeholder="50" step="0.25" id="discountNumber" class="form-control form-control-line">
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="form-group mt-3">
+                    <label asp-for="DiscountRate" class="col-md-12">İndirim Oranı (Yüzde)</label>
+                    <div class="col-md-12">
+                        <input type="number" asp-for="DiscountRate" placeholder="10" step="1" id="discountRate" class="form-control form-control-line">
+                    </div>
+                </div>
+            }
+            <div class="mt-4 mb-3">
+                <h4>Koda Ürün Dahil Et</h4>
+                <div class="input-group mb-3" style="padding: 0;margin-top: 1rem;">
+                    <input id="searchInput" type="text" placeholder="Ürünlerde Ara" class="form-control">
+                    <div style="cursor:pointer" class="input-group-append"  id="adminsearch">
+                        <span class="input-group-text" id="searchfilterres">
+                            <i class="mdi mdi-magnify"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <input name="SelectedProductIds" id="selectedProductIds" hidden>
+                <div class="mt-3 code-search-result" id="addPrSearchResult">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;display:block">Değişiklikleri Kaydet</button>
+        </div>
+    </form>
+</div>
+
+
+
+<div class="mt-4 mb-3">
+    <h4>Kod Dahilindeki Ürünler</h4>
+    <table class="table table-hover" style="background-color:#fff">
+        <thead>
+        <tr>
+            <th scope="col">Resim</th>
+            <th scope="col">Başlık</th>
+            <th scope="col">Fiyat</th>
+            <th scope="col">Kaldır</th>
+        </tr>
+        </thead>
+        <tbody>
+        @for(var i = 0; i < @Model.Products.Count; i++)
+        {
+        <tr>
+            <td><img style="width:60px;" src="@Model.Products[i].MainImageUrl"></td>
+            <td>@Model.Products[i].Name</td>
+            <td>@Model.Products[i].Price</td>
+            <td>
+                <form method="post" action="/admin/deleteProductFromCode" style="display:inline">
+                    <input hidden value="@Model.Products[i].Id" name="productId">
+                    <input hidden value="@Model.Id" name="codeId">
+                    <button class="btn btn-sm btn-danger text-white">
+                        <i class="mdi mdi-bookmark-remove"></i>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        }
+        </tbody>
+    </table>
+</div>

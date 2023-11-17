@@ -1,0 +1,201 @@
+﻿@using mkiyafetleri.webui.SiteOperations
+@model bool
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Site Ayarları";
+}
+@*@section SubHeader{
+    <div class="header" style="height:150px">
+    <div class="header-content">
+            <h2>Site Ayarları</h2>
+    </div>
+</div>
+}*@
+@section Scripts{
+    <script src="~/js/admin/nonPosts.js"></script>
+    <script src="~/js/dialog.js"></script>
+}
+@section Styles{
+    <style>
+        ul li {
+            list-style: none;
+        }
+        .form-group{
+            margin-bottom:0!important;
+            padding: .5rem!important;
+        }
+    </style>
+}
+<div class="econtent-65"></div>
+<h2>Genel Ayarlar</h2>
+<form class="container mt-3 form-group" method="post" action="/admin/saveSettings">
+    <div class="row">
+        <div class="col">
+            <label><span class="switch-button-label-span">Siteyi Bakıma Al</span></label>
+        </div>
+        <div class="col" style="text-align:right">
+            <input value="isOffline" name="isOffline" type="checkbox" class="form-check-input" @(Model ? "checked" : "")>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label class="switch-button-label"><span class="switch-button-label-span">Duyurular</span></label>
+        </div>
+        <div class="col" style="text-align:right">
+            <a onclick="getNotices()" data-toggle="modal" data-target="#noticesModal">
+                <i style="font-size: 1.5rem;cursor:pointer;" class="mdi mdi-table-edit"></i>
+            </a>
+        </div>
+    </div>
+<button class="btn btn-primary" style="width:100%;display:block">Kaydet</button>
+</form>
+
+<form class="container mt-5 form-group" method="post" action="/admin/saveSettings">
+  <h4 style="padding: .5rem">Sosyal Ağ Linkleri</h4>
+    <div class="form-group mt-3">
+        <label for="pinterest" class="col-md-12">Pinterest Linki</label>
+        <div class="col-md-12">
+            <input type="text" name="PinterestLink" id="pinterest" class="form-control form-control-line">
+        </div>
+    </div>
+    <div class="form-group mt-1">
+        <label for="facebook" class="col-md-12">Facebook Linki</label>
+        <div class="col-md-12">
+            <input type="text" name="FacebookLink" id="facebook" class="form-control form-control-line">
+        </div>
+    </div>
+    <div class="form-group mt-1">
+        <label for="twitter" class="col-md-12">Twitter Linki</label>
+        <div class="col-md-12">
+            <input type="text" name="TwitterLink" id="twitter" class="form-control form-control-line">
+        </div>
+    </div>
+    <div class="form-group mt-1">
+        <label for="instagram" class="col-md-12">Instagram Linki</label>
+        <div class="col-md-12">
+            <input type="text" name="InstagramLink" id="instagram" class="form-control form-control-line">
+        </div>
+    </div>
+    <div class="form-group mt-1">
+        <label for="youtube" class="col-md-12">Youtube Linki</label>
+        <div class="col-md-12">
+            <input type="text" name="YoutubeLink" id="youtube" class="form-control form-control-line">
+        </div>
+    </div>
+  <button class="btn btn-primary" style="width:100%;display:block">Kaydet</button>
+</form>
+
+<form class="container mt-5 form-group" method="post" action="/admin/setEmails">
+  <h4 style="padding: .5rem">Email</h4>
+    <div class="form-group mt-3">
+        <label for="complaintMail" class="col-md-12">Şikayet Email</label>
+        <div class="col-md-12">
+            <input type="text" name="ComplaintMail" id="complaintMail" class="form-control form-control-line">
+        </div>
+    </div>
+    <div class="form-group mt-1">
+        <label for="contactEmail" class="col-md-12">İletişim Email</label>
+        <div class="col-md-12">
+            <input type="text" name="ContactEmail" id="contactEmail" class="form-control form-control-line">
+        </div>
+    </div>
+    <div class="form-group mt-1">
+        <label for="orderToInformEmail" class="col-md-12">Sipariş Bilgilendirme Email</label>
+        <div class="col-md-12">
+            <input type="text" name="OrderToInformEmail" id="orderToInformEmail" class="form-control form-control-line">
+        </div>
+    </div>
+  <button class="btn btn-primary" style="width:100%;display:block">Kaydet</button>
+</form>
+
+<form class="container mt-5 form-group" method="post" action="/admin/setFooterDesc">
+  <h4 style="padding: .5rem">Footer</h4>
+    <div class="form-group mt-1">
+        <label for="footerDescription" class="col-md-12">Footer Açıklaması</label>
+        <div class="col-md-12">
+            <textarea type="text" name="FooterDescription" id="footerDescription" class="form-control form-control-line"></textarea>
+        </div>
+    </div>
+  <button class="btn btn-primary" style="width:100%;display:block">Kaydet</button>
+</form>
+
+<form class="container mt-5 form-group" method="post" action="/admin/setNavbarLinks">
+  <h4 style="padding: .5rem">Navbar Linkleri</h4>
+    <div class="form-group mt-1">
+        <label for="firstLink" class="col-md-12">İlk Link</label>
+        <div class="col-md-12">
+            <input placeholder="Kadın" type="text" name="FirstLinkShowName" id="firstLink" class="form-control form-control-line">
+        </div>
+        <div class="col-md-12 mt-1">
+            <input placeholder="/kadin" type="text" name="FirstLinkUrl" id="firstLinkUrl" class="form-control form-control-line">
+        </div>
+    </div>
+    <div class="form-group mt-1">
+        <label for="secondLink" class="col-md-12">İkinci Link</label>
+        <div class="col-md-12">
+            <input placeholder="Erkek" type="text" name="SecondLinkShowName" id="secondLink" class="form-control form-control-line">
+        </div>
+        <div class="col-md-12 mt-1">
+            <input placeholder="/erkek" type="text" name="SecondLinkUrl" id="secondLinkUrl" class="form-control form-control-line">
+        </div>
+    </div>
+    <div class="form-group mt-1">
+        <label for="thirthLink" class="col-md-12">Üçüncü Link</label>
+        <div class="col-md-12">
+            <input placeholder="Çocuk" type="text" name="ThirthLinkShowName" id="thirthLink" class="form-control form-control-line">
+        </div>
+        <div class="col-md-12 mt-1">
+            <input placeholder="/cocuk" type="text" name="ThirthLinkUrl" id="secondLinkUrl" class="form-control form-control-line">
+        </div>
+    </div>
+    <div class="form-group mt-1">
+        <label for="fourthLink" class="col-md-12">Döndürncü Link</label>
+        <div class="col-md-12">
+            <input placeholder="Bebek" type="text" name="FourthLinkShowName" id="fourthLink" class="form-control form-control-line">
+        </div>
+        <div class="col-md-12 mt-1">
+            <input placeholder="/Bebek" type="text" name="FourthLinkUrl" id="secondLinkUrl" class="form-control form-control-line">
+        </div>
+    </div>
+    <div class="form-group mt-1">
+        <label for="fifthLink" class="col-md-12">Beşinci Link</label>
+        <div class="col-md-12">
+            <input placeholder="Spor" type="text" name="FifthLinkShowName" id="fifthLink" class="form-control form-control-line">
+        </div>
+        <div class="col-md-12 mt-1">
+            <input placeholder="/spor" type="text" name="FifthLinkUrl" id="secondLinkUrl" class="form-control form-control-line">
+        </div>
+    </div>
+  <button class="btn btn-primary" style="width:100%;display:block">Kaydet</button>
+</form>
+
+
+<div class="modal fade" id="noticesModal" tabindex="-1" role="dialog" aria-labelledby="noticesModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Duyurular</h5>
+        <i type="button" class="close mdi mdi-close" data-dismiss="modal" aria-label="Close"></i>
+      </div>
+      <div class="modal-body">
+            <ul class="responsive-table" id="notices">
+                <li class="table-header">
+                    <div class="col col-3 text-white">Duyuru</div>
+                    <div class="col col-4 text-white">Sil</div>
+                </li>
+            </ul>
+
+            <div style="text-align:center; width: 100%">
+                <i onclick="newNotice()" style="padding: 0.35rem 0.5rem;cursor: pointer;background-color: #7460ee;color: #fff;border-radius: 4px;"
+                class="mdi mdi-plus mb-1"></i>
+            </div>
+            <button onclick="saveNotices()" class="btn btn-primary mt-3" style="width:100%;cursor:pointer">
+                Değişiklikleri Kaydet</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

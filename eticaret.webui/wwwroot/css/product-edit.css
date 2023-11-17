@@ -1,0 +1,136 @@
+﻿.w-75 {
+    width: 75%;
+    margin: 0 auto!important;
+    align-items: center;
+}
+
+
+.product-edit-cart {
+    box-shadow: rgb(9 30 66 / 25%) 0px 4px 8px -2px, rgb(9 30 66 / 8%) 0px 0px 0px 1px;
+    background-color: #fdfdfd;
+    border-radius: .2rem;
+    padding: 1rem;
+}
+
+.product-image {
+    width: 100%;
+}
+
+.upload-btn {
+    display: block;
+    margin: .5rem 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.bottom-line{
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #222222c3;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index:500;
+}
+
+
+
+
+.dialog-window {
+    background-color: #ffff;
+    height: 615px;
+    width: 85%;
+    border-radius: .3rem;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    padding: 1rem;
+}
+
+.w-75 {
+    width: 75%;
+    margin: auto;
+    align-items: center;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    height: 485px;
+    overflow-y: scroll;
+}
+
+.card{
+    width:32%!important;
+}
+
+.card img {
+    height: 280px;
+    object-fit: cover;
+}
+
+.close-btn {
+    text-align: right;
+    font-size: 1.25rem;
+    color: #1e1e1e;
+    cursor: pointer;
+}
+
+.upload-btn {
+    margin: .5rem 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.block {
+    display: block !important;
+}
+
+.upload-image {
+    width: 50% !important;
+    margin-left: auto;
+}
+
+.push-image {
+    width: 30% !important;
+}
+/*
+.checkBoxBox {
+    overflow-y: scroll;
+    height: 150px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    padding: 1rem;
+    width: 100%;
+    background-color: #efefef;
+    border-radius: .3rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.edit-product-form{
+    width:100%;
+}*/
+
+
+.product-image-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+    padding: 1rem;
+    width: 23.5% !important;
+}
+
+.product-image-cart-img{
+    max-height:280px;
+    width:100%;
+    object-fit:cover;
+}

@@ -1,0 +1,294 @@
+﻿@using eticaret.entity.Filter
+@model ProductEditModel
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = $"Ürün Düzenle {Model.Name}";
+}
+
+@functions{
+    public string printSubCategoryRecursive(TopCategory cat)
+    {
+        string innerHTML = "";
+        if (cat.SubCategories == null) {
+            return "";
+        }
+        else {
+            innerHTML += "<ul class='px-1'>";
+            for (int i = 0; i < cat.SubCategories.Count; i++){
+                if (Model.ActiveCategories.FirstOrDefault(ac => ac.Id.ToString() == cat.SubCategories[i].Id) != null)
+                {
+                    innerHTML += $"<li><div class='form-check'><input checked class='form-check-input cat' type='checkbox' id='{cat.SubCategories[i].Id}' name='categoryIds' value='{cat.SubCategories[i].Id}'> <label class='form-check-label' for='{cat.SubCategories[i].Id}'>{cat.SubCategories[i].Name}</label></div>";
+                }
+                else
+                {
+                    innerHTML += $"<li><div class='form-check'><input class='form-check-input cat' type='checkbox' id='{cat.SubCategories[i].Id}' name='categoryIds' value='{cat.SubCategories[i].Id}'> <label class='form-check-label' for='{cat.SubCategories[i].Id}'>{cat.SubCategories[i].Name}</label></div>";
+                }
+                innerHTML += printSubCategoryRecursive(cat.SubCategories[i]);
+                innerHTML += "</li>";
+            }
+            innerHTML += "</ul>";
+        }
+        return innerHTML;
+    }
+}
+
+@section Styles{
+    <link rel="stylesheet" href="~/css/admin/froala_editor.pkgd.min.css">
+    <link rel="stylesheet" href="~/css/admin/addProduct.css">
+    <link rel="stylesheet" href="~/css/dropdown.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/product-edit.css" crossorigin="anonymous">
+    <style>
+        li{
+            list-style: none;
+        }
+        li label{
+            margin-bottom: 0
+        }
+        li ul{
+            margin-left:.6rem;
+        }
+        ul .form-check{
+            margin-bottom:0;
+        }
+        ol, ul{
+            padding-left: 0;
+        }
+        .relateds-search-results{
+            display: flex;
+            gap: 10px;
+        }
+        .selectRelated{
+            position: absolute;
+            top: -10px;
+            font-size: 24px;
+            right: 0;
+            color: green;
+            display: none;
+        }
+        .relateds-s-r{
+            position: relative;
+        }
+    </style>
+}
+
+@section Scripts{
+    <script src="~/js/admin/froala_editor.pkgd.min.js"></script>
+    <script src="~/js/dialog.js"></script>
+    <script src="~/js/admin/image.upload.js"></script>
+    <script src="~/js/admin/productEdit.js"></script>
+    <script src="~/admin/dist/js/product/Filters.js"></script>
+    <script src="~/admin/dist/js/product/Relateds.js"></script>
+    <script>const imageManager = new ImageManager('images','@Model.Id');</script>
+    <script>
+        @foreach(string item in Model.RelatedIds)
+        {
+            @if (item != Model.Id.ToString())
+            {
+                <text>
+                    relateds.relatedIds.push(`@item`);
+                </text>
+            }
+        }
+        relateds.changeOutIntput();
+        @foreach(Filter item in Model.Filters)
+        {
+            <text>
+                AddProductFilter.filterList.push({"filterId":'@item.Id',"filterName":'@item.FilterTitle'});
+                AddProductFilter.updateFilterInput();
+            </text>
+        }
+
+    </script>
+    <script>
+        const dt = new DataTransfer();
+        const input = document.querySelector("#desc_input");
+    
+        new FroalaEditor('#desc', {
+            events: {
+                'image.beforeUpload': function(img) {
+                    dt.items.add(img[0]);
+                    input.files = dt.files;
+                }
+            }
+        });
+        new FroalaEditor('#s-desc', {
+        events: {
+            'image.beforeUpload': function(img) {
+            }
+        }
+        });
+    </script>
+    <script>window.addEventListener("load", () => { getOptions('@Model.Id'); })</script>
+}
+<div class="econtent-35"></div>
+<form method="post" enctype="multipart/form-data" id="form">
+    <div class="create-product mt-4 mb-3">
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="validation-box mb-2" asp-validation-summary="All"></div>
+        }
+        <div class="row">
+            <div class="col">
+                <h1 class="border-bottom mb-2">Ürünü Düzenle</h1>
+            </div>
+            <div class="col" style="text-align:right">
+                <a target="_blank" href="/@Model.ActiveCategories[0].Url/@Model.Url" class="btn btn-success text-white"><i class="mdi mdi-directions"></i> Ürünü Mağzada Aç</a>
+            </div>
+        </div>
+        <div class="categories form-group">
+            <h3 class="border-bottom" style="margin-bottom: .5rem;">Kategori Seçin</h3>
+            <ul>
+                <div class="checkBoxBox">
+                    <ul>
+                        @for (int i = 0; i < Model.TopCategories.Count; i++)
+                        {
+                        <li>@(Model.TopCategories[i].Name)                        
+                            @Html.Raw(printSubCategoryRecursive(Model.TopCategories[i]))
+                        </li>
+                        }
+                    </ul>
+                </div>
+            </ul>
+        </div>
+        <input asp-for="Id" id="prId" hidden/>
+        <div class="form">
+            <a onclick="imageManager.openImagesDialog('@Model.Id')" 
+                class="btn btn-primary" style="display:block">Resimleri Düzenle</a>
+            <div class="form-group mt-3">
+                <label asp-for="Name" class="col-md-12">Ürün Adı</label>
+                <div class="col-md-12">
+                    <input id="name" asp-for="Name" type="text" class="form-control form-control-line" placeholder="Loose Bootcut Jeans">
+                </div>
+            </div>
+            <div class="form-group mt-3">
+                <label asp-for="Url" class="col-md-12">Ürün Url</label>
+                <div class="col-md-12">
+                    <input id="name" asp-for="Url" type="text" class="form-control form-control-line">
+                </div>
+            </div>
+            <div class="form-group mt-3" id="desc-area">
+                <label asp-for="ShortDescription" class="col-md-12">Kısa Açıklama</label>
+                <div class="col-md-12">
+                    <textarea id="s-desc" asp-for="ShortDescription" type="text" class="form-control form-control-line"></textarea>
+                </div>
+            </div>
+            <div class="form-group mt-3">
+                <input id="desc_input" hidden type="file" name="descFiles" multiple>
+                <label asp-for="Description" class="col-md-12">Ürün Açıklaması</label>
+                <div class="col-md-12">
+                    <textarea id="desc" asp-for="Description" type="text" class="form-control form-control-line" rows="25"></textarea>
+                </div>
+            </div>
+            <div class="form-group mt-3">
+                <label for="options" class="col-md-12">Seçenekler</label>
+                <div class="mb-1 mt-2 flex-col" id="optionCount"></div>
+                <input id="OptionsAsJsonString" name="OptionsAsJsonString" type="text" class="admin-input" hidden>
+            </div>
+            <div class="form-group mt-3">
+                <label for="price" class="col-md-12">Ürün Fiyatı</label>
+                <div class="col-md-12">
+                    <input id="price" class="form-control form-control-line" placeholder="Price" asp-for="@Model.Price">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col form-group mx-3">
+                    <p class="admin-label">İlişkili Ürünler</p>
+                    <input name="RelatedProductIds" id="relatedProductIds" hidden>
+                    <a data-toggle="modal" data-target="#relatedsModal" class="btn btn-primary">Düzenle ve görüntüle</a>
+                </div>
+                <div class="col form-group mx-2">
+                    <p class="admin-label">Ürün Filtreleri</p>
+                    <a id="filterEdit" data-toggle="modal" data-target="#filterModal" class="btn btn-primary">Düzenle ve görüntüle</a>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%" onclick="submitForm()">Değişiklikleri Kaydet</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ürün Filtreleri</h5>
+            <i type="button" class="close mdi mdi-close" data-dismiss="modal" aria-label="Close"></i>
+          </div>
+          <div class="modal-body">
+            <div class="mb-1">
+                <div class="input-group mb-3">
+                    <input id="searchFilterInput" type="text" placeholder="Filtrelerde Ara" class="form-control">
+                    <div class="input-group-append" style="height:40px">
+                        <span class="input-group-text" id="searchfilterres">
+                            <a onclick="adminFilterSearch()" style="padding:1rem;cursor:pointer">
+                                <i class="mdi mdi-magnify"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            
+            </div>
+            <h3 class="border-bottom" style="padding:.75rem 0">Seçilen Kategori Filtreleri</h3>
+            <div class="search-results mt-1"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="relatedsModal" tabindex="-1" role="dialog" aria-labelledby="relatedsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">İlişkili Ürünler</h5>
+            <i type="button" class="close mdi mdi-close" data-dismiss="modal" aria-label="Close"></i>
+          </div>
+          <div class="modal-body">
+            <div class="mb-1">
+                <div class="input-group mb-3">
+                    <input id="searchInput" type="text" placeholder="Ürünlerde Ara" class="form-control">
+                    <div class="input-group-append" style="height:40px">
+                        <span class="input-group-text" id="searchfilterres">
+                            <a style="padding:1rem;cursor:pointer" id="adminsearch">
+                                <i class="mdi mdi-magnify"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            
+            </div>
+            <h3 class="border-bottom" style="padding:.75rem 0">Arama Sonuçları</h3>
+            <div class="relateds-search-results mt-1" id="relateds-search-results"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</form>
+
+
+<div class="dialog" style="position:fixed;">
+    <div class="dialog-window">
+        <i onclick="openDialog()" class="mdi mdi-close close-btn"></i>
+        <div class="grid-2">
+            <h3 class="lg-title">Ürün Resimleri</h3>
+                <input name="postedFiles" multiple style="display: none;" 
+                    id="postedFiles" type="file" class="file-upload-input">
+                <input hidden value="@Model.Id" name="Id" id="productId">
+                <div style="display:grid;grid-template-columns:2fr 1fr">
+                    <label class="btn btn-primary upload-image shp-left" 
+                        for="postedFiles" style="margin-bottom:0!important;width:100%!important">
+                        <i class="mdi mdi-folder-multiple-image"></i>
+                        Resim Yükle
+                    </label>
+                    <button onclick="imageManager.uploadImage()" class="btn btn-danger text-white shp-right">Gönder</button>
+                </div>
+        </div>
+        <hr>
+        <div class="images" id="images"></div>
+        <button onclick="imageManager.saveAlignment()" class="btn btn-primary" style="width: 30%;margin-top: -3.35rem;">Sıralamayı Kaydet</button>
+    </div>
+</div>

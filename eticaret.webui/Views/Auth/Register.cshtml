@@ -1,0 +1,65 @@
+﻿@model CreateUserModel
+<link rel="stylesheet" href="~/css/forms.css">
+<div class="sm-e-content"></div>
+@{
+    ViewData["Title"] = "Kayıt Ol";
+}
+
+
+<div class="login-page">
+    <div class="login-cart">
+        <div style="width:400px;">
+            <div style="width:100%;text-align:center">
+                <img class="login-cart-logo"
+                src="img/logo_transparent.png">
+            </div>
+            <h2 class="login-title">Kayıt Ol</h2>
+            
+            <form method="post" class="login-form" style="width:100%;">
+                <div class="grid-2">
+                    <div class="input-div">
+                        <label for="fname">İsim</label>
+                        <input id="fname" type="text"
+                            name="FirstName" class="form-input" placeholder="John">
+                    </div>
+                    <div class="input-div">
+                        <label for="lname">Soyisim</label>
+                        <input id="lname" type="text"
+                            name="LastName" class="form-input" placeholder="MacTavish">
+                    </div>
+                </div>
+
+                <div class="input-div">
+                    <label for="username">Kullanıcı Adı</label>
+                    <input id="username" type="text"
+                        name="UserName" class="form-input" placeholder="soup">
+                </div>
+                <div class="input-div">
+                    <label for="username">E-Posta Adresi</label>
+                    <input id="email" type="email"
+                        name="Email" class="form-input" placeholder="soup_mactavish@hotmail.com">
+                </div>
+                <div class="grid-2">
+                    <div class="input-div">
+                        <label for="psw">Şifre</label>
+                        <input id="psw" type="password" name="Psw"
+                            class="form-input" placeholder="Şifreniz">
+                    </div>
+                    <div class="input-div">
+                        <label for="psw">Şifre Tekrar</label>
+                        <input id="psw" type="password" name="Againpsw"
+                            class="form-input" placeholder="Şifreniz">
+                    </div>
+                </div>
+
+                <button type="submit" class="form-button">Kayıt Ol</button>
+
+                <div style="width:100%;text-align:center;margin-top:.5rem;">
+                    <span>Zaten bir hesabınız var mı? </span>
+                    <a href="/login" class="italic">Giriş Yapın</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

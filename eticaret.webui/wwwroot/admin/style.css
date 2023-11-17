@@ -1,0 +1,207 @@
+﻿.econtent-35{
+    width:100%;
+    height: 35px;
+}
+.grid-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+a{
+    text-decoration:none!important;
+}
+.left-sidebar a span{
+    font-size: 14px!important;
+}
+.left-sidebar h5{font-size:1rem!important}
+.statistics {
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.chart-sm {
+    max-width: 300px;
+    margin: auto;
+    height: 100%;
+    box-shadow: rgb(0 0 0 / 2%) 0px 1px 3px 0px, rgb(27 31 35 / 15%) 0px 0px 0px 1px;
+    padding: 1rem;
+}
+
+.chart-md {
+    width: 600px;
+    margin: auto;
+    height: 100%;
+    box-shadow: rgb(0 0 0 / 2%) 0px 1px 3px 0px, rgb(27 31 35 / 15%) 0px 0px 0px 1px;
+    padding: 1rem;
+}
+
+.box-shadow {
+    box-shadow: rgb(0 0 0 / 2%) 0px 1px 3px 0px, rgb(27 31 35 / 15%) 0px 0px 0px 1px;
+    padding: 1rem;
+}
+
+.a-center {
+    display: flex;
+    gap: 10px;
+    align-items: center
+}
+
+.subtitle {
+    color: #b2b2b2;
+    font-size: .75rem;
+}
+
+.chart-div{
+    background-color: #fff;
+    padding: 2rem;
+}
+.form-group {
+    background-color: #fff;
+    padding: 1rem;
+}
+tr td {
+    vertical-align: middle;
+}
+.statistic-box {
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px dashed #dfdfdf;
+}
+
+    .statistic-box i {
+        font-size: 1.5rem;
+        background-color: #00e2ff4a;
+        color: #00b0c7;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+.statistic-boxs {
+    gap: 15px;
+}
+
+.last-registers {
+}
+
+.border-dashed {
+    border: 1px dashed #dfdfdf
+}
+
+.list-group-item {
+    padding: .65rem 0;
+}
+
+.mailbox {
+    display: grid;
+    grid-template-columns: 1fr 3.25fr;
+    padding: 1.25rem;
+}
+
+.mail {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 1rem 0;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+    .mail:hover {
+        background-color: #f1f1f1;
+        cursor: pointer;
+    }
+
+.max-50 {
+    max-width: 50px;
+    overflow: hidden;
+}
+
+.max-75 {
+    max-width: 75px;
+    overflow: hidden;
+}
+
+.max-100 {
+    max-width: 100px;
+    overflow: hidden;
+}
+
+.max-125 {
+    max-width: 125px;
+    overflow: hidden;
+}
+
+.max-150 {
+    max-width: 150px;
+    overflow: hidden;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.alertModal {
+    position: fixed;
+    padding: 20px 35px 20px 25px;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    background-color: #000000c9;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    display: none;
+}
+
+.alertModal.active{
+    display: flex;
+}
+
+.alertModalBox {
+    max-width: 430px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+    z-index: 10001;
+    margin-top: 1rem;
+    font-family: 'quicksand';
+}
+
+.alertModalTitleBox {
+    display: flex;
+    color: #fff;
+    gap: 10px;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.alertModalTitleBox.warning {
+    background-color: #7460ee
+}
+
+.alertModalTitle{
+    font-weight: bold;
+}
+
+
+.alertModalMessageBox {
+    padding: 1rem;
+}
+
+.alertModalButtonBox {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: flex-end;
+    padding: 0rem 1rem;
+    padding-bottom: .5rem;
+    gap: 10px;
+}

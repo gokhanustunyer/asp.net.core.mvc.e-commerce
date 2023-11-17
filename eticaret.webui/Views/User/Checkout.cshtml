@@ -1,0 +1,171 @@
+﻿@using eticaret.business.Abstract.Service
+@using eticaret.entity.Cargo
+@model UserCheckOutModel
+@inject IShippingService _shippingService
+@{
+    Layout = "~/Views/Shared/_ProcessLayout.cshtml";
+    ViewData["Title"] = "Siparişi Tamamla";
+    int year = DateTime.Now.Year;
+    Shipping defaultShippingCompany = await _shippingService.GetDefaultAsync();
+    double discountPrice = (Model.CartModel.DiscountCode != null) ? (Model.CartModel.DiscountCode.DiscountRate != 0) ? Model.CartModel.totalPrice - Model.CartModel.totalPrice *  (100 - Model.CartModel.DiscountCode.DiscountRate) / 100 : Model.CartModel.DiscountCode.DiscountNumber : 0;
+    double active_price = Math.Round(Model.CartModel.totalPrice+defaultShippingCompany.Price-discountPrice,2);
+}
+@section Styles{
+    <link rel="stylesheet" href="~/css/ui/checkout.css">
+    <link rel="stylesheet" href="~/css/ui/creditcart.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <style>
+        p{
+            margin-bottom: 0!important;
+        }
+        .custom-select{
+            height: 50px;
+        }
+    </style>
+}
+@section Scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/notyf/3.10.0/notyf.min.js" integrity="sha512-467grL09I/ffq86LVdwDzi86uaxuAhFZyjC99D6CC1vghMp1YAs+DqCgRvhEtZIKX+o9lR0F2bro6qniyeCMEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/js/dialog.js"></script>
+    <script src="~/js/ui/country.js"></script>
+    <script src="~/js/ui/address.js"></script>
+    <script src="~/js/ui/checkout.js"></script>
+    <script src="~/js/ui/getUserAddressForCheckout.js"></script>
+}
+<form class="w-85 container" style="margin-bottom:3rem" method="post" action="/user/checkout">
+    <h1 class="border-bottom-h mb-1">Siparişinizi Tamamlayın</h1>
+    <div class="box-shadow mt-2" style="padding:1rem">
+        <h3 class="mb-1" style="font-size:1.35rem">Sepetinizi Kontrol Edin</h3>
+        <table class="table">
+          <thead class="thead-black">
+            <tr>
+              <th scope="col">Ürün</th>
+              <th scope="col">Başlık</th>
+              <th scope="col">Seçenek</th>
+              <th scope="col">Adet</th>
+              <th scope="col">Fiyat</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for(int i=0;i<Model.CartModel.CartItems.Count;i++){
+                <tr style="">
+                  <td style="vertical-align:inherit">
+                      <img src="@Model.CartModel.CartItems[i].Product.MainImageUrl" 
+                        style="width:85px"/>
+                  </td>
+                  <td style="vertical-align:inherit"
+                        id="name@(i)">@Model.CartModel.CartItems[i].Product.Name</td>
+                  <td style="vertical-align:inherit" 
+                        id="name@(i)">@Model.CartModel.CartItems[i].SizeName</td>
+                  <td style="vertical-align:inherit" 
+                        id="quantity@(i)">@Model.CartModel.CartItems[i].Quantity</td>
+                  <td style="vertical-align:inherit"
+                        id="price@(i)">@Model.CartModel.CartItems[i].Price</td>
+                </tr>
+            }
+          </tbody>
+        </table>
+        <div class="cart-info mt-1 mb-1">
+            <div class="grid-2 border-top pt-1">
+                <span class="cart-info-span">
+                    Toplam Ürün Sayısı</span>
+                <span style="text-align:right;font-weight:600">@Model.CartModel.totalQuantity</span>
+            </div>
+            <div class="grid-2 border-top pt-1">
+                <span class="cart-info-span">
+                    Kargo Ücreti</span>
+                <span style="text-align:right;font-weight:600">@defaultShippingCompany.Price TL</span>
+            </div>
+            <div class="grid-2 border-top pt-1">
+                <span class="cart-info-span">
+                    Toplam Tutar</span>
+                <span style="text-align:right;font-weight:600">@active_price TL
+
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="addresses mb-4 mt-4">
+        <h2 class="mb-1">Adreslerim</h2>
+        <div class="f-wrap">
+        </div>
+    </div>
+
+    <div class="cc grid-2 mb-2 row" style="margin:0;margin-bottom:2rem">
+        <div class="col">
+            <h2 class="mb-1">Kredi Kartı Bilgileri</h2>
+            <div class="form-group mb-2">
+                <label for="nameoncart">Kart Üzerindeki İsim</label>
+                <input class="user-input" id="nameoncart" 
+                 name="NameOnCart" placeholder="John Price">
+            </div>
+            <div class="form-group mb-2">
+                <label for="cartnumber">Kart Numarası</label>
+                <input class="user-input" id="cartnumber"
+                name="CartNumber" placeholder="**** **** **** 6258">
+            </div>
+            <div class="form-group mb-2 d-flex" style="gap:15px">
+                <div class="w-100">
+                    <label for="nameoncart">Son Kullanma Tarihi</label>
+                    <div style="display:flex;gap:15px">
+                        <select name="Month" style="padding:0 .5rem;height:50px">
+                            <option id="0">Ay</option>
+                            @for(int i = 1; i < 13; i++)
+                            {
+                                <option id="@(i)">@(i)</option>
+                            }
+                        </select>
+                        <select name="year" style="padding:0 .5rem;height:50px">
+                        <option id="0">Yıl</option>
+                        @for(int i = year; i < year+13; i++)
+                        {
+                            <option id="@(i)">@(i)</option>
+                        }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" style="max-width: 70px">
+                    <label for="cvccode">CVC</label>
+                    <input maxlength="3" class="user-input" id="cvccode" 
+                    style="height:50px" placeholder="420" name="CVCCode">
+                </div>
+            </div>
+        </div>
+        <div style="display:flex;justify-content:center;align-items:center;width:100%;heiht:100%" class="col">
+            <div class="card">
+              <div class="card__front card__part">
+                <img class="card__front-square card__square">
+                <img class="card__front-logo card__logo">
+                <p class="card_numer">**** **** **** 6258</p>
+                <div class="card__space-75">
+                  <span class="card__label">Card holder</span>
+                  <p class="card__info">John Price</p>
+                </div>
+                <div class="card__space-25">
+                  <span class="card__label">Expires</span>
+                        <p class="card__info">10/25</p>
+                </div>
+              </div>
+  
+              <div class="card__back card__part">
+                <div class="card__black-line"></div>
+                <div class="card__back-content">
+                  <div class="card__secret">
+                    <p class="card__secret--last">420</p>
+                  </div>
+                  <img class="card__back-square card__square" >
+                  <img class="card__back-logo card__logo">
+      
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="button">Siparişi Tamamla</button>
+</form>
+
+<div class="dialog" style="position:fixed;">
+    <div class="dialog-window" style="width:75%;height:540px;overflow-y:scroll">
+
+    </div>
+</div>

@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Rol Ekle";
+}
+@*@section SubHeader{
+    <div class="header" style="height:150px">
+    <div class="header-content">
+            <h2>Yeni Rol Ekleme</h2>
+    </div>
+</div>
+}*@
+<div class="econtent-65"></div>
+<div class="create-product mt-4 mb-3">
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="validation-box mb-2" asp-validation-summary="All"></div>
+    }
+    <h3 class="border-bottom mb-2">Rol Ekle</h3>
+    <form action="/admin/addRole" method="post" enctype="multipart/form-data" style="display:block">
+        <div class="form">
+            <div class="form-group mt-3">
+                <label for="name" class="col-md-12">Rol Adı</label>
+                <div class="col-md-12">
+                    <input type="text" placeholder="Kullanıcı" for="name" id="name" class="form-control form-control-line">
+                </div>
+            </div>
+            <button class="btn btn-primary" style="width:100%;display:block" type="submit">Rolü Ekle</button>
+        </div>
+    </form>
+</div>

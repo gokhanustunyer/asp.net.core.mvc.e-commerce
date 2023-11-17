@@ -1,0 +1,105 @@
+﻿@model List<AppRole>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Tüm Roller";
+}
+@*@section SubHeader{
+    <div class="header" style="height:150px">
+    <div class="header-content">
+            <h2>Tüm Roller</h2>
+    </div>
+</div>
+}*@
+
+<div class="econtent-65"></div>
+<h2>Roller</h2>
+<table class="table table-hover" style="background-color:#fff">
+  <thead>
+    <tr>
+        <th scope="col">Rol Adı</th>
+        <th scope="col" style="width:155px"></th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(var i = 0; i < @Model.Count; i++)
+    {
+    <tr>
+        <td>@Model[i].Name</td>
+        <td>
+            <a href="/admin/editProduct/@Model[i].Id" 
+            class="btn btn-sm btn-primary">Düzenle</a>
+            <form method="post" action="/admin/deleteProduct" style="display:inline">
+                <input hidden value="@Model[i].Id" name="Id">
+                <button class="btn btn-sm btn-primary">
+                    <i class="mdi mdi-delete"></i>
+                </button>
+            </form>
+        </td>
+    </tr>
+    }
+  </tbody>
+</table>
+
+@if (Model.Count == 0 || Model == null)
+{
+    <div class="validation-box mb-2 mt-2 validation-summary-errors" data-valmsg-summary="true">
+        <ul>
+            <li>Henüz mevcut bir rol bulunmamakta</li>
+        </ul>
+    </div>
+}
+
+@*
+<link rel="stylesheet" href="~/css/forms.css">
+    <div class="admin-prods mb-3">
+        <div class="flex-row">
+            <a href="/admin/addRole" class="admin-button full-widht">Yeni Rol Ekle</a>
+            <h2>Roller</h2>
+            <form action="/admin/roles">
+                <input type="text" name="search"
+                class="admin-search"
+                placeholder="Rollerde Ara">
+            </form>
+        </div>
+        <div class="line"
+            style="width: 85%!important;"></div>
+        <table class="admin-products mt-1">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col" style="width:150px"></th>
+                    <th scope="col" style="width:100px"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(var i = 0; i < @Model.Count; i++)
+                {
+                <tr>
+                    <td>@Model[i].Name</td>
+                    <td>
+                        <a href="/admin/editRole/@Model[i].Id" 
+                        class="admin-button admin-btn-sm">Düzenle</a>
+                    </td>
+                    <td>
+                        <form method="post" action="/admin/deleteRole">
+                            <input hidden value="@Model[i].Id" name="Id">
+                            <button class="admin-button admin-btn-sm">
+                                <i class="fa-solid fa-x"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    @if (Model.Count == 0 || Model == null)
+    {
+        <div class="validation-box mb-2 mt-2 validation-summary-errors" data-valmsg-summary="true">
+            <ul>
+                <li>Henüz mevcut bir rol bulunmamakta</li>
+            </ul>
+        </div>
+    }
+
+    </div>*@

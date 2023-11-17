@@ -1,0 +1,62 @@
+﻿@model List<ProductListModel>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Ürünler Admin";
+}
+
+<div class="econtent-65"></div>
+<div class="row">
+    <div class="col">
+        <h2>Tüm Ürünler</h2>
+    </div>
+    <div class="col" style="text-align:right">
+        <a href="/admin/addproduct" class="btn btn-success text-white"><i class="mdi mdi-plus"></i> Yeni Ürün</a>
+    </div>
+</div>
+
+<div class="input-group mb-3" style="padding: 0;margin-top: 1rem;">
+    <input id="searchInput" type="text" placeholder="Ürünlerde Ara" class="form-control">
+    <div class="input-group-append">
+        <span class="input-group-text" id="searchfilterres">
+            <a style="cursor:pointer" id="adminsearch">
+                <i class="mdi mdi-magnify"></i>
+            </a>
+        </span>
+    </div>
+</div>
+
+<table class="table table-hover" style="background-color:#fff">
+  <thead>
+    <tr>
+        <th scope="col">Resim</th>
+        <th scope="col">Başlık</th>
+        <th scope="col">Fiyat</th>
+        <th scope="col">Stok</th>
+        <th scope="col">Yorumlar</th>
+        <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(var i = 0; i < @Model.Count; i++)
+    {
+    <tr>
+        <td><img style="width:60px;" src="@Model[i].MainImageUrl"></td>
+        <td>@Model[i].Name</td>
+        <td>@Model[i].Price</td>
+        <td>@Model[i].Stock</td>
+        <td><a href="/admin/commentsandrates/@Model[i].Id" class="btn btn-sm btn-primary">Görüntüle</a></td>
+        <td>
+            <a href="/admin/editProduct/@Model[i].Id" 
+            class="btn btn-sm btn-primary">Düzenle</a>
+            <form method="post" action="/admin/deleteProduct" onclick="OpenComfirmModal('Uyarı!', 'Bu ürünü silmek istediğinize emin misiniz? Bu işlem geri alınamaz bunun yerine ürünü deaktive etmek istiyor olabilirsiniz.', 'deleteProductForm@(i)', 'Warning')" id="deleteProductForm@(i)" style="display:inline">
+                <input hidden value="@Model[i].Id" name="Id">
+                <div class="btn btn-sm btn-primary">
+                    <i class="mdi mdi-delete"></i>
+                </div>
+            </form>
+        </td>
+    </tr>
+    }
+  </tbody>
+</table>

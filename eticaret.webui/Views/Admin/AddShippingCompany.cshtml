@@ -1,0 +1,36 @@
+﻿@using eticaret.entity.Cargo
+@model Shipping
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="econtent-65"></div>
+<form method="post">
+    <div class="form">
+        <div class="form-group mt-3">
+            <label asp-for="Name" class="col-md-12">Şirket Adı</label>
+            <div class="col-md-12">
+                <input type="text" asp-for="Name" class="form-control form-control-line">
+            </div>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="Description" class="col-md-12">Açıklama</label>
+            <div class="col-md-12">
+                <textarea style="height:120px;resize:none" type="text" asp-for="Description" class="form-control form-control-line"></textarea>
+            </div>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="Price" class="col-md-12">Kargo Ücreti</label>
+            <div class="col-md-12">
+                <input type="text" asp-for="Price" class="form-control form-control-line">
+            </div>
+        </div>
+        <div class="form-group mt-3">
+            <div class="col-md-12 d-inline">
+                <input type="checkbox" asp-for="IsDefault" class="form-check-input">
+            </div>
+            <label asp-for="IsDefault" class="col-md-12 d-inline">Yeni Varsayılan Şirket Olarak Atansın mı?</label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;display:block">Filtreyi Ekle</button>
+    </div>
+</form>

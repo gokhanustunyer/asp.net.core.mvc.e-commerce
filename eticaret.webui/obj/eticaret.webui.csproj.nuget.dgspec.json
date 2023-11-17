@@ -1,0 +1,342 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.webui\\eticaret.webui.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.business\\eticaret.business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.business\\eticaret.business.csproj",
+        "projectName": "eticaret.business",
+        "projectPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.business\\eticaret.business.csproj",
+        "packagesPath": "C:\\Users\\gokha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.business\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gokha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.data\\eticaret.data.csproj": {
+                "projectPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.data\\eticaret.data.csproj"
+              },
+              "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\eticaret.entity.csproj": {
+                "projectPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\eticaret.entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AngleSharp": {
+              "target": "Package",
+              "version": "[0.17.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.14.1, )"
+            },
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.46, )"
+            },
+            "Iyzipay": {
+              "target": "Package",
+              "version": "[2.1.46, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Facebook": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "NETCore.MailKit": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.data\\eticaret.data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.data\\eticaret.data.csproj",
+        "projectName": "eticaret.data",
+        "projectPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.data\\eticaret.data.csproj",
+        "packagesPath": "C:\\Users\\gokha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gokha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\eticaret.entity.csproj": {
+                "projectPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\eticaret.entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\eticaret.entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\eticaret.entity.csproj",
+        "projectName": "eticaret.entity",
+        "projectPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\eticaret.entity.csproj",
+        "packagesPath": "C:\\Users\\gokha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gokha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.webui\\eticaret.webui.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.webui\\eticaret.webui.csproj",
+        "projectName": "eticaret.webui",
+        "projectPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.webui\\eticaret.webui.csproj",
+        "packagesPath": "C:\\Users\\gokha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.webui\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gokha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.business\\eticaret.business.csproj": {
+                "projectPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.business\\eticaret.business.csproj"
+              },
+              "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.data\\eticaret.data.csproj": {
+                "projectPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.data\\eticaret.data.csproj"
+              },
+              "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\eticaret.entity.csproj": {
+                "projectPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\eticaret.entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

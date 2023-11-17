@@ -1,0 +1,58 @@
+﻿@using mkiyafetleri.webui.SiteOperations
+@{
+    ViewBag.Links = new List<string>();
+}
+@if (PageSettings.isOffline)
+{
+    @await Component.InvokeAsync("Maintenance");
+    RenderBody();
+}
+else
+{
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio&family=Combo&family=Dancing+Script&family=Fira+Sans+Condensed:wght@400;500&family=Heebo:wght@600;700&family=IBM+Plex+Sans:wght@300;400;500&family=Lato:wght@300;400&family=Open+Sans&family=Oswald:wght@300;400&family=Poppins:wght@400;500;600;700&family=Prompt:wght@200;300;400&family=Quicksand&family=Raleway:wght@400;500&family=Roboto:wght@300;400&family=The+Nautigal&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2245e9a8b0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/css/ui/utilities.css">
+    <link rel="stylesheet" href="~/css/ui/layout.css">
+    @RenderSection("Styles", required:false)
+    </head>
+<body>
+
+    
+    <div class="nav-container border-bottom" style="position:static">
+        <nav class="navbar navbar-light container">
+            <a href="/"><img src="~/img/logo_transparent.png" width="125"></a>
+        </nav>
+    </div>
+
+    <main class="mt-2">
+        @RenderBody()
+    </main>
+
+    <footer style="width:100%">
+        <p style="padding:1rem;font-size:.9rem;text-align:center;box-shadow: rgb(0 0 0 / 2%) 0px 1px 3px 0px, rgb(27 31 35 / 15%) 0px 0px 0px 1px;">
+            ©Copyright 2023 <a href="https://www.arite.com.tr/">Arite</a>
+        </p>
+    </footer>
+    @RenderSection("Scripts", required:false)
+    <script>
+        Object.defineProperty(String.prototype, 'capitalize', {
+          value: function() {
+            return this.charAt(0).toUpperCase() + this.slice(1);
+          },
+          enumerable: false
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>   
+</body>
+</html>
+}

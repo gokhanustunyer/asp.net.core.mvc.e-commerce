@@ -1,0 +1,66 @@
+﻿@model List<ProductCommentModel>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@section Styles{
+    <style>
+        .comment{
+            padding: 1rem;
+            background-color: #fff;
+            box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+            margin-bottom: 1rem;
+        }
+    
+    </style>
+}
+@if (Model.Count < 1)
+{
+    <h3>Ürünün Herhangi Bir Yorumu Bulunmamaktadır</h3>
+}
+
+else
+{
+<div class="econtent-65"></div>
+<div class="comments">
+    <div class="row">
+        <div class="col">
+            <h2>Ürün Yorumları</h2>
+        </div>
+        <div class="col" style="text-align:right">
+            @for (int j = 0; j < Model[0].GeneralRate; j++)
+            {
+                <i style="color:orange" class="mdi mdi-star"></i>            
+            }
+            @for (int j = 0; j < 5 - Model[0].GeneralRate; j++)
+            {            
+                <i style="color:orange" class="mdi mdi-star-outline"></i>
+            }
+        </div>
+    </div>
+    @foreach(ProductCommentModel item in Model)
+    {
+        <div class="comment">
+            <div class="row">
+                <div class="col">
+                    <p style="font-weight:bold">@item.FullName</p>
+                </div>
+                <div class="col" style="text-align:right">
+                    @for (int j = 0; j < item.Rate; j++)
+                    {
+                        <i style="color:orange" class="mdi mdi-star"></i>            
+                    }
+                    @for (int j = 0; j < 5 - item.Rate; j++)
+                    {            
+                        <i style="color:orange" class="mdi mdi-star-outline"></i>
+                    }
+                </div>
+            </div>
+            <p>@item.Comment</p>
+        </div>
+    }
+</div>
+
+
+
+}

@@ -1,0 +1,94 @@
+﻿@model List<ProductCommentCartModel>
+
+@{
+    ViewData["Title"] = "Yorumlarım";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+@section Styles{
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/ui/userinfo.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/ma.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <link rel="stylesheet" href="~/css/ui/product-list-page.css">
+}
+
+@section Scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/notyf/3.10.0/notyf.min.js" integrity="sha512-467grL09I/ffq86LVdwDzi86uaxuAhFZyjC99D6CC1vghMp1YAs+DqCgRvhEtZIKX+o9lR0F2bro6qniyeCMEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/js/getFav.js"></script>
+    <script src="~/js/ui/userPage.js"></script>
+}
+@section SubHeader{
+<div class="sub-header">
+    <div class="sub-header-content">
+        <span class="category col-lg-8 col-sm-12 col-md-8 m-0 p-0">
+            <h3 class="category-title">
+                Değerlendirmelerim
+            </h3>
+            <p class="category-tree">
+                Hesabım <span class="mx-1">></span> Değerlendirmelerim
+            </p>
+        </span>
+    </div>
+</div>
+}
+
+<div style="flex-wrap:wrap;gap:20px;display:flex;margin-left:.5rem">
+    @for(int i=0;i<Model.Count;i++){
+        <a class="col-lg-4 col-md-6 col-sm-6 mb-3" href="@Model[i].Product.Url/@Model[i].Product.Url" style="max-width:295px;padding:0">
+            <div class="product-cart">
+                <img src="@Model[i].Product.MainImageUrl">
+                <div class="product-cart-info">
+                    <div class="d-flex">
+                        <div class="ellipsis" style="width:90%">
+                            <p class="ellipsis">@Model[i].Product.Name</p>
+                            <p>
+                                @Model[i].Comment.Comment
+                            </p>
+                            <p>
+                            @for (int j = 0; j < Model[i].Comment.Rate.Rate; j++)
+                            {
+                                <i style="color:orange" class="fa-solid fa-star"></i>            
+                            }
+                            @for (int j = 0; j < 5 - Model[i].Comment.Rate.Rate; j++)
+                            {            
+                                <i style="color:orange" class="fa-regular fa-star"></i>
+                            }
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        @*
+        <div class="products_product" style="width:230px;height:515px">
+            <a href="/@Model[i].Product.TopCategoryUrl/@Model[i].Product.Url">
+                <img src="@Model[i].Product.MainImageUrl">
+            </a>
+            <div class="add-favorites">
+                <i onclick="setFav(this)"
+                    class="set-fav fa-solid fa-heart"></i>
+            </div>
+            <a href="@ViewBag.Category/@Model[i].Product.Url">
+                <p class="p-title">@Model[i].Product.Name</p>
+            </a>
+            <p class="pr-comment">
+                @Model[i].Comment.Comment
+            </p>
+            <div style="text-align: center;padding:.5rem 0;border-top:1px solid #dfdfdf">
+                <div class="rate-stars">
+                    @for (int j = 0; j < Model[i].Comment.Rate.Rate; j++)
+                    {
+                        <i style="color:orange" class="fa-solid fa-star"></i>            
+                    }
+                    @for (int j = 0; j < 5 - Model[i].Comment.Rate.Rate; j++)
+                    {            
+                        <i style="color:orange" class="fa-regular fa-star"></i>
+                    }
+                </div>
+            </div>
+        </div>
+        *@
+    }
+</div>

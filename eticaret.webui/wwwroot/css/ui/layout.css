@@ -1,0 +1,271 @@
+﻿nav ul{
+    margin-bottom:0!important
+}
+button:focus{
+    outline:none!important;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+ol, ul {
+    margin-bottom: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.layout-navbar {
+    color: #444453;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.layout-logo {
+    width: 175px
+}
+
+.navbar-icon {
+    width: 28px;
+}
+
+.navbar-input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #444453;
+    font-size: .9rem
+}
+
+.navbar-link {
+    font-family: 'Quicksand';
+    font-weight: 600;
+}
+
+.navbar-nav {
+    padding: 1rem 0;
+    margin: auto;
+    max-width: 1370px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand img {
+    width: 125px;
+}
+
+.navbar-item {
+    padding: .35rem;
+    margin: 0 .75rem;
+    position: relative;
+    border-bottom: 2px solid transparent;
+    transition: .3s;
+}
+
+    .navbar-item:hover {
+        border-bottom: 2px solid #444453;
+    }
+
+.navbar-icon-item {
+    padding: .35rem;
+    margin: 0 .75rem;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #444453;
+    border-radius: .5rem;
+}
+
+.layout-footer {
+    background-color: #444453;
+    width: 100%;
+}
+
+.footer {
+    width: 1370px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.footer-brand img {
+    width: 125px;
+    padding: 1rem 0;
+}
+
+.footer-link {
+    color: #fff !important;
+    font-size: .9rem;
+}
+
+.subscribe-input {
+    background: none;
+    border: none;
+    outline: none;
+    padding: .5rem .35rem;
+    color: #fff;
+}
+
+.pr-stars {
+    font-size: 1.25rem;
+}
+
+.subscribe {
+    border-bottom: 2px solid #fff;
+    display: inline;
+    padding: .5rem 0;
+}
+
+.sub-header-content {
+    max-width: 1370px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.sub-header {
+    background-color: #d8e9f0ba;
+    height: 125px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+    .sub-header::before {
+        background-image: url('/img/cintage.jpeg');
+        height: 100%;
+        width: 100%;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -1;
+    }
+
+
+.category {
+    width: 1370px;
+    margin: auto;
+}
+
+.category-title {
+    color: #444453;
+    font-family: 'quicksand', sans-serif;
+}
+
+.category-tree {
+    font-family: 'quicksand', sans-serif;
+    font-weight: bold;
+    font-size: .9rem;
+    margin-bottom: 0;
+    color: #444453;
+}
+
+.user-input {
+    outline: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 0.35rem 0.5rem;
+}
+
+.user-button-dark:focus{
+    outline:none!important;
+}
+.user-button-light:focus{
+    outline:none!important;
+}
+
+.external-btn {
+    outline: none;
+    padding: .5rem;
+    width: 100%;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    margin-bottom: .5rem;
+    transition: .3s;
+    font-size: .9rem;
+}
+
+
+    .external-btn i {
+        font-size: .9rem;
+    }
+
+.login-or {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #b3b3b3;
+}
+
+.btn {
+    padding: .75rem !important;
+}
+
+.facebook:hover {
+    background-color: #2d4f97 !important;
+}
+
+.google:hover {
+    background-color: #ea2e1e !important;
+}
+
+.forgotpsw-link {
+    display: block;
+    text-align: right;
+    font-size: .9rem;
+    color: #888 !important;
+    margin: .25rem 0;
+    text-decoration: underline;
+    padding: .25rem 0;
+}
+
+.user-layout {
+    max-width: 1370px;
+    width: 100%;
+    margin: auto;
+}
+
+.main-header {
+    position: fixed;
+    width: 100%;
+    z-index: 100000;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.main-header .layout-header{
+    background-color: #fff;
+}
+
+.sub-header {
+    margin-top: 148px;
+}

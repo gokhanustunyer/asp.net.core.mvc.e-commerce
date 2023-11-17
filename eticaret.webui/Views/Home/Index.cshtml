@@ -1,0 +1,192 @@
+﻿
+@{
+    ViewData["Title"] = "Arite";
+}
+@section Styles{
+    <link rel="stylesheet" href="~/css/ui/product-list-page.css">
+    <link rel="stylesheet" href="~/css/ui/utilities.css">
+    <link rel="stylesheet" href="~/css/ui/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="~/lib/quill/quill.css">
+    <style>
+        .ql-toolbar{
+            display:none!important;
+        }
+        .container{
+            max-width: 1370px;
+        }
+    </style>
+}
+@section Scripts{
+    <script src="~/lib/quill/quill.min.js"></script>
+    <script>
+        var quill = new Quill('#editor', {
+            theme: 'snow',
+            modules: {
+                toolbar: []
+            }
+        });
+
+        function submit(){
+            const message = document.getElementById("message")
+            const quill_editor = document.querySelector(".ql-editor");
+            message.value = quill_editor.innerHTML;
+            let form = document.querySelector("#supportform");
+            form.submit();
+        }
+    </script>
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting){
+                    entry.target.classList.add("animate__animated");
+                    if (entry.target.classList.contains("animation-left")){
+                        entry.target.classList.add("animate__fadeInLeft");
+                    }
+                    else if (entry.target.classList.contains("animation-right")){
+                        entry.target.classList.add("animate__fadeInRight");
+                    }
+                    else if (entry.target.classList.contains("fadeA")){
+                        entry.target.classList.add("animate__fadeIn");
+                    }
+                    else if (entry.target.classList.contains("animation-down")){
+                        entry.target.classList.add("animate__fadeInDown");
+                    }
+                    else if (entry.target.classList.contains("animation-top")){
+                        entry.target.classList.add("animate__fadeInUp");
+                    }
+                }
+            })
+        })
+        const hiddenElements = document.querySelectorAll(".hide");
+        hiddenElements.forEach(element => observer.observe(element))
+    </script>
+}
+<div class="main-slider">
+    <div class="slider-contents">
+        <div class="slider-item">
+            <div class="slider-image" style="background-image: url('/img/index/bg2.jpg');"></div>
+            <div class="slider-content">
+                <div class="animation animate__animated animate__fadeInUp mb-3">
+                    <p class="slider-content-title">Nora One Styles 2023</p>
+                    <p class="slider-content-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <a class="animate__animated animate__fadeIn animate__delay-1s user-button-dark" style="color:#fff!important">Keşfet</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="econtent-100"></div>
+<div class="welcome row container m-auto" style="gap:25px">
+    <div class="col px-0 animation-left hide">
+        <img src="~/img/cintage.jpeg" alt="">
+    </div>
+    <div class="col px-0 d-flex flex-column animation-right hide" style="justify-content: space-evenly;">
+        <div class="">
+            <p class="welcome-title quicksand">Arite'ye Hoşgeldiniz</p>
+            <p class="welcome-content quicksand mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi, sapiente amet aliquam obcaecati dolorum repudiandae molestias quisquam non dolorem!</p>
+        </div>
+        <a href="" class="user-button-dark-link mt-3 px-4 py-2" style="width: fit-content;">Hemen Keşfet</a>
+    </div>
+</div>
+<div class="index-categories container text-center mt-5 px-0">
+    <div class="index-categories-title quicksand"><p class="title">Kategoriler</p></div>
+    <div class="d-flex justify-content-between mt-3 mb-4">
+        <div class="index-category-item animation-left hide delay0">
+            <a class="index-category d-flex align-items-center justify-content-center" style="background-image: url('/img/index/c1.webp');">
+                <p class="index-category-title">
+                    ERKEK
+                </p>
+            </a>
+        </div>
+        <div class="index-category-item animation-left hide delay1">
+            <a class="index-category d-flex align-items-center justify-content-center" style="background-image: url('/img/index/c2.jpg');">
+                <p class="index-category-title">
+                    KADIN
+                </p>
+            </a>
+        </div>
+        <div class="index-category-item animation-left hide delay2">
+            <a class="index-category d-flex align-items-center justify-content-center" style="background-image: url('/img/index/c3.jpg');">
+                <p class="index-category-title">
+                    SPOR
+                </p>
+            </a>
+        </div>
+    </div>
+            
+    <a href="" class="user-button-dark-link d-inline py-2 px-4 hide animation-top hide">Tüm Kategoriler</a>
+</div>
+<div class="py-4 recomendets mt-5 text-center" style="background-image: url('/img/index/bg3.jpg');">
+    <div class="recomendets-inner-content container px-0">
+        <p class="recomendets-title">Bakmak İsteyebilirsiniz</p>
+        <div class="d-flex mt-3 mb-4 px-0 justify-content-between">
+            <div class="index-recomendets-item animation-left hide delay0">
+                <a class="index-recomendets">
+                    <img src="~/img/index/prs/product1.jpg" alt="">
+                <div class="link-hover"></div>
+                <p class="recomendets-info">Lacivert Ceket Gibi</p>
+                </a>
+            </div>
+            <div class="index-recomendets-item animation-left hide delay1">
+                <a class="index-recomendets">
+                    <img src="~/img/index/prs/product2.jpg" alt="">
+                <div class="link-hover"></div>
+                <p class="recomendets-info">Lacivert Ceket Gibi</p>
+                </a>
+            </div>
+            <div class="index-recomendets-item animation-left hide delay2">
+                <a class="index-recomendets">
+                    <img src="~/img/index/prs/product3.jpg" alt="">
+                <div class="link-hover"></div>
+                <p class="recomendets-info">Lacivert Ceket Gibi</p>
+                </a>
+            </div>
+        </div>
+        <a href="" class="my-3 user-button-red-link animation-top hide">Tüm Kıyafetler</a>
+    </div>
+</div>
+<div class="bg-gray">
+    <div class="welcome row container m-auto" style="gap:25px">
+        <div class="col px-0 d-flex flex-column justify-content-center animation-left hide">
+            <div class="">
+                <p class="welcome-title quicksand font-weight-bold">Vintage Ürünler</p>
+                <p class="welcome-content quicksand mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid, aperiam voluptatum deserunt, reprehenderit est hic ut nisi, eum dolorem sapiente! Consequatur obcaecati nostrum sapiente harum cum hic assumenda totam earum, dolores ipsam ratione in. Ab reprehenderit suscipit voluptatibus earum?</p>
+            </div>
+            <a href="" class="user-button-dark-link mt-4 px-4 py-2" style="width: fit-content;">Hemen Keşfet</a>
+        </div>
+        <div class="col px-0 animation-right hide">
+            <img src="~/img/index/v1.jpg" alt="">
+        </div>
+    </div>
+</div>
+<div class="bg-white">
+    <div class="welcome row container m-auto" style="gap:25px">
+        <div class="col px-0 animation-left hide">
+            <img src="~/img/index/contact3.jpg" alt="">
+        </div>
+        <form method="post" class="col px-0 d-flex flex-column justify-content-center animation-right hide" id="supportform">
+            <div class="">
+                <p class="welcome-title quicksand font-weight-bolder">Bizimle İletişime Geçin</p>
+                <div class="inputs">
+                    <input class="user-input w-100 mt-3" name="Name" placeholder="İsim Soyisim"/>
+                    <div class="row">
+                        <div class="col d-flex flex-column">
+                            <input class="user-input w-100 mt-3" name="Email" placeholder="E-Posta Adresi"/>
+                        </div>
+                        <div class="col d-flex flex-column">
+                            <input class="user-input w-100 mt-3" name="Phone" placeholder="Telefon Numarası"/>
+                        </div>
+                    </div>
+                    <input class="user-input w-100 mt-3 mb-3" name="Subject" placeholder="Konu"/>
+                    <small>Mesajınızı Buraya Yazabilirsiniz...</small>
+                    <div class="form-group border-top mb-0">
+                        <div id="editor"></div>
+                    </div>
+                    <input hidden name="Messsage" id="message"/>
+                </div>
+            </div>
+            <a onclick="submit()" class="user-button-dark-link mt-4 px-4 py-2">Gönder</a>
+        </form>
+    </div>
+</div>

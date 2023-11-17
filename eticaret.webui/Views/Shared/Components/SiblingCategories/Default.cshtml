@@ -1,0 +1,20 @@
+﻿@model List<CategoryListModel>
+<div>
+    <div class="row d-flex mt-2">
+        @if (Model.Count > 2)
+        {
+            @for(int i=0;i<Model.Count;i++)
+            {
+                @if (Model[i].ImagePath != null)
+                {
+                    var imageUrl = Model[i].ImagePath.Replace('\\', '/');
+                    <div class="category-image-list col-lg-4 col-md-6 col-sm-6 pr-1 pl-0">
+                        <a class="category-list-image" href="/@Model[i].Url" style="background-image:url('/@imageUrl')">
+                            <p class="list-page-category-title">@Model[i].Name.ToUpper()</p>
+                        </a>
+                    </div>
+                }
+            }
+        }
+    </div>
+</div>

@@ -1,0 +1,109 @@
+﻿@model List<TopCategory>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Kategoriler Admin";
+}
+@functions{
+    List<string> nodeIds = new();
+    public string printSubCategoryRecursive(TopCategory cat, string pnode)
+    {
+        string innerHTML = "";
+        if (!nodeIds.Contains(cat.Id))
+        {
+            innerHTML += $"<tr data-node='treetable-{pnode}'>";
+            innerHTML += $"<td>{cat.Name}</td>";
+            innerHTML += $"<td><a href='/admin/editcategory/{cat.Id}' class='btn btn-sm btn-primary'>Düzenle</a><form method='post' action='/admin/deleteProduct' style='display:inline'> <input hidden value='{cat.Id}' name='Id'> <button class='btn btn-sm btn-primary'> <i class='mdi mdi-delete'></i> </button> </form></td>";
+            innerHTML += "</tr>";
+        }
+        if (cat.SubCategories == null) {
+            return "";
+        }
+        else {
+            for (int i = 0; i < cat.SubCategories.Count; i++) {
+                nodeIds.Add(cat.SubCategories[i].Id);
+                innerHTML += $"<tr data-node='treetable-{pnode}{i}' data-pnode='treetable-parent-{pnode}'>";
+                innerHTML += $"<td>{cat.SubCategories[i].Name}</td>";
+                innerHTML += $"<td><a href='/admin/editcategory/{cat.SubCategories[i].Id}' class='btn btn-sm btn-primary'>Düzenle</a><form method='post' action='/admin/deleteProduct' style='display:inline'> <input hidden value='{cat.Id}' name='Id'> <button class='btn btn-sm btn-primary'> <i class='mdi mdi-delete'></i> </button> </form></td>";
+                innerHTML += "</tr>";
+                innerHTML += printSubCategoryRecursive(cat.SubCategories[i], $"{pnode}{i}");
+            }
+        }
+        return innerHTML;
+    }
+}
+
+@section Scripts{
+    <script src="~/admin/assets/libs/treetable/bootstrap-treefy.js"></script>
+    <script>
+        $(function() {
+            $("#table").treeFy({
+                treeColumn: 0,
+                expanderExpandedClass: 'mdi mdi-chevron-down',
+                expanderCollapsedClass: 'mdi mdi-chevron-right',
+            });
+        });
+    </script>
+}
+
+@section Styles{
+    <link rel="stylesheet" href="~/admin/assets/libs/treetable/bootstrap-treefy.min.css">
+    <style>
+        tr td{
+            vertical-align: middle;
+        }
+    </style>
+}
+<div class="econtent-65"></div>
+<div class="row">
+    <div class="col">
+        <h2>Tüm Kategoriler</h2>
+    </div>
+    <div class="col" style="text-align:right">
+        <a href="/admin/addcategory" class="btn btn-success text-white"><i class="mdi mdi-plus"></i> Yeni Kategori</a>
+    </div>
+</div>
+
+
+<table class="table" id="table">
+    <thead>
+    <tr>
+        <th scope="col">Kategori Adı</th>
+        <th scope="col" style="width:155px"></th>
+    </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            @Html.Raw(printSubCategoryRecursive(Model[i], i.ToString()))
+        }
+    </tbody>
+</table>
+
+@*<table class="table table-hover" style="background-color:#fff">
+  <thead>
+    <tr>
+        <th scope="col">Kategori Adı</th>
+        <th scope="col" style="width:155px"></th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(var i = 0; i < @Model.Count; i++)
+    {
+    <tr>
+        <td>@Model[i].Name</td>
+        <td>
+            <a href="/admin/editcategory/@Model[i].Id" 
+            class="btn btn-sm btn-primary">Düzenle</a>
+            <form method="post" action="/admin/deleteProduct" style="display:inline">
+                <input hidden value="@Model[i].Id" name="Id">
+                <button class="btn btn-sm btn-primary">
+                    <i class="mdi mdi-delete"></i>
+                </button>
+            </form>
+        </td>
+    </tr>
+    }
+  </tbody>
+</table>
+*@

@@ -1,0 +1,245 @@
+.relative{
+    position: relative;
+}
+
+.thumbnail{
+    width: 75px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.thumbnails{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 185px;
+    max-height: 1008px;
+    scrollbar-width: none;
+}
+.thumbnails::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+.thumbnail:hover{
+    opacity: .8;
+}
+
+.thumb-right, .thumb-left{
+    background-color: #fff;
+    padding: .3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #444453;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.thumb-right:hover, .thumb-left:hover{
+    box-shadow: rgba(255, 255, 255, 0.56) 0px 2px 70px 2px;
+}
+
+.filter-title{
+    font-size: 1.05rem;
+    font-weight: 500;
+    font-family: 'raleway';
+}
+
+.nav-link{
+    padding: .5rem 2rem;
+    border-color: #e9ecef #e9ecef #dee2e6!important;
+}
+
+.comment {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    border-radius: 5px;
+}
+
+.scroller-left, .scroller-right{
+    background-color: #fff;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: .65rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.scroller-left:hover, .scroller-right:hover{
+    box-shadow: rgb(255 255 255 / 95%) 20px 30px 80px 4px;
+}
+
+.similar-products_products {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+    width: 100%;
+}
+
+.swiper {
+    position: relative;
+}
+
+    .swiper .next, .swiper .prev {
+        padding: 0 !important;
+        z-index: 0;
+        position: absolute;
+        bottom: -15px;
+        background-color: #444453;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 300;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: .8rem;
+        cursor: pointer;
+        border: 1px solid #444453;
+        transition: .3s;
+    }
+
+    .swiper .next {
+        right: 0;
+    }
+
+        .swiper .next:hover, .swiper .prev:hover {
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #444453;
+        }
+
+.color_thumb {
+    width: 100px;
+}
+
+
+.color-images {
+    display: flex;
+    gap: 5px;
+}
+
+.color {
+    flex: 0 0 100px;
+}
+
+.short-desc{
+    font-size: .9rem;
+}
+
+.custom-file-input-custom {
+    opacity: 0;
+    z-index: 3;
+    cursor: pointer;
+    position: absolute
+}
+
+.upload-file-div{
+    position: relative;
+    height: 32px;
+}
+
+.custom-file-input-before {
+    display: inline-block;
+    border: 1px solid #dfdfdf;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+}
+
+.custom-file-input-custom:hover::before {
+    border-color: black;
+}
+
+.custom-file-input-custom:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+.similar-products {
+    border: 1px solid #dfdfdf;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+    border-right: 0;
+    border-left: 0;
+}
+
+.prDetailsLine {
+    position: relative;
+    background-image: url('/img/vintage.jpg');
+    padding: 2rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.prDetailsLine span{
+    z-index: 5;
+    position: inherit
+}
+
+.prDetailsLine::before{
+    content: "";
+    background-color: #444453;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .8;
+}
+
+
+
+.category-list-image {
+    height: 175px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    position: relative;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .category-list-image::before {
+        content: '';
+        background-color: #00000080;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+.list-page-category-title {
+    font-size: 2rem;
+    z-index: 50;
+    letter-spacing: 1px;
+    font-family: 'Josefin Sans';
+    margin-bottom: 0;
+    font-weight: 300;
+    color: #fff;
+    position: relative;
+}
+
+
+.category-list-image:hover {
+    transform: scale(1.2);
+}
+
+.category-image-list {
+    height: 175px;
+    width: 100%;
+    overflow: hidden;
+}

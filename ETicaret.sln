@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eticaret.webui", "eticaret.webui\eticaret.webui.csproj", "{36C3C27D-D61F-4CFA-83DB-4549704E44DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eticaret.business", "eticaret.business\eticaret.business.csproj", "{72A1C902-2D66-4507-B2D1-5A6534BE8F57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eticaret.entity", "eticaret.entity\eticaret.entity.csproj", "{00BBD54C-E9ED-4B20-BCE9-57DAA76226DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eticaret.data", "eticaret.data\eticaret.data.csproj", "{3327E165-0879-4564-A000-E14B92664C95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36C3C27D-D61F-4CFA-83DB-4549704E44DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36C3C27D-D61F-4CFA-83DB-4549704E44DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36C3C27D-D61F-4CFA-83DB-4549704E44DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36C3C27D-D61F-4CFA-83DB-4549704E44DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72A1C902-2D66-4507-B2D1-5A6534BE8F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72A1C902-2D66-4507-B2D1-5A6534BE8F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72A1C902-2D66-4507-B2D1-5A6534BE8F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72A1C902-2D66-4507-B2D1-5A6534BE8F57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00BBD54C-E9ED-4B20-BCE9-57DAA76226DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00BBD54C-E9ED-4B20-BCE9-57DAA76226DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00BBD54C-E9ED-4B20-BCE9-57DAA76226DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00BBD54C-E9ED-4B20-BCE9-57DAA76226DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3327E165-0879-4564-A000-E14B92664C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3327E165-0879-4564-A000-E14B92664C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3327E165-0879-4564-A000-E14B92664C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3327E165-0879-4564-A000-E14B92664C95}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7CC66CD-6AE6-4462-83F4-060525758ED7}
+	EndGlobalSection
+EndGlobal

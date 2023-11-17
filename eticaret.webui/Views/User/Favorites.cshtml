@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Favorilerim";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+@section Scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/notyf/3.10.0/notyf.min.js" integrity="sha512-467grL09I/ffq86LVdwDzi86uaxuAhFZyjC99D6CC1vghMp1YAs+DqCgRvhEtZIKX+o9lR0F2bro6qniyeCMEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/js/getFav.js"></script>
+}
+
+@section Styles{
+    <link rel="stylesheet" href="~/css/ma.css">
+    <link rel="stylesheet" href="~/css/ui/product-list-page.css">
+    <link rel="stylesheet" href="~/css/ui/utilities.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+}
+
+@section SubHeader{
+<div class="sub-header">
+    <div class="sub-header-content">
+        <span class="category col-lg-8 col-sm-12 col-md-8 m-0 p-0">
+            <h3 class="category-title">
+                Favorilerim
+            </h3>
+            <p class="category-tree">
+                Hesabım <span class="mx-1">></span> Favorilerim
+            </p>
+        </span>
+    </div>
+</div>
+}
+
+<div class="ml-3 quicksand">
+    <h2 id="favs-title" class="favorites-title border-bottom quicksand">Favorilerim (0)</h2>
+    <div class="row ml-1 py-2" id="fav-products">
+        
+    </div>
+</div>

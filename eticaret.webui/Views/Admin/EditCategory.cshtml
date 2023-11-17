@@ -1,0 +1,217 @@
+﻿@model CategoryEditModel
+
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = $"Kategori Düzenle {Model.Name}";
+}
+@section Styles{
+    <link rel="stylesheet" href="~/css/admin/addProduct.css">
+    <style>
+        li{
+            list-style: none;
+        }
+        li label{
+            margin-bottom: 0
+        }
+        li ul{
+            margin-left:.6rem;
+        }
+        ul .form-check{
+            margin-bottom:0;
+        }
+        ol, ul{
+            padding-left: 0;
+        }
+        .relateds-search-results{
+            display: flex;
+            gap: 10px;
+        }
+        .selectRelated{
+            position: absolute;
+            top: -10px;
+            font-size: 24px;
+            right: 0;
+            color: green;
+            display: none;
+        }
+        .relateds-s-r{
+            position: relative;
+        }
+    </style>
+}
+@section Scripts{
+<script>
+    var i = 0;
+    var loadFile = function(event) {
+        var image = document.querySelector('.imageOutput');
+        for (let i=0;i<event.target.files.length;i++){
+            var newImage =
+            `
+            <div class="uploaded-images" onclick="removeFile(event, ${i})">
+                <div class="filter">
+                    <img id="output" src="${URL.createObjectURL(event.target.files[i])}" width="100">
+                </div>
+            </div>
+            `
+            image.innerHTML += newImage;
+        }
+    };
+
+    function removeFile(event, index){
+        const dt = new DataTransfer();
+        const input = document.querySelector("#imageUpload");
+        const { files } = input;
+
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            if (index !== i)
+                dt.items.add(file);
+        }
+        input.files = dt.files;
+        var image = document.querySelector('.imageOutput');
+        image.innerHTML = "";
+        for (let i=0;i<input.files.length;i++){
+        var newImage =
+        `
+        <div class="uploaded-images" onclick="removeFile(event, ${i})>
+            <div class="filter">
+                <img id="output" src="${URL.createObjectURL(input.files[i])}" width="100">
+            </div>
+        </div>
+        `
+        image.innerHTML += newImage;
+    }
+    }
+</script>
+}
+@functions{
+    public string printTopCategoryRecursive(TopCategory cat)
+    {
+        string innerHTML = "";
+        if (Model.TopCategoryId == cat.Id)
+        {
+            return "";
+        }
+        if (Model.TopCategories.FirstOrDefault(ac => ac.Id.ToString() == cat.Id) != null)
+        {
+            innerHTML += $"<li><div class='form-check'><input checked class='form-check-input cat' type='radio' id='topcat{cat.Id}' name='topCategoryIds' value='{cat.Id}'> <label class='form-check-label' for='topcat{cat.Id}'>{cat.Name}</label></div>";
+        }
+        else
+        {
+            innerHTML += $"<li><div class='form-check'><input class='form-check-input cat' type='radio' id='topcat{cat.Id}' name='topCategoryIds' value='{cat.Id}'> <label class='form-check-label' for='topcat{cat.Id}'>{cat.Name}</label></div>";
+        }
+        if (cat.SubCategories == null) {
+            return "";
+        }
+        else {
+            innerHTML += "<ul class='px-1'>";
+            for (int i = 0; i < cat.SubCategories.Count; i++){
+                if (Model.TopCategories.FirstOrDefault(ac => ac.Id.ToString() == cat.SubCategories[i].Id) != null)
+                {
+                    innerHTML += $"<li><div class='form-check'><input checked class='form-check-input cat' type='radio' id='topcat{cat.SubCategories[i].Id}' name='topCategoryIds' value='{cat.SubCategories[i].Id}'> <label class='form-check-label' for='topcat{cat.SubCategories[i].Id}'>{cat.SubCategories[i].Name}</label></div>";
+                }
+                else
+                {
+                    innerHTML += $"<li><div class='form-check'><input class='form-check-input cat' type='radio' id='topcat{cat.SubCategories[i].Id}' name='topCategoryIds' value='{cat.SubCategories[i].Id}'> <label class='form-check-label' for='topcat{cat.SubCategories[i].Id}'>{cat.SubCategories[i].Name}</label></div>";
+                }
+                innerHTML += printTopCategoryRecursive(cat.SubCategories[i]);
+                innerHTML += "</li>";
+            }
+            innerHTML += "</ul>";
+        }
+        return innerHTML;
+    }
+}
+<div class="econtent-35"></div>
+<div class="row" style="margin-top:2rem">
+    <div class="col">
+        <h2>Kategori Düzenle @Model.Name</h2>
+    </div>
+    <div class="col" style="text-align:right">
+        <form method="post" action="/admin/deleteCategory">
+            <input hidden value="@Model.Id.ToString()" name="Id">
+            <button class="btn btn-danger btn-sm text-white">Delete Category</button>
+        </form>
+    </div>
+</div>
+<div class="flex-center flex-col">
+     <form class="edit-product-form" method="post" enctype="multipart/form-data">
+        <input hidden value="@Model.Id" name="CategoryId">
+        <div class="checkBoxBox form-group">
+            <h4 class="border-bottom">Alt Kategorilerileri Düzenleyin</h4>
+            @if (Model.SubCategories.Count < 1)
+            {
+                <div class="row">
+                    <div class="col">
+                        <span style="font-weight:600">Bu kategoriye ait herhangi bir alt kategori bulunmamaktadır</span>
+                    </div>
+                    <div class="col" style="text-align:right">
+                        <a href="/admin/addcategory" class="btn btn-sm btn-success text-white" style="margin-left:.5rem"><i class="mdi mdi-plus"></i> Yeni Kategori</a>
+                    </div>
+                </div>
+            }
+            else
+            {
+                @for(var j = 0;j < Model.SubCategories.Count;j++)
+                {
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="flexCheckDefault@(j)"
+                            name="SubCategoryIds" value="@(Model.SubCategories[j].Id)" checked/>
+                        <label class="form-check-label" for="flexCheckDefault@(j)"> 
+                            @Model.SubCategories[j].Name
+                        </label>
+                    </div>
+                }
+            }
+        </div>
+
+        <div class="categories form-group">
+            <h4 class="border-bottom">Üst Kategorileri Düzenleyin</h4>
+            <ul>
+                <div class="checkBoxBox">
+                    <ul>
+                        @for (int i = 0; i < Model.AllCategories.Count; i++)
+                        {
+                            <li>                   
+                                @Html.Raw(printTopCategoryRecursive(Model.AllCategories[i]))
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </ul>
+        </div>
+
+        <div class="form-group">
+            <div class="uploadImageContainer mb-2">
+                <span>Kategori Görselini Buradan Güncelleyin<i class="px-1 mdi mdi-folder-multiple-image"></i></span>
+                <input style="cursor:pointer;" id="imageUpload" type="file" name="CategoryImage"
+                onchange="loadFile(event)" class="upload-image" multiple>
+            </div>
+            <div class="imageOutput">
+                @if (Model.ImagePath != null)
+                {
+                    <div class="uploaded-images" onclick="removeFile(event, ${i})">
+                        <div class="filter">
+                            <img id="output" src="/@Model.ImagePath" width="100">
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="form-group" style="margin-top:1rem">
+            <label asp-for="Name" class="col-md-12">Kategori Adı</label>
+            <div class="col-md-12">
+                <input type="text" asp-for="Name" class="form-control form-control-line">
+            </div>
+        </div>
+        <div class="form-group" style="margin-top:1rem">
+            <label asp-for="Url" class="col-md-12">Kategori Url</label>
+            <div class="col-md-12">
+                <input type="text" asp-for="Url" class="form-control form-control-line">
+            </div>
+        </div>
+        <button class="btn btn-primary text-white" style="width:100%">Değişlikleri Kaydet</button>
+    </form>
+</div>

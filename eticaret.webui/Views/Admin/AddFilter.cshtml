@@ -1,0 +1,90 @@
+﻿@model List<TopCategory>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Filtre Ekle";
+}
+
+@functions{
+    public string printSubCategoryRecursive(TopCategory cat)
+    {
+        string innerHTML = "";
+        if (cat.SubCategories == null) {
+            return "";
+        }
+        else {
+            innerHTML += "<ul class='px-1'>";
+            for (int i = 0; i < cat.SubCategories.Count; i++){
+                innerHTML += $"<li><div class='form-check'><input class='form-check-input cat' type='checkbox' id='{cat.SubCategories[i].Id}' name='CategoryIds' value='{cat.SubCategories[i].Id}'> <label class='form-check-label' for='{cat.SubCategories[i].Id}'>{cat.SubCategories[i].Name}</label></div>";
+                innerHTML += printSubCategoryRecursive(cat.SubCategories[i]);
+                innerHTML += "</li>";
+            }
+            innerHTML += "</ul>";
+        }
+        return innerHTML;
+    }
+}
+@section Styles{
+    <style>
+        li{
+            list-style: none;
+        }
+        li label{
+            margin-bottom: 0
+        }
+        li ul{
+            margin-left:.6rem;
+        }
+        ul .form-check{
+            margin-bottom:0;
+        }
+        ol, ul{
+            padding-left: 0;
+        }
+    </style>
+}
+
+<div class="econtent-65"></div>
+<div class="create-product mt-4 mb-3">
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="validation-box mb-2" asp-validation-summary="All"></div>
+    }
+    <form method="post" enctype="multipart/form-data" id="form">
+    <h2 class="border-bottom mb-2">Filtre Ekle</h2>
+    <div class="categories form-group">
+        <h5 class="border-bottom" style="margin-bottom: .5rem;">Kategori Seçin</h5>
+        <ul>
+            <div class="checkBoxBox">
+                <ul id="checkBoxes">
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                    <li>@(Model[i].Name)                        
+                        @Html.Raw(printSubCategoryRecursive(Model[i]))
+                    </li>
+                    }
+                </ul>
+            </div>
+        </ul>
+    </div>
+        <div class="form">
+            <div class="form-group mt-3">
+                <label for="name" class="col-md-12">Filtre Adı</label>
+                <div class="col-md-12">
+                    <input type="text" id="name" name="FilterBoxTitle" class="form-control form-control-line">
+                </div>
+            </div>
+            <div class="flex-col mb-2">
+              <label for="options" class="admin-label">Seçenek Sayısı</label>
+              <select name="Options" class="form-select" onchange="changeFilterCount(this)" id="options">
+                @for(int i = 0; i < 26; i++)
+                {
+                    <option value="@(i)">@(i)</option>
+                }
+                </select>
+                <div class="mb-1 mt-2 flex-col" id="optionCount"></div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;display:block">Filtreyi Ekle</button>
+        </div>
+    </form>
+</div>

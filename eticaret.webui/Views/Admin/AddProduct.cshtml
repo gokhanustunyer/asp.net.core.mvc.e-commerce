@@ -1,0 +1,327 @@
+﻿@model ProductCreateModel
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Ürün Ekle";
+}
+@section Scripts{
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="~/js/admin/froala_editor.pkgd.min.js"></script>
+<script src="~/js/dialog.js"></script>
+<script src="~/js/admin/nonPosts.js"></script>
+<script src="~/admin/dist/js/product/Filters.js"></script>
+<script src="~/admin/dist/js/product/Relateds.js"></script>
+<script>
+    const dt = new DataTransfer();
+    const input = document.querySelector("#desc_input");
+    
+    new FroalaEditor('#desc', {
+        events: {
+            'image.beforeUpload': function(img) {
+                dt.items.add(img[0]);
+                input.files = dt.files;
+            }
+        }
+    });
+    new FroalaEditor('#s-desc', {
+    events: {
+        'image.beforeUpload': function(img) {
+        }
+    }
+    });
+</script>
+<script>
+    var i = 0;
+    var loadFile = function(event) {
+    var image = document.querySelector('.imageOutput');
+    for (let i=0;i<event.target.files.length;i++){
+        var newImage =
+        `
+        <div class="uploaded-images" onclick="removeFile(event, ${i})">
+            <div class="filter">
+                <img id="output" src="${URL.createObjectURL(event.target.files[i])}" width="100">
+            </div>
+        </div>
+        `
+        image.innerHTML += newImage;
+    }
+    };
+
+    function removeFile(event, index){
+        const dt = new DataTransfer();
+        const input = document.querySelector("#imageUpload");
+        const { files } = input;
+
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            if (index !== i)
+                dt.items.add(file);
+        }
+        input.files = dt.files;
+        var image = document.querySelector('.imageOutput');
+        image.innerHTML = "";
+        for (let i=0;i<input.files.length;i++){
+        var newImage =
+        `
+        <div class="uploaded-images" onclick="removeFile(event, ${i})>
+            <div class="filter">
+                <img id="output" src="${URL.createObjectURL(input.files[i])}" width="100">
+            </div>
+        </div>
+        `
+        image.innerHTML += newImage;
+    }
+    }
+</script>
+}
+
+@section Styles{
+    <link rel="stylesheet" href="~/css/admin/froala_editor.pkgd.min.css">
+    <link rel="stylesheet" href="~/css/admin/addProduct.css">
+    <link rel="stylesheet" href="~/css/dropdown.css" crossorigin="anonymous">
+    <style>
+        .selectRelated{
+            position: absolute;
+            top: -10px;
+            font-size: 24px;
+            right: 0;
+            color: green;
+            display: none;
+        }
+        .relateds-s-r{
+            position: relative;
+        }
+
+	    .uploadImageContainer {
+		    border: 1px dotted #414755;
+		    width: 100%;
+		    height: 100px;
+		    border-radius: .2rem;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    color: #414755;
+		    position: relative
+	    }
+
+		.uploadImageContainer .upload-image {
+			opacity: 0;
+			position: absolute;
+			width: 100%;
+			height: 100%
+		}
+        .relateds-search-results{
+            display: flex;
+            gap: 10px;
+        }
+
+        li{
+            list-style: none;
+        }
+        li label{
+            margin-bottom: 0
+        }
+        li ul{
+            margin-left:.6rem;
+        }
+        ul .form-check{
+            margin-bottom:0;
+        }
+        ol, ul{
+            padding-left: 0;
+        }
+        .imageOutput{
+            display:flex;
+            gap: 10px;
+        }
+    </style>
+}
+
+@functions{
+    public string printSubCategoryRecursive(TopCategory cat)
+    {
+        string innerHTML = "";
+        if (cat.SubCategories == null) {
+            return "";
+        }
+        else {
+            innerHTML += "<ul class='px-1'>";
+            for (int i = 0; i < cat.SubCategories.Count; i++){
+                innerHTML += $"<li><div class='form-check'><input class='form-check-input cat' type='checkbox' id='{cat.SubCategories[i].Id}' name='categoryIds' value='{cat.SubCategories[i].Id}'> <label class='form-check-label' for='{cat.SubCategories[i].Id}'>{cat.SubCategories[i].Name}</label></div>";
+                innerHTML += printSubCategoryRecursive(cat.SubCategories[i]);
+                innerHTML += "</li>";
+            }
+            innerHTML += "</ul>";
+        }
+        return innerHTML;
+    }
+}
+
+<div class="econtent-65"></div
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="validation-box mb-2 form-group" asp-validation-summary="All"></div>
+}
+<div class="addproduct-form">
+<form class="form-horizontal form-material mx-2" id="form" method="post" enctype="multipart/form-data">
+    <div class="categories form-group">
+        <h3 class="border-bottom" style="margin-bottom: .5rem;">Kategori Seçin</h3>
+        <ul>
+            <div class="checkBoxBox">
+                <ul>
+                    @for (int i = 0; i < Model.TopCategories.Count; i++)
+                    {
+                    <li>@(Model.TopCategories[i].Name)                        
+                        @Html.Raw(printSubCategoryRecursive(Model.TopCategories[i]))
+                    </li>
+                    }
+                </ul>
+            </div>
+        </ul>
+    </div>
+    <div class="form-group">
+        <div class="uploadImageContainer mb-2">
+            <span>Ürün Görsellerini Yükleyin <i class="px-1 mdi mdi-folder-multiple-image"></i></span>
+            <input style="cursor:pointer;" id="imageUpload" type="file" name="postedFiles"
+            onchange="loadFile(event)" class="upload-image" multiple>
+        </div>
+        <div class="imageOutput"></div>
+    </div>
+
+    <div class="form-group mt-3">
+        <label asp-for="Name" class="col-md-12">Ürün Adı</label>
+        <div class="col-md-12">
+            <input type="text" placeholder="Loose Bootcut Jeans" asp-for="Name" class="form-control form-control-line">
+        </div>
+    </div>
+    <div class="form-group mt-3" id="desc-area">
+        <label asp-for="ShortDescription" class="col-md-12">Kısa Açıklama</label>
+        <div class="col-md-12">
+            <textarea id="s-desc" asp-for="ShortDescription" type="text" class="admin-input"></textarea>
+        </div>
+    </div>
+    <div class="form-group mt-3">
+        <label asp-for="Description" class="col-md-12">Açıklama</label>
+        <div class="col-md-12">
+            <input id="desc_input" hidden type="file" name="descFiles" multiple>
+            <textarea id="desc" asp-for="Description" type="text" class="admin-input"></textarea>
+        </div>
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="options" class="col-md-12">Seçenek Sayısı</label>
+        <div class="col-md-12">
+            <select name="Options" class="form-select" onchange="changeOptionCount(this)" id="options">
+            @for(int i = 0; i < 11; i++)
+            {
+                <option value="@(i)">@(i)</option>
+            }
+            </select>
+            <div class="mb-1 mt-2 flex-col" id="optionCount"></div>
+            <input id="OptionsAsJsonString" name="OptionsAsJsonString" type="text" class="admin-input" hidden>
+        </div>
+    </div>
+
+    <div class="form-group mt-3">
+        <label asp-for="Price" class="col-md-12">Fiyat</label>
+        <div class="col-md-12">
+            <input asp-for="Price" type="text" id="price" placeholder="349,99" class="form-control form-control-line">
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col form-group mx-2">
+            <label class="col-md-12">İlişkili Ürünler</label>
+            <div class="col-md-12">
+                <input name="RelatedProductIds" id="relatedProductIds" hidden>
+                <a data-toggle="modal" data-target="#relatedsModal" class="btn btn-primary">Düzenle ve görüntüle</a>
+            </div>
+        </div>
+        <div class="col form-group mx-2">
+            <label class="col-md-12">Ürün Filtreleri</label>
+            <div class="col-md-12">
+                <a id="filterEdit" data-toggle="modal" data-target="#filterModal" class="btn btn-primary">Düzenle ve görüntüle</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group mt-3">
+        <h3>SEO Ayarları</h3>
+        <div class="row" id="desc-area">
+            <label for="seoTitle" class="col-md-12">SEO Başlığı</label>
+            <div class="col-md-12">
+                <input id="seoTitle" name="SeoDescription" type="text" class="form-control"/>
+            </div>
+        </div>
+        <div class="row mt-2" id="desc-area">
+            <label for="seoDesc" class="col-md-12">SEO Açıklaması</label>
+            <div class="col-md-12">
+                <textarea id="seoDesc" name="SeoDescription" type="text" class="form-control"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <a class="btn btn-primary" onclick="submitForm()" style="display:block;width:100%">Ürünü Ekle</a>
+</form>
+</div>
+
+<div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ürün Filtreleri</h5>
+        <i type="button" class="close mdi mdi-close" data-dismiss="modal" aria-label="Close"></i>
+      </div>
+      <div class="modal-body">
+        <div class="mb-1">
+            <div class="input-group mb-3">
+                <input id="searchFilterInput" type="text" placeholder="Filtrelerde Ara" class="form-control">
+                <div class="input-group-append" style="height:40px">
+                    <span class="input-group-text" id="searchfilterres">
+                        <a onclick="adminFilterSearch()" style="padding:1rem;cursor:pointer">
+                            <i class="mdi mdi-magnify"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+            
+        </div>
+        <h3 class="border-bottom" style="padding:.75rem 0">Seçilen Kategori Filtreleri</h3>
+        <div class="search-results mt-1"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="relatedsModal" tabindex="-1" role="dialog" aria-labelledby="relatedsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">İlişkili Ürünler</h5>
+        <i type="button" class="close mdi mdi-close" data-dismiss="modal" aria-label="Close"></i>
+      </div>
+      <div class="modal-body">
+        <div class="mb-1">
+            <div class="input-group mb-3">
+                <input id="searchInput" type="text" placeholder="Ürünlerde Ara" class="form-control">
+                <div class="input-group-append" style="height:40px">
+                    <span class="input-group-text" id="searchfilterres">
+                        <a style="padding:1rem;cursor:pointer" id="adminsearch">
+                            <i class="mdi mdi-magnify"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+            
+        </div>
+        <h3 class="border-bottom" style="padding:.75rem 0">Arama Sonuçları</h3>
+        <div class="relateds-search-results mt-1" id="relateds-search-results"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

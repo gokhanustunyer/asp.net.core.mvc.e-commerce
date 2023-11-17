@@ -1,0 +1,95 @@
+﻿@using eticaret.entity.Cargo
+@model List<Shipping>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="econtent-65"></div>
+<div class="row">
+    <div class="col">
+        <h2>Kargo Şirketleri</h2>
+    </div>
+    <div class="col" style="text-align:right">
+        <a href="/admin/AddShippingCompany" class="btn btn-success text-white"><i class="mdi mdi-plus"></i> Yeni Şirket</a>
+    </div>
+</div>
+<table class="table table-hover" style="background-color:#fff">
+  <thead>
+    <tr>
+        <th scope="col">Şirket Adı</th>
+        <th scope="col">Tarih</th>
+        <th scope="col">Ücret</th>
+        <th scope="col">Varsayılan mı?</th>
+        <th scope="col" style="width:165px"></th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(var i = 0; i < @Model.Count; i++)
+    {
+    <tr>
+        <td>@Model[i].Name</td>
+        <td>@Model[i].CreateDate.Day.@Model[i].CreateDate.Month.@Model[i].CreateDate.Year</td>
+        <td>@Model[i].Price</td>
+        <td>@(Model[i].IsDefault ? "Evet" : "Hayır")</td>
+        <td>
+            <a href="/admin/editShippingCompany/@Model[i].Id"  class="btn btn-primary btn-sm">Düzenle</a>
+            <form method="post" action="/admin/deleteShippingCompany" style="display:inline">
+                <input hidden value="@Model[i].Id" name="Id">
+                <button class="btn btn-sm btn-primary">
+                    <i class="mdi mdi-delete"></i>
+                </button>
+            </form>
+        </td>
+    </tr>
+    }
+  </tbody>
+</table>
+
+@*
+<div class="admin-prods mb-3">
+    <div class="flex-row">
+        <h2>Tüm Ürünler</h2>
+        <form action="/admin/adminProducts">
+            <input type="text" name="search"
+            class="admin-search"
+            placeholder="Ürünlerde Ara">
+        </form>
+    </div>
+    <div class="line"
+        style="width: 85%!important;"></div>
+    <table class="admin-products mt-1">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Varsayılan mı?</th>
+                <th scope="col" style="width:150px"></th>
+                <th scope="col" style="width:100px"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(var i = 0; i < @Model.Count; i++)
+            {
+            <tr>
+                <td>@Model[i].Name</td>
+                <td>@Model[i].Price</td>
+                <td>@(Model[i].IsDefault?"Evet":"Hayır")</td>
+                <td>
+                    <a href="/admin/editShippingCompany/@Model[i].Id" 
+                    class="admin-button admin-btn-sm">Edit Company</a>
+                                
+                </td>
+                <td>
+                    <form method="post" action="/admin/deleteShippingCompany">
+                        <input hidden value="@Model[i].Id" name="Id">
+                        <button class="admin-button admin-btn-sm">
+                            <i class="fa-solid fa-x"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+</div>*@

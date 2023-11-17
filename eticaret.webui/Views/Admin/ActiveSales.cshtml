@@ -1,0 +1,174 @@
+﻿@model OrderListModel
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Bekleyen Satışlar";
+}
+
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="~/lib/datatable/datatables.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .shadow-sm{
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px!important;
+        }
+    </style>
+}
+@section Scripts{
+    <script type="text/javascript" src="~/lib/datatable/datatables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="~/js/admin/delivery.js"></script>
+    <script>
+    $("#activeSales").DataTable();
+    </script>
+}
+@*
+@section SubHeader{
+    <div class="header" style="height:150px">
+    <div class="header-content">
+            <h2>Bekleyen Satışlar</h2>
+    </div>
+</div>
+}*@
+<div class="econtent-35"></div>
+<div class="container">
+<div class="mt-5" style="margin-top: 2rem;background-color: #fff;padding: 2rem 1.25rem;">
+    <table id="activeSales" class="table" style="font-size: .9rem;">
+        <thead>
+            <tr>
+                <th>İsim</th>
+                <th>Tutar</th>
+                <th>İl</th>
+                <th>İlçe</th>
+                <th>Mahalle</th>
+                <th>Tarih</th>
+                <th>Kargo</th>
+                <th>Durum</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(int i=0;i<Model.OrderModels.Count;i++){
+                <tr>
+                    <td>@Model.OrderModels[i].User.FirstName @Model.OrderModels[i].User.LastName</td>
+                    <td>@Model.OrderModels[i].Price</td>
+                    <td>@Model.OrderModels[i].City</td>
+                    <td>@Model.OrderModels[i].District</td>
+                    <td>@Model.OrderModels[i].Neighborhood</td>
+                    <td>@Model.OrderModels[i].CreateDate.Day.@Model.OrderModels[i].CreateDate.Month.@Model.OrderModels[i].CreateDate.Year</td>
+                    <td>
+                        <select class="form-select form-select-sm">
+                            @for(int j = 0; j < Model.ShippingCompanies.Count; j++)
+                            {
+                                @if (Model.OrderModels[i].ShippingCompany.Name == @Model.ShippingCompanies[j].Name)
+                                {
+                                    <option selected>@Model.ShippingCompanies[j].Name</option>
+                                }
+                                else
+                                {
+                                    <option>@Model.ShippingCompanies[j].Name</option>
+                                }    
+                            }
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-select form-select-sm">
+                            @for(int j = 0; j < Model.OrderStatusus.Count; j++)
+                            {    
+                                @if (Model.OrderModels[i].OrderStatus.Title == @Model.OrderStatusus[j].Title)
+                                {
+                                    <option selected>@Model.OrderStatusus[j].Title</option>
+                                }
+                                else
+                                {
+                                    <option>@Model.OrderStatusus[j].Title</option>
+                                }
+                            }
+                        </select>
+                    </td>
+                    <td>
+                        <a href="/admin/saleDetails?id=@Model.OrderModels[i].OrderId"
+                            class="btn btn-sm btn-primary"> Görüntüle
+                        </a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    </div>
+</div>
+
+
+@for(int i=0;i<Model.OrderModels.Count;i++){
+    <div class="modal fade" id="modal@(i)" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Siparişim</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-group">
+              <li class="list-group-item">@Model.OrderModels[i].AddressTitle</li>
+              <li class="list-group-item">@Model.OrderModels[i].City</li>
+              <li class="list-group-item">@Model.OrderModels[i].District</li>
+              <li class="list-group-item">@Model.OrderModels[i].Neighborhood</li>
+              <li class="list-group-item">@Model.OrderModels[i].PhoneNumber</li>
+              <li class="list-group-item">@Model.OrderModels[i].DetailedAddress</li>
+              <li class="list-group-item">Toplam Tutar: @Model.OrderModels[i].Price</li>
+                <table class="table">
+                  <thead class="thead-black">
+                    <tr>
+                      <th scope="col">Ürün</th>
+                      <th scope="col">Beden</th>
+                      <th scope="col">Adet</th>
+                      <th scope="col">Fiyat</th>
+                      <th scope="col">Toplam Fiyat</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @foreach(OrderItemModel item in Model.OrderModels[i].OrderItem){
+                        <tr>
+                          <td style="vertical-align:inherit">
+                              <img src="@item.Product.MainImageUrl" style="width:35px"/>
+                          </td>
+                          <td style="vertical-align:inherit">@item.Size.SizeName</td>
+                          <td style="vertical-align:inherit">@item.Quantity</td>
+                          <td style="vertical-align:inherit">
+                              @(item.TotalPrice/item.Quantity)
+                          </td>
+                          <td style="vertical-align:inherit">@item.TotalPrice</td>
+                        </tr>
+                    }
+                  </tbody>
+                </table>
+            </ul>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"
+                   id="isConfirmed@(i)" @(Model.OrderModels[i].IsConfirmed ? "checked" : "")>
+                <label class="form-check-label" for="isConfirmed@(i)">
+                    Siparişi Onay Durumu
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" @(Model.OrderModels[i].DeliveryStatus ? "checked" : "")
+                  type="checkbox" id="deliveryStatus@(i)">
+                <label class="form-check-label" for="deliveryStatus@(i)">
+                    Sipariş Testlim Dururmu
+                </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary"
+              onclick="saveDelivery('@Model.OrderModels[i].OrderId',@(i))"> Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+}

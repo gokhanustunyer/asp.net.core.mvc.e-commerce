@@ -1,0 +1,194 @@
+﻿@model List<TopCategory>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Yeni Kapmanya Oluştur";
+}
+
+@functions{
+    public string printSubCategoryRecursive(TopCategory cat)
+    {
+        string innerHTML = "";
+        if (cat.SubCategories == null) {
+            return "";
+        }
+        else {
+            innerHTML += "<ul class='px-1'>";
+            for (int i = 0; i < cat.SubCategories.Count; i++){
+                innerHTML += $"<li><div class='form-check'><input class='form-check-input cat' type='checkbox' id='{cat.SubCategories[i].Id}' name='CategoryIds' value='{cat.SubCategories[i].Id}'> <label class='form-check-label' for='{cat.SubCategories[i].Id}'>{cat.SubCategories[i].Name}</label></div>";
+                innerHTML += printSubCategoryRecursive(cat.SubCategories[i]);
+                innerHTML += "</li>";
+            }
+            innerHTML += "</ul>";
+        }
+        return innerHTML;
+    }
+}
+@section Styles{
+    <style>
+        .search-results{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .search-result {
+            max-width: 115px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: rgb(0 0 0 / 2%) 0px 1px 3px 0px, rgb(27 31 35 / 15%) 0px 0px 0px 1px;
+            border-radius: 4px;
+        }
+
+        .search-img{
+            width:115px;
+            object-fit:cover;
+        }
+
+        .search-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: .75rem .35rem;
+            font-size: .8rem
+        }
+        li{
+            list-style: none;
+        }
+        li label{
+            margin-bottom: 0
+        }
+        li ul{
+            margin-left:.6rem;
+        }
+        ul .form-check{
+            margin-bottom:0;
+        }
+        ol, ul{
+            padding-left: 0;
+        }
+        .relateds-search-results{
+            display: flex;
+            gap: 10px;
+        }
+        .selectRelated{
+            position: absolute;
+            top: -10px;
+            font-size: 24px;
+            right: 0;
+            color: green;
+            display: none;
+        }
+        .relateds-s-r{
+            position: relative;
+        }
+
+    </style>
+}
+@section Scripts{
+    <script src="~/admin/dist/js/discount/DiscountCodeDOMManager.js"></script>
+    <script src="~/admin/dist/js/discount/DiscountCode.js"></script>
+    <script> const discountManager = new DiscountCodeManager("openModal", "selectedProductIds", "cat", "relateds-search-results"); </script>
+}
+
+<div class="econtent-65"></div>
+<div class="create-product mt-4 mb-3">
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="validation-box mb-2" asp-validation-summary="All"></div>
+    }
+    <form method="post" enctype="multipart/form-data" id="form">
+        <h2 class="border-bottom mb-2">Kampanya Oluştur</h2>
+        <div class="form">
+            <div class="form-group mt-3">
+                <label for="code" class="col-md-12">Kampanya Başlığı</label>
+                <div class="col-md-12">
+                    <input type="text" placeholder="Bahar İndirimleri" id="code" name="Code" class="form-control form-control-line">
+                </div>
+            </div>
+
+            <div id="numberOrDateDiv">
+                <div class="row mt-3">
+                    <div class="col form-group mx-2">
+                        <label class="col-md-12">Başlangıç Tarihi</label>
+                        <div class="col-md-12">
+                            <input name="CodeStartDate" type="datetime-local" id="code" class="form-control form-control-line">
+                        </div>
+                    </div>
+                    <div class="col form-group mx-2">
+                        <label class="col-md-12">Bitiş Tarihi</label>
+                        <div class="col-md-12">
+                            <input name="CodeEndDate" type="datetime-local" id="code" class="form-control form-control-line">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="rateOrPriceDiv">
+                <div class="form-group mt-3">
+                    <label for="discountRate" class="col-md-12">İndirim Oranı (Yüzde)</label>
+                    <div class="col-md-12">
+                        <input name="DiscountRate" type="number" placeholder="15" step="1" id="discountRate" class="form-control form-control-line">
+                    </div>
+                </div>
+            </div>
+            <div class="categories form-group">
+                <h5>Kategori Seçin</h5>
+                <small class="border-bottom" style="margin-bottom: .5rem;">Seçim Yapmazsanız Kampanya Tüm Kategorilerde Geçerli Olacaktır</small>
+                <ul>
+                    <div class="checkBoxBox">
+                        <ul id="checkBoxes">
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+                                <li>@(Model[i].Name)                        
+                                    @Html.Raw(printSubCategoryRecursive(Model[i]))
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+            <div class="form-group mt-3">
+                <label for="discountRate" class="col-md-12" style="margin-bottom:0!important">Geçerli Ürünleri Seçin</label>
+                <small class="border-bottom" style="margin-bottom: .5rem;">Seçim Yapmazsanız Kampanya Seçitiğiniz Kategorilerdeki Tüm Ürünlerde Geçerli Olacaktır</small>
+                <div class="col-md-12">
+                    <input name="SelectedProductIds" id="selectedProductIds" hidden>
+                    <a id="openModal" class="btn btn-success text-white" data-toggle="modal" data-target="#productModal" style="width:100%">Ürün Seç</a>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;display:block">Oluştur</button>
+        </div>
+    </form>
+</div>
+
+
+<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Kampanya Dahilindeki Ürünler</h5>
+        <i type="button" class="close mdi mdi-close" data-dismiss="modal" aria-label="Close"></i>
+      </div>
+      <div class="modal-body">
+        <div class="mb-1">
+            <div class="input-group mb-3">
+                <input id="searchInput" type="text" placeholder="Ürünlerde Ara" class="form-control">
+                <div class="input-group-append" style="height:40px">
+                    <span class="input-group-text" id="searchfilterres" style="height:40px">
+                        <a id="adminsearch">
+                            <i class="mdi mdi-magnify"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+            
+        </div>
+        <h3 class="border-bottom" style="padding:.75rem 0">Arama Sonuçları</h3>
+        <div class="relateds-search-results mt-1 d-flex flex-wrap" id="relateds-search-results"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

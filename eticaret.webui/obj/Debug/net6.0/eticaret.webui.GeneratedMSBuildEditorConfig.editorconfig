@@ -1,0 +1,303 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = eticaret.webui
+build_property.RootNamespace = eticaret.webui
+build_property.ProjectDir = C:\Users\gokha\OneDrive\Masaüstü\Masaüstü\ETicaretFiles\ETicaret\eticaret.webui\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\gokha\OneDrive\Masaüstü\Masaüstü\ETicaretFiles\ETicaret\eticaret.webui
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/ActiveSales.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWN0aXZlU2FsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/AddCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/AddFilter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkRmlsdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/AddProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkUHJvZHVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/AddRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/AddShippingCompany.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkU2hpcHBpbmdDb21wYW55LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/AdminCategories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5DYXRlZ29yaWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/AdminProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5Qcm9kdWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/CampaignManagement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2FtcGFpZ25NYW5hZ2VtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/Cargo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2FyZ28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/CommentsAndRates.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ29tbWVudHNBbmRSYXRlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/CreateCampaign.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlQ2FtcGFpZ24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/CreateDiscountCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlRGlzY291bnRDb2RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/DiscountCodes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGlzY291bnRDb2Rlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/EditCampaign.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdENhbXBhaWduLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/EditCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdENhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/EditDiscountCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdERpc2NvdW50Q29kZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/EditFilter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEZpbHRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/EditProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFByb2R1Y3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/EditRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFJvbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/EditShippingCompany.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFNoaXBwaW5nQ29tcGFueS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/FilterProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRmlsdGVyUHJvZHVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/Filters.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRmlsdGVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/LastLogs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGFzdExvZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/MailInBox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFpbEluQm94LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/MailManagement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFpbE1hbmFnZW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/Pastsales.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGFzdHNhbGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/Roles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUm9sZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/SaleDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2FsZURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/Settings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2V0dGluZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Admin/Statistics.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU3RhdGlzdGljcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Auth/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Auth/ConfirmEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxDb25maXJtRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Auth/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Auth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Auth/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Home/Help.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIZWxwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Home/NotFounded.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3RGb3VuZGVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Home/ProductDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Home/Products.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Shared/Components/HeaderNotice/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSGVhZGVyTm90aWNlXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Shared/Components/LastVisitedProducts/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTGFzdFZpc2l0ZWRQcm9kdWN0c1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Shared/Components/Maintenance/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWFpbnRlbmFuY2VcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Shared/Components/ProductComments/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUHJvZHVjdENvbW1lbnRzXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Shared/Components/ProductQA/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUHJvZHVjdFFBXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Shared/Components/SiblingCategories/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2libGluZ0NhdGVnb3JpZXNcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Shared/Components/SimilarProducts/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2ltaWxhclByb2R1Y3RzXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Shared/_footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9mb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Shared/_navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9uYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Shared/_ProcessLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9jZXNzTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Shared/_UserLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/User/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/User/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDaGVja291dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/User/Comments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDb21tZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/User/EditUserInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0VXNlckluZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/User/Favorites.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxGYXZvcml0ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/User/Information.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmZvcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/User/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxPcmRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/User/UpdateEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVcGRhdGVFbWFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/User/UpdatePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVcGRhdGVQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gokha/OneDrive/Masaüstü/Masaüstü/ETicaretFiles/ETicaret/eticaret.webui/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

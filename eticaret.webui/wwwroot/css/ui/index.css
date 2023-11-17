@@ -1,0 +1,241 @@
+﻿
+.main-slider {
+    width: 100%;
+    height: 80vh;
+}
+
+.slider-item {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.main-slider .slider-contents {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main-slider .slider-image {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: .4s;
+    animation: zoomin;
+    animation: zoomin .5s ease-out;
+}
+
+.main-slider .slider-content {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    color: #fff;
+    max-width: 400px;
+    overflow-y: hidden;
+    padding-bottom: 1rem;
+}
+
+.slider-contents .user-button-dark {
+    padding: .75rem 2rem;
+    color: #fff
+}
+
+    .slider-contents .user-button-dark:hover {
+        background-color: transparent;
+    }
+
+.slider-content .slider-content-title {
+    font-size: 2.75rem;
+    border-left: 3px solid #fff;
+    padding-left: 1rem;
+    font-family: "poppins";
+    font-weight: 600;
+}
+
+@keyframes zoomin {
+    0% {
+        transform: scale(1.25);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.index-categories-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #444453;
+    position: relative;
+}
+
+    .index-categories-title::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #444453;
+        left: 0;
+        top: 50%;
+        z-index: -1;
+    }
+
+    .index-categories-title .title {
+        margin-bottom: 0;
+        background-color: #fff;
+        padding: 1rem;
+        display: inline;
+    }
+
+.index-category {
+    width: 450px;
+    height: 320px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    position: relative;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: .4s;
+}
+
+.index-category-item {
+    width: 450px;
+    height: 320px;
+    overflow: hidden;
+}
+
+.index-category:hover {
+    transform: scale(1.2);
+}
+
+.index-category::before {
+    content: '';
+    background-color: #00000094;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.index-category-title {
+    font-size: 2rem;
+    z-index: 50;
+    letter-spacing: 1px;
+    font-family: 'Josefin Sans';
+    margin-bottom: 0;
+    font-weight: 300;
+    color: #fff;
+}
+
+.welcome img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.welcome-title {
+    font-size: 2.25rem;
+    color: #832922;
+    font-weight: 500;
+}
+
+.welcome-content {
+    color: #444453;
+    font-size: 1.25rem;
+}
+
+.recomendets {
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+    .recomendets::after {
+        content: '';
+        background-color: #000000ab;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+.recomendets-title {
+    font-size: 2rem;
+    z-index: 50;
+    letter-spacing: 1px;
+    font-family: 'Josefin Sans';
+    margin-bottom: 0;
+    font-weight: 300;
+    color: #fff;
+}
+
+.recomendets-inner-content {
+    z-index: 50;
+    position: inherit;
+}
+
+.index-recomendets {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    position: relative;
+}
+
+.index-recomendets {
+    width: 450px;
+    height: 450px;
+    display: block;
+}
+
+    .index-recomendets img {
+        width: 450px;
+        height: 450px;
+        object-fit: cover;
+    }
+
+.recomendets-info {
+    position: absolute;
+    top: 65%;
+    left: 0;
+    background-color: #000000ab;
+    color: #fff;
+    font-size: 1.15rem;
+    font-family: 'Josefin Sans';
+    padding: 1rem;
+    z-index: 500;
+    transition: .5s;
+}
+
+.link-hover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000000b9;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    transition: .5s;
+}
+
+    .link-hover:hover {
+        opacity: 1;
+    }
+
+        .link-hover:hover ~ .recomendets-info {
+            background-color: #832922;
+            color: #ffffff;
+        }
+
+.econtent-100 {
+    width: 100%;
+    height: 100px;
+}

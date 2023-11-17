@@ -1,0 +1,54 @@
+﻿@using eticaret.entity.PageEntities
+@model SupportFormModel
+@section Styles{
+    <link rel="stylesheet" href="~/css/ui/checkout.css">
+    <link rel="stylesheet" href="~/css/ui/creditcart.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <link rel="stylesheet" href="~/lib/quill/quill.css">
+}
+
+@section Scripts{
+<script src="~/lib/quill/quill.min.js"></script>
+<script>
+    var quill = new Quill('#editor', {
+        theme: 'snow',
+        modules: {
+            toolbar: []
+        }
+    });
+
+    function submit(){
+        const message = document.getElementById("message")
+        const quill_editor = document.querySelector(".ql-editor");
+        message.value = quill_editor.innerHTML;
+        document.querySelector("form").submit();
+    }
+</script>
+}
+<div class="w-85">
+    <form action="/home/SupportForm" method="post">
+        <div class="mt-5 mt-3">
+            <div class="form-group">
+                <label asp-for="Name">Tam Adınız</label>
+                <input class="form-control" asp-for="Name" placeholder="Gökhan Üstünyer">
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone">Telefon Numaranız</label>
+                <input class="form-control" asp-for="Phone" placeholder="0555 555 55 55">
+            </div>
+            <div class="form-group">
+                <label asp-for="Email">E-Posta Adresiniz</label>
+                <input class="form-control" asp-For="Email" placeholder="gokhan74_ustunyer@hotmail.com">
+            </div>
+            <div class="form-group">
+                <label asp-for="Subject">Konu</label>
+                <input class="form-control" asp-For="Subject" placeholder="İade İşlemleri Hakkında Sorularım Var">
+            </div>
+            <div class="form-group">
+                <div id="editor"></div>
+            </div>
+            <input hidden name="Messsage" id="message"/>
+            <a onclick="submit()" class="button mb-2">Gönder</a>
+        </div>
+    </form>
+</div>

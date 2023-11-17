@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewData["Title"]</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/admin/assets/images/favicon.png">
+    <link href="/admin/assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link href="/admin/dist/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/admin/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <link rel="stylesheet" href="~/css/common/alert.css">
+    <script src="https://kit.fontawesome.com/2245e9a8b0.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio&family=Combo&family=Dancing+Script&family=Fira+Sans+Condensed:wght@400;500&family=Heebo:wght@600;700&family=IBM+Plex+Sans:wght@300;400;500&family=Josefin+Sans:wght@200;300;400;600&family=Lato:wght@300;400&family=Open+Sans&family=Oswald:wght@300;400&family=Poppins:wght@400;500;600;700&family=Prompt:wght@200;300;400&family=Quicksand:wght@400;500;600&family=Raleway:wght@400;500&family=Roboto:wght@300;400&family=Schibsted+Grotesk:wght@800&family=The+Nautigal&display=swap" rel="stylesheet">
+    @RenderSection("Styles", required:false)
+    <style>
+    .topbar{
+        position: fixed!important;
+        width:100%!important;
+    }
+
+    .econtent-65{
+        width: 100%;
+        height: 65px;
+    }
+    .left-sidebar{
+        position: fixed;
+        overflow-y: scroll;
+        overflow-x: hidden;
+	    mask-image: linear-gradient(to top, transparent, black), linear-gradient(to left, transparent 17px, black 17px);
+	    mask-size: 100% 20000px;
+	    mask-position: left bottom;
+	    -webkit-mask-image: linear-gradient(to top, transparent, black), linear-gradient(to left, transparent 17px, black 17px);
+	    -webkit-mask-size: 100% 20000px;
+	    -webkit-mask-position: left bottom;
+        transition: .3s;
+    }
+    .left-sidebar:hover {
+	    -webkit-mask-position: left top;
+    }
+
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #414755;
+        border-radius: .5rem;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="alerts" id="alerts"></div>
+    <div class="alertModal" id="alertModal"></div>
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+        data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+        <header class="topbar" data-navbarbg="skin5">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header" data-logobg="skin5">
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <a class="navbar-brand" href="/admin">
+                        <!-- Logo icon -->
+                        <b class="logo-icon">
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <img src="/admin/assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <!-- Light Logo icon -->
+                            <img src="/img/arite_beyaz.png" alt="homepage" class="light-logo" height="50"/>
+                        </b>
+                    </a>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+                            class="ti-menu ti-close"></i></a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-start me-auto">
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark"
+                                href="javascript:void(0)"><i class="ti-search"></i></a>
+                            <form class="app-search position-absolute">
+                                <input type="text" class="form-control" placeholder="Search &amp; enter"> <a
+                                    class="srh-btn"><i class="ti-close"></i></a>
+                            </form>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-end">
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/admin/assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i>
+                                    My Profile</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i>
+                                    My Balance</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i>
+                                    Inbox</a>
+                            </ul>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <!-- User Profile-->
+                        <li>
+                            <!-- User Profile-->
+                            <div class="user-profile d-flex no-block dropdown m-t-20">
+                                <div class="user-pic"><img src="/admin/assets/images/users/1.jpg" alt="users"
+                                        class="rounded-circle" width="40" /></div>
+                                <div class="user-content hide-menu m-l-10">
+                                    <a href="#" class="" id="Userdd" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <h5 class="m-b-0 user-name font-medium">Gökhan Üstünyer <i
+                                                class="fa fa-angle-down"></i></h5>
+                                        <span class="op-5 user-email">gokhan74_ustunyer@hotmail.com</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Userdd">
+                                        <a class="dropdown-item" href="javascript:void(0)"><i
+                                                class="ti-user m-r-5 m-l-5"></i> My Profile</a>
+                                        <a class="dropdown-item" href="/admin/mailInbox"><i
+                                                class="ti-email m-r-5 m-l-5"></i> Inbox</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="/logout"><i
+                                                class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End User Profile-->
+                        </li>
+                        <!-- <li class="p-15 m-t-10"><a href="javascript:void(0)"
+                                class="btn d-block w-100 create-btn text-white no-block d-flex align-items-center"><i
+                                    class="fa fa-plus-square"></i> <span class="hide-menu m-l-5">Create New</span> </a>
+                        </li> -->
+                        <!-- User Profile-->
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            href="/admin" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span
+                                class="hide-menu">Anasayfa</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            href="/" target="_blank" aria-expanded="false"><i class="mdi mdi-home"></i><span
+                                class="hide-menu">Siteye Dön</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            href="/admin/settings" aria-expanded="false"><i class="mdi mdi-settings"></i><span
+                                class="hide-menu">Genel Ayarlar</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            href="/admin/activesales" aria-expanded="false"><i class="mdi mdi-sale"></i><span
+                                class="hide-menu">Sipariş Yönetimi</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            href="/admin/mailInbox" aria-expanded="false"><i class="mdi mdi-inbox"></i><span
+                                class="hide-menu">Inbox</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            href="/admin/mailManagement" aria-expanded="false"><i class="mdi mdi-email"></i><span
+                                class="hide-menu">Mail Yönetimi</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            href="/admin/campaignManagement" aria-expanded="false"><i class="mdi mdi-gift"></i><span
+                                class="hide-menu">Kampanya Yönetimi</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            href="/admin/discountCodes" aria-expanded="false"><i class="mdi mdi-barcode"></i><span
+                                class="hide-menu">İndirim Kodları</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            href="/admin/cargo" aria-expanded="false"><i class="mdi mdi-truck"></i><span
+                                class="hide-menu">Kargolama</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            href="/admin/users" aria-expanded="false"><i class="mdi mdi-account"></i><span
+                                class="hide-menu">Kullanıcı Yönetimi</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            href="/admin/adminproducts" aria-expanded="false"><i class="mdi mdi-dropbox"></i><span
+                                class="hide-menu">Ürün Yönetimi</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            href="/admin/admincategories" aria-expanded="false"><i class="mdi mdi-equal-box"></i><span
+                                class="hide-menu">Kategori Yönetimi</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            href="/admin/roles" aria-expanded="false"><i class="mdi mdi-access-point"></i><span
+                                class="hide-menu">Rol Yönetimi</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            href="/admin/filters" aria-expanded="false"><i class="mdi mdi-filter"></i><span
+                                class="hide-menu">Filtre Yönetimi</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            href="/admin/documents" aria-expanded="false"><i class="mdi mdi-file-document"></i><span
+                                class="hide-menu">Dokümanlar</span></a></li>
+                    </ul>
+
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper" style="min-height:100vh;padding:1rem">
+            @RenderBody()
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="/admin/assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="/admin/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/admin/dist/js/app-style-switcher.js"></script>
+    <!--Wave Effects -->
+    <script src="/admin/dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="/admin/dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="/admin/dist/js/custom.js"></script>
+    <!--This page JavaScript -->
+    <!--chartis chart-->
+    <script src="/admin/assets/libs/chartist/dist/chartist.min.js"></script>
+    <script src="/admin/assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="/admin/dist/js/pages/dashboards/dashboard1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/notyf/3.10.0/notyf.min.js" integrity="sha512-467grL09I/ffq86LVdwDzi86uaxuAhFZyjC99D6CC1vghMp1YAs+DqCgRvhEtZIKX+o9lR0F2bro6qniyeCMEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="~/js/admin/admin.js"></script>
+    <script src="~/js/common/alert.js"></script>
+    <script>
+        CreateAlert('@Html.Raw(TempData["Alert"])');
+    </script>
+    @RenderSection("Scripts", required:false)
+</body>
+
+</html>

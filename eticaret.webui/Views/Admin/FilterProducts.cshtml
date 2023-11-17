@@ -1,0 +1,56 @@
+﻿@using eticaret.entity.EntityRefrences.FilterReference
+@model FilterDetailsModel
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Filtre Detayları";
+}
+
+<div class="econtent-65"></div>
+<div class="row">
+    <div class="col">
+        <h2>Filtre Detayları</h2>
+    </div>
+    <div class="col" style="text-align:right">
+        <a href="/admin/addFitler" class="btn btn-success text-white"><i class="mdi mdi-plus"></i> Yeni Filtre</a>
+    </div>
+</div>
+<div class="form">
+    <div class="form-group mt-3">
+        <label asp-for="FilterTitle" class="col-md-12">Filtre Adı</label>
+        <div class="col-md-12">
+            <input disabled type="text" asp-for="FilterTitle" class="form-control form-control-line">
+        </div>
+    </div>
+</div>
+<table class="table table-hover mt-4" style="background-color:#fff">
+  <thead>
+    <tr>
+        <th scope="col">Resim</th>
+        <th scope="col">Başlık</th>
+        <th scope="col">Fiyat</th>
+        <th scope="col">Stok</th>
+        <th scope="col" style="width:155px">Kaldır</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(var i = 0; i < @Model.Products.Count; i++)
+    {
+    <tr>
+        <td><img style="width:60px;" src="@Model.Products[i].MainImageUrl"></td>
+        <td>@Model.Products[i].Name</td>
+        <td>@Model.Products[i].Price</td>
+        <td>@Model.Products[i].Stock</td>
+        <td>
+            <form method="post" action="/admin/RemoveProductFromFilter" style="display:inline">
+                <input hidden value="@Model.Products[i].Id" name="productId">
+                <input hidden value="@Model.FilterId" name="filterId">
+                <button class="btn btn-sm btn-danger">
+                    <i class="mdi mdi-bookmark-remove text-white"></i>
+                </button>
+            </form>
+        </td>
+    </tr>
+    }
+  </tbody>
+</table>

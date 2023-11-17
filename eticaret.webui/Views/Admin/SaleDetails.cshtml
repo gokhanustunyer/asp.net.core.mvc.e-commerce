@@ -1,0 +1,145 @@
+﻿@model OrderModel
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@section Styles{
+    <style>
+        .form-group{
+            margin-bottom:0!important;
+            padding: .5rem 1rem;
+        }
+    </style>
+}
+@section Scripts{
+    <script>
+        function goProduct(url){
+            window.open(`/${url}/${url}`);
+        }
+
+    </script>
+}
+
+<div class="econtent-65"></div>
+
+<div class="sale-details">
+    <h3>Sipariş Detaları</h3>
+    <div class="form-group mt-3">
+        <label class="col-md-12">Kullanıcı Adı</label>
+        <div class="col-md-12">
+            <input type="text" value="@Model.User.FirstName @Model.User.LastName" class="form-control form-control-line" disabled>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-12">Telefon Numarası</label>
+        <div class="col-md-12">
+            <input type="text" value="@Model.PhoneNumber" class="form-control form-control-line" disabled>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-12">Sipariş Tarihi</label>
+        <div class="col-md-12">
+            <input type="text" value="@Model.CreateDate" class="form-control form-control-line" disabled>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-12">İl</label>
+        <div class="col-md-12">
+            <input type="text" value="@Model.City" class="form-control form-control-line" disabled>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-12">İlçe</label>
+        <div class="col-md-12">
+            <input type="text" value="@Model.District" class="form-control form-control-line" disabled>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-12">Mahalle</label>
+        <div class="col-md-12">
+            <input type="text" value="@Model.Neighborhood" class="form-control form-control-line" disabled>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-12">Detaylı Adres</label>
+        <div class="col-md-12">
+            <input type="text" value="@Model.DetailedAddress" class="form-control form-control-line" disabled>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-12">Toplam Tutar</label>
+        <div class="col-md-12">
+            <input type="text" value="@Model.Price" class="form-control form-control-line" disabled>
+        </div>
+    </div>
+    <form method="post">
+        <div class="form-group">
+            <input hidden name="OrderId" value="@Model.OrderId"/>
+            <label class="col-md-12">Sipariş Durumu</label>
+            <div class="col-md-12">
+                <select name="orderSatatusTitle" class="form-select form-select-sm">
+                    @for(int j = 0; j < ViewBag.OrderStatusus.Count; j++)
+                    {    
+                        @if (Model.OrderStatus.Title == ViewBag.OrderStatusus[j].Title)
+                        {
+                            <option selected>@ViewBag.OrderStatusus[j].Title</option>
+                        }
+                        else
+                        {
+                            <option>@ViewBag.OrderStatusus[j].Title</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="form-group" style="padding-bottom: 1.5rem!important;">
+            <label class="col-md-12">Kargo Şirketi</label>
+            <div class="col-md-12">
+                <select name="shippingCompanyName" class="form-select form-select-sm">
+                    @for(int j = 0; j < ViewBag.ShippingCompanies.Count; j++)
+                    {
+                        @if (Model.ShippingCompany.Name == @ViewBag.ShippingCompanies[j].Name)
+                        {
+                            <option selected>@ViewBag.ShippingCompanies[j].Name</option>
+                        }
+                        else
+                        {
+                            <option>@ViewBag.ShippingCompanies[j].Name</option>
+                        }    
+                    }
+                </select>
+            </div>
+        </div>
+        <button class="btn btn-primary" style="width:100%;display:block">Değişiklikleri Kaydet</button>
+    </form>
+    <h3 class="mt-4">Kart Detayları</h3>
+    <div class="cart-details">
+        <table class="table table-hover" style="background-color:#fff">
+          <thead>
+            <tr>
+                <th scope="col">Ürün</th>
+                <th scope="col">Adı</th>
+                <th scope="col">Beden</th>
+                <th scope="col">Adet</th>
+                <th scope="col">Fiyat</th>
+                <th scope="col">Toplam Fiyat</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach(OrderItemModel item in Model.OrderItem){
+                <tr onclick="goProduct('@item.Product.Url')" style="cursor:pointer">
+                    <td>
+                        <img src="@item.Product.MainImageUrl" style="width:35px"/>
+                    </td>
+                    <td>@item.Product.Name</td>
+                    <td>@item.Size.SizeName</td>
+                    <td>@item.Quantity</td>
+                    <td>
+                        @(item.TotalPrice/item.Quantity)
+                    </td>
+                    <td>@item.TotalPrice</td>
+                </tr>
+            }
+          </tbody>
+        </table>
+    </div>
+</div>

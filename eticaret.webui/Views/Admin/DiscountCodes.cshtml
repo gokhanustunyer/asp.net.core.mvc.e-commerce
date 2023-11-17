@@ -1,0 +1,64 @@
+﻿@using eticaret.entity.Offer
+@model List<DiscountCode>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "İndirim Kodları";
+}
+
+<div class="econtent-65"></div>
+<div class="row">
+    <div class="col">
+        <h2>İndirim Kodları</h2>
+    </div>
+    <div class="col" style="text-align:right">
+        <a href="/admin/createDiscountCode" class="btn btn-success text-white"><i class="mdi mdi-plus"></i> Kod Oluştur</a>
+    </div>
+</div>
+
+<div class="input-group mb-3" style="padding: 0;margin-top: 1rem;">
+    <input id="searchInput" type="text" placeholder="Kodlarda Ara" class="form-control">
+    <div class="input-group-append">
+        <span class="input-group-text" id="searchfilterres">
+            <a style="cursor:pointer" id="adminsearch">
+                <i class="mdi mdi-magnify"></i>
+            </a>
+        </span>
+    </div>
+</div>
+
+<table class="table table-hover" style="background-color:#fff">
+  <thead>
+    <tr>
+        <th scope="col">Kod</th>
+        <th scope="col">Başlangıç Tarihi</th>
+        <th scope="col">Bitiş Tarihi</th>
+        <th scope="col">Kullanım Limiti</th>
+        <th scope="col">İndirim Yüzdeliği</th>
+        <th scope="col">İndirim Miktarı (TL)</th>
+        <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(var i = 0; i < @Model.Count; i++)
+    {
+    <tr>
+        <td>@Model[i].Code</td>
+        <td>@Model[i].CodeStartDate</td>
+        <td>@Model[i].CodeEndDate</td>
+        <td>@Model[i].CodeLimitNumber</td>
+        <td>@Model[i].DiscountRate</td>
+        <td>@Model[i].DiscountNumber</td>
+        <td>
+            <a href="/admin/editDiscountCode/@Model[i].Id" 
+            class="btn btn-sm btn-primary">Düzenle</a>
+            <form method="post" action="/admin/deleteDiscountCode" style="display:inline">
+                <input hidden value="@Model[i].Id" name="Id">
+                <button class="btn btn-sm btn-primary">
+                    <i class="mdi mdi-delete"></i>
+                </button>
+            </form>
+        </td>
+    </tr>
+    }
+  </tbody>
+</table>

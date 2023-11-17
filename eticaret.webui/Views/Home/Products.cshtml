@@ -1,0 +1,258 @@
+﻿@using Newtonsoft.Json
+@using System.Collections.Specialized
+@using eticaret.entity.Filter
+@model ProductCategoryPageModel
+
+@{
+    ViewData["Title"] = "Arite";
+    string filterIds = JsonConvert.SerializeObject(Model.FilterIds);
+    string currentPath = Context.Request.Path;
+    NameValueCollection queryString = System.Web.HttpUtility.ParseQueryString(string.Empty);
+    var query = Context.Request.Query;
+    foreach(string key in query.Keys)
+    {
+        if (key != "order")
+        {
+            queryString.Add(key, query[key]);
+        }
+    }
+    currentPath += "?" + queryString.ToString();
+    currentPath += (queryString.ToString() != "") ? "&" : "";
+
+    bool isRowLarger = true;
+    int longRowPrCount = 4;
+    int shortRowPrCount = 2;
+    int mode = longRowPrCount;
+}
+
+@section Styles{
+    <link rel="stylesheet" href="~/css/ui/product-list-page.css">
+    <link rel="stylesheet" href="~/css/ui/utilities.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <style>
+        .dropdown-item:active{
+            background-color: #dfdfdf!important;
+        }
+        .dropdown-btn {
+          font-size: .9rem;
+          font-family: 'Open Sans';
+          padding: 0.5rem 0;
+          text-decoration: none;
+          display: block;
+          border: none;
+          background: none;
+          width: 100%;
+          text-align: left;
+          cursor: pointer;
+          outline: none;
+        }
+        .fa-caret-down {
+          float: right;
+          transition: .35s;
+        }
+        .dropdown-container {
+          display: none;
+        }
+
+        .sub-header::before{
+            background-image: url('/img/cintage.jpeg');
+        }
+
+        .dark{
+            color: #444453!important;
+        }
+    </style>
+}
+@section Scripts{
+    <script src="~/js/setFav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/notyf/3.10.0/notyf.min.js" integrity="sha512-467grL09I/ffq86LVdwDzi86uaxuAhFZyjC99D6CC1vghMp1YAs+DqCgRvhEtZIKX+o9lR0F2bro6qniyeCMEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownButton = this.querySelector("i");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+          dropdownButton.style.transform = "rotate(0)";
+        } else {
+          dropdownContent.style.display = "block";
+          dropdownButton.style.transform = "rotate(-180deg)";
+        }
+      });
+    }
+    </script>
+    <script src="~/js/ui/products.js"></script>
+    <script>
+        const query = new Query("query", `@Html.Raw(filterIds)`);
+    </script>
+}
+
+<div class="sub-header">
+    <span class="category">
+        <h3 class="category-title">
+            @Model.CategoryPath[Model.CategoryPath.Count - 1].Name
+        </h3>
+        <p class="category-tree">
+            @for(int i = 0; i < Model.CategoryPath.Count - 1; i++)
+            {
+                <a class="dark" href="/@Model.CategoryPath[i].Url">@Model.CategoryPath[i].Name </a><span class="mx-1">></span>
+            }
+            <a class="dark" href="/@Model.CategoryPath[Model.CategoryPath.Count - 1].Url">@Model.CategoryPath[Model.CategoryPath.Count - 1].Name</a>
+        </p>
+    </span>
+</div>
+
+<section class="product-list-page d-flex">
+    <aside class="list-page-sidebar">
+        <div class="list-page-search d-flex align-items-center">
+            <input type="text" name="" placeholder="Ara" class="list-page-search-input">
+            <a>
+                <svg style="color: rgb(183, 183, 183);" xmlns="http://www.w3.org/2000/svg" width="20" height="28" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"> <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" fill="#b7b7b7"></path> </svg>
+            </a>
+        </div>
+
+        <div class="category-box mt-4" id="headingOne">
+            <a class="d-flex justify-content-between" data-toggle="collapse" data-target="#categories" aria-expanded="true" aria-controls="categories">
+                <h5 class="filter-title">Kategoriler</h5>
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            @if (Model.Categories.Count > 0)
+            {
+                <ul id="categories" class="collapse show filter-box" aria-labelledby="headingOne" data-parent=".category-box">
+                @for(int i=0;i<Model.Categories.Count;i++)
+                {
+                    <li class="my-2">
+                        <a class="filter-link" href="/@Model.Categories[i].Url">
+                            @Model.Categories[i].Name
+                        </a>
+                    </li>
+                }
+                </ul>
+            }
+        </div>
+        @if (Model.FilterIds != null)
+        {
+            @for(int i=0;i<Model.Filters.Count;i++)
+            {
+                <div class="category-box mt-4" id="heading@(i)">
+                    <a class="d-flex justify-content-between" data-toggle="collapse" data-target="#filterBox@(i)">
+                        <h5 class="filter-title">@Model.Filters[i].FilterBoxTitle</h5>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    @{
+                        var filterIsNullOrEmpty = Model.Filters[i].Filters.Where(f => filterIds.Contains(f.Id.ToString())).ToList();
+                                <ul id="filterBox@(i)" class="collapse filter-box @(filterIsNullOrEmpty.Count != 0 ? "show" : "")" data-parent="#heading@(i)">
+                                @foreach(Filter filter in Model.Filters[i].Filters)
+                            {
+                                    <li class="my-2 custom-control custom-checkbox">
+                                        <input  class="custom-control-input" type="checkbox" id="@filter.Id" name="filterIds" 
+                                        @(Model.FilterIds.Contains(filter.Id.ToString()) ? "checked" : "")
+                                        onchange="query.updateFilterIds(this, '@filter.Id','@ViewData["Category"]')">
+                                        <label class="custom-control-label filter-link" for="@filter.Id">@filter.FilterTitle</label>
+                                    </li>
+                            }
+                                </ul>
+                    }
+                </div>
+            }
+        }
+        <a class="user-button-dark-link d-block text-center w-100 mt-2" id="query">Uygula</a>
+    </aside>
+    <article class="product-list mb-5">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 d-flex pl-0 pr-0" style="align-items: center">
+                <div class="shop__product__option__left">
+                    <p>@Model.Products.Count Ürün İçerisinden 1-12 Arası Gösteriliyor</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 pr-1">
+                <div class="text-right">
+                    <button class="user-button-secondary dropdown-toggle" data-toggle="dropdown">
+                        <span class="mr-1">Sıralama</span>
+                    </button>
+                    <div style="border-radius:2px" class="dropdown-menu dropdown-menu-right quicksand">
+                        <a class="dropdown-item" href="@(currentPath)order=grow">Artan Fiyat</a>
+                        <a class="dropdown-item" href="@(currentPath)order=down">Azalan Fiyat</a>
+                        <a class="dropdown-item" href="@(currentPath)order=new">Yeni Ürünler</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex mt-2">
+            @if (Model.Categories.Count > 2)
+            {
+                @for(int i=0;i<Model.Categories.Count;i++)
+                {
+                    @if (Model.Categories[i].ImagePath != null)
+                    {
+                        var imageUrl = Model.Categories[i].ImagePath.Replace('\\', '/');
+                        <div class="category-image-list col-lg-4 col-md-6 col-sm-6 pr-1 pl-0">
+                            <a class="category-list-image" href="@Model.Categories[i].Url" style="background-image:url('@imageUrl')">
+                                <p class="list-page-category-title">@Model.Categories[i].Name.ToUpper()</p>
+                            </a>
+                        </div>
+                    }
+                }
+            }
+        </div>
+        <div class="row mt-2">
+            @for (var i = 0; i < Model.Products.Count; i++)
+            {
+                if (i == mode)
+                {
+                    isRowLarger = false;
+                }
+                else if (i == mode + shortRowPrCount)
+                {
+                    isRowLarger = true;
+                    mode += shortRowPrCount + longRowPrCount;
+                }
+
+                var colSize = isRowLarger ? 3 : 6;
+                <div class="col-lg-@colSize col-md-6 col-sm-6 mb-3 pr-1 pl-0">
+                    <div class="product-cart">
+                        <a href="@ViewData["Category"]/@Model.Products[i].Url">
+                            <img class="@(isRowLarger ? "" : "larger-image")" src="@Model.Products[i].MainImageUrl">
+                        </a>
+                        <a class="product-cart-info" href="@ViewData["Category"]/@Model.Products[i].Url">
+                            <div class="d-flex">
+                                <div class="ellipsis" style="width:90%">
+                                    <p class="ellipsis quicksand">@Model.Products[i].Name</p>
+                                    <p>
+                                    @if (Model.Products[i].Rate != null){
+                                        @for (int j = 0; j < Model.Products[i].Rate; j++)
+                                        {
+                                            <i class="fa-solid fa-star"></i>
+                                        }
+                                        @for (int j = 0; j < 5 - Model.Products[i].Rate; j++)
+                                        {            
+                                            <i class="fa-regular fa-star"></i>
+                                        }
+                                    }
+                                    </p>
+                                </div>
+                                <div class="text-right quicksand" style="width: 35%;">
+                                    @if (Model.Products[i].DiscountedPrice > 0){
+                                        <span style="text-decoration: line-through;color: #93939396;">@Model.Products[i].Price TL</span>
+                                        <span style="color:#d4121e" class="ml-1 text-444 font-weight-bold">@Model.Products[i].DiscountedPrice TL</span>
+                                    }
+                                    else{
+                                        <span>@Model.Products[i].Price TL</span>
+                                    }
+                                </div>
+                            </div>
+                        </a>
+                        <div class="absolute-icons">
+                            <span class="cart-icon-link"><i onclick="setFav(this, '@Model.Products[i].Id')" class="cart-icon fa-regular fa-heart"></i></span>
+                            <span class="cart-icon-link mt-2"><i class="cart-icon fa-solid fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </article>
+</section>

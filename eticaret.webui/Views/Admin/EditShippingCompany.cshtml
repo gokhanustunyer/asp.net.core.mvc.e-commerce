@@ -1,0 +1,76 @@
+﻿@using eticaret.entity.Cargo
+@model Shipping
+
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = $"Kargo Şirketi Düzenle {Model.Name}";
+    string imagePath = (Model.ShippingImages.Count > 0) ? Model.ShippingImages[0].Path : "";
+}
+@*@section SubHeader{
+    <div class="header" style="height:150px">
+        <div class="header-content">
+            <h2>Kargo Şirketi Düzenle</h2>
+        </div>
+    </div>
+}*@
+@section Styles{
+    <style>
+        .edit-shipping form{
+            width: 75%;
+            margin: auto;
+        }
+    </style>
+}
+
+<div class="econtent-65"></div>
+<form class="edit-shipping" method="post" id="form">
+    <div class="form-group mt-3">
+        <label asp-for="Name" class="col-md-12">Şirket Adı</label>
+        <div class="col-md-12">
+            <input type="text" placeholder="Loose Bootcut Jeans" asp-for="Name" class="form-control form-control-line">
+        </div>
+    </div>
+    <div class="form-group mt-3">
+        <label asp-for="Description" class="col-md-12">Açıklama</label>
+        <div class="col-md-12">
+            <textarea type="text" asp-for="Description" class="form-control form-control-line"></textarea>
+        </div>
+    </div>
+    <div class="form-group mt-3">
+        <label asp-for="Price" class="col-md-12">Kargo Ücreti</label>
+        <div class="col-md-12">
+            <input type="text" asp-for="Price" class="form-control form-control-line">
+        </div>
+    </div>
+    <div class="form-group mt-3">
+        <input type="checkbox" asp-for="IsDefault" class="form-check-input">
+        <label asp-for="IsDefault" class="col-md-12" style="display:inline">Varsayılan Kargo Şirketi mi?</label>
+    </div>
+    <button type="submit" class="btn btn-primary" style="width:100%;display:block">Kaydet</button>
+</form>
+
+
+@*
+<div class="edit-shipping mt-4 mb-3">
+    <form method="post" id="form"  enctype="multipart/form-data">
+        <input hidden name="Id" value="@Model.Id"/>
+        <div class="flex-col mb-2 mt-2">
+            <label asp-for="Name" class="admin-label">Şirket Adı</label>
+            <input asp-for="Name" type="text" class="admin-input" placeholder="MNG Kargo">
+        </div>
+        <div class="flex-col mb-2" id="desc-area">
+            <label asp-for="Description" class="admin-label">Açıklama</label>
+            <textarea asp-for="Description" type="text" class="admin-input"></textarea>
+        </div>
+        <div class="flex-col mb-2 mt-2">
+            <label asp-for="Price" class="admin-label">Kargo Ücreti</label>
+            <input asp-for="Price" type="text" class="admin-input">
+        </div>
+        <div class="mb-2 mt-2">
+            <input asp-for="IsDefault" type="checkbox">
+            <label asp-for="IsDefault" class="admin-label">Varsayılan Kargo Şirketi mi</label>
+        </div>
+        <button type="submit" class="admin-button">Kaydet</button>
+    </form>
+</div>*@
