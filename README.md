@@ -1,15 +1,9 @@
 ![localhost_7164_erkek_order=old (1)](https://github.com/gokhanustunyer/asp.net.core.mvc.e-commerce/assets/103903004/cf83ec62-2f30-4bdb-8d70-dbe7be5baf49)
-<hr>
 ![Ekran görüntüsü 2024-03-05 013401](https://github.com/gokhanustunyer/asp.net.core.mvc.e-commerce/assets/103903004/8c18e206-5407-45c5-a879-52b80632bb2f)
-<hr>
 ![screencapture-localhost-7164-erkek-su-itici-slim-fit-dik-yaka-tafta-ceket-mont-2024-03-05-01_33_24](https://github.com/gokhanustunyer/asp.net.core.mvc.e-commerce/assets/103903004/67ce393f-e8c5-4693-9ea9-2ec147a6d363)
-<hr>
 ![screencapture-localhost-7164-2024-03-05-00_51_11](https://github.com/gokhanustunyer/asp.net.core.mvc.e-commerce/assets/103903004/e311ff65-a01f-4995-92c2-c91a328ba427)
-<hr>
 ![localhost_7164_admin_editcategory_fd1b39e1-7327-47fe-a586-43e9d5a216da](https://github.com/gokhanustunyer/asp.net.core.mvc.e-commerce/assets/103903004/55709765-52dc-44f3-8744-0101cd40a380)
-<hr>
 ![localhost_7164_admin_cargo](https://github.com/gokhanustunyer/asp.net.core.mvc.e-commerce/assets/103903004/58470a06-2a25-47fc-832c-35e02a7a4090)
-<hr>
 ![localhost_7164_admin_mailManagement](https://github.com/gokhanustunyer/asp.net.core.mvc.e-commerce/assets/103903004/4cac3fa0-2fc0-441b-a8f6-3a798e83057f)
 ![localhost_7164_admin_activesales](https://github.com/gokhanustunyer/asp.net.core.mvc.e-commerce/assets/103903004/edca5b36-4026-46d5-afda-eef6165a0509)
 ![localhost_7164_admin_saleDetails_id=f48522ee-04ba-49ac-a987-837cb7957356](https://github.com/gokhanustunyer/asp.net.core.mvc.e-commerce/assets/103903004/f0023714-23f3-41dc-a9dc-22146e7cc065)
