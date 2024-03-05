@@ -7,9 +7,12 @@ using eticaret.business.ViewModels.Notice;
 using eticaret.data.Abstract.Category;
 using eticaret.data.Abstract.Filter;
 using eticaret.data.Abstract.Product;
+using eticaret.entity.EntityRefrences.ProductCategoryReference;
+using eticaret.entity.Identity;
 using eticaret.entity.Product;
 using HtmlAgilityPack;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
@@ -32,7 +35,7 @@ namespace eticaret.business.Features.Commands.Product.CreateProduct
         private readonly IConfiguration _configuration;
         private readonly IMapper _mapper;
         private readonly IFilterRepository _filterRepository;
-
+        private readonly UserManager<AppUser> _userManager;
         public CreateProductCommandHandler(IProductRepository productRepository,
                                            ICategoryRepository categoryRepository,
                                            ICategoryService categoryService,
@@ -40,7 +43,8 @@ namespace eticaret.business.Features.Commands.Product.CreateProduct
                                            IMapper mapper,
                                            ILocalStorage localStorage,
                                            IConfiguration configuration,
-                                           IFilterRepository filterRepository)
+                                           IFilterRepository filterRepository,
+                                           UserManager<AppUser> userManager)
         {
             _productRepository = productRepository;
             _mapper = mapper;
@@ -50,24 +54,17 @@ namespace eticaret.business.Features.Commands.Product.CreateProduct
             _localStorage = localStorage;
             _configuration = configuration;
             _filterRepository = filterRepository;
+            _userManager = userManager;
         }
 
-        public async Task<CreateProductCommandResponse> Handle
-                (CreateProductCommandRequest request, CancellationToken cancellationToken)
+        public async Task<CreateProductCommandResponse> Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
         {
-            if (request.filterIds != null && request.filterIds.Count > 0)
-            {
-                if (request.filterIds[0] != null)
-                {
-                    request.filterIds = request.filterIds[0].Split(",").ToList();
-                    request.filterIds.RemoveAt(request.filterIds.Count() - 1);
-                }
-            }
+            AppUser publisher = await _userManager.FindByNameAsync(request.PublisherAsString);
             et.Product.Product product = _mapper.Map<et.Product.Product>(request);
+            product.Publisher = publisher;
             product.Id = Guid.NewGuid();
 
-            product.Url = UrlNameOperation.CharacterRegulatory(request.Name,
-                (string url) => _productRepository.Table.FirstOrDefault(p => p.Url == url) != null);
+            product.Url = UrlNameOperation.CharacterRegulatory(request.Name, (string url) => _productRepository.Table.FirstOrDefault(p => p.Url == url) != null);
 
             List<et.Category.Category> categories = new();
             if (request.categoryIds != null)
@@ -83,16 +80,23 @@ namespace eticaret.business.Features.Commands.Product.CreateProduct
                     categories.AddRange(topCategories);
                 }
             }
+
             List<(Size, int, float)> sizes = new();
-            var sizesString = JsonConvert.DeserializeObject<List<OptionModel>>
-                                                (request.OptionsAsJsonString);
-            for (var i = 0; i < sizesString.Count; i++)
+            var sizesString = JsonConvert.DeserializeObject<List<OptionModel>>(request.OptionsAsJsonString);
+            if (sizesString != null)
             {
-                Size size = _sizeService.GetByName(sizesString[i].Name);
-                if (size == null)
-                    size = await _sizeService.GenerateSize(sizesString[i].Name);
-                float price = (float)((sizesString[i].Price == null) ? request.Price : sizesString[i].Price);
-                sizes.Add((size, sizesString[i].Count, price));
+                for (var i = 0; i < sizesString.Count; i++)
+                {
+                    float price = (float)((sizesString[i].Price == null) ? request.Price : sizesString[i].Price);
+                    
+                    Size size = _sizeService.GetByName(sizesString[i].Name);
+                    if (size == null)
+                    {
+                        size = await _sizeService.GenerateSize(sizesString[i].Name);
+                    }
+
+                    sizes.Add((size, sizesString[i].Count, price));
+                }
             }
 
             List<ProductSize> productSizes = new ();
@@ -104,41 +108,49 @@ namespace eticaret.business.Features.Commands.Product.CreateProduct
                 } );
             }
 
-            List<(string, string)> productImagePaths = await _localStorage.UploadAsync(_configuration["Containers:Azure"], request.postedFiles);            
             List<ProductImage> productImages = new();
-            for (var i = 0; i < productImagePaths.Count; i++)
+            if (request.postedFiles != null)
             {
-                productImages.Add(new() 
+                List<(string, string)> productImagePaths = await _localStorage.UploadAsync(_configuration["Containers:Azure"], request.postedFiles);            
+                for (var i = 0; i < productImagePaths.Count; i++)
                 {
-                    Id = Guid.NewGuid(),
-                    CreateDate = DateTime.Now,
-                    UpdateDate = DateTime.Now,
-                    Path = productImagePaths[i].Item2,
-                    FileName = productImagePaths[i].Item1,
-                    Product = new() { product },
-                    Storage = _configuration["ActiveStorage"],
-                    Index = i
-                });
+                    productImages.Add(new() 
+                    {
+                        Id = Guid.NewGuid(),
+                        CreateDate = DateTime.Now,
+                        UpdateDate = DateTime.Now,
+                        Path = productImagePaths[i].Item2,
+                        FileName = productImagePaths[i].Item1,
+                        Product = new() { product },
+                        Storage = _configuration["ActiveStorage"],
+                        Index = i
+                    });
+                }
             }
 
-            List<(string, string)> productDescImagePaths = await _localStorage.UploadAsync(_configuration["Containers:Azure"], request.descFiles);
+            List<(string, string)> productDescImagePaths = new();
             List<ProductDescImage> productDescImages = new();
-            HtmlDocument doc = new HtmlDocument();
-            doc.LoadHtml(request.Description);
-            for (int i = 0; i < productDescImagePaths.Count; i++)
+            HtmlDocument descriptionDocument = new HtmlDocument();
+            descriptionDocument.LoadHtml(request.Description);
+            if (request.descFiles != null)
             {
-                doc.DocumentNode.SelectNodes("//img[@src]")[i].Attributes[0].Value = _configuration["StoragePaths:Local"] + productDescImagePaths[i].Item2;
-                productDescImages.Add(new()
+                productDescImagePaths = await _localStorage.UploadAsync(_configuration["Containers:Azure"], request.descFiles);
+                for (int i = 0; i < productDescImagePaths.Count; i++)
                 {
-                    Id = Guid.NewGuid(),
-                    CreateDate = DateTime.Now,
-                    UpdateDate = DateTime.Now,
-                    Path = productDescImagePaths[i].Item2,
-                    FileName = productDescImagePaths[i].Item1,
-                    Product = new() { product },
-                    Storage = "Azure"
-                });
+                    descriptionDocument.DocumentNode.SelectNodes("//img[@src]")[i].Attributes[0].Value = _configuration["StoragePaths:Local"] + productDescImagePaths[i].Item2;
+                    productDescImages.Add(new()
+                    {
+                        Id = Guid.NewGuid(),
+                        CreateDate = DateTime.Now,
+                        UpdateDate = DateTime.Now,
+                        Path = productDescImagePaths[i].Item2,
+                        FileName = productDescImagePaths[i].Item1,
+                        Product = new() { product },
+                        Storage = "Azure"
+                    });
+                }
             }
+
             List<RelatedProduct> relateds = new();
             List<string> relatedProductIds = new();
             if (request.RelatedProductIds != null)
@@ -153,23 +165,32 @@ namespace eticaret.business.Features.Commands.Product.CreateProduct
                 }
             }
             List<et.Filter.Filter> filters = new();
-            foreach(string filterId in request.filterIds)
+            List<string> filterIds = new();
+            if (request.filterIds != null)
             {
-                filters.Add(await _filterRepository.GetByIdAsync(filterId));
+                filterIds = request.filterIds.Split(",").ToList();
+                foreach (string filterId in filterIds)
+                {
+                    if (filterId != "")
+                    {
+                        filters.Add(await _filterRepository.GetByIdAsync(filterId));
+                    }
+                }
             }
 
             product.Categories = categories;
             product.UpdateDate = DateTime.Now;
             product.CreateDate = DateTime.Now;
             product.ShortDescription = request.ShortDescription;
-            product.Description = doc.DocumentNode.InnerHtml;
+            product.Description = descriptionDocument?.DocumentNode.InnerHtml;
             product.ProductDescImages = productDescImages;
-            product.MainImageId = productImages[0].Id.ToString();
+            product.MainImageId = productImages?[0].Id.ToString();
             product.ProductImages = productImages;
             product.ProductSizes = productSizes;
             product.isActive = true;
             product.Filters = filters;
             product.RelatedProducts = relateds;
+            product.Publisher = publisher;
             var result = await _productRepository.AddAsync(product);
             await _productRepository.SaveAsync();
 

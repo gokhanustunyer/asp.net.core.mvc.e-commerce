@@ -15,6 +15,8 @@
     <PackageReference Include="AngleSharp" Version="0.17.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.14.1" />
+    <PackageReference Include="EPPlus" Version="7.0.9" />
+    <PackageReference Include="ExcelDataReader" Version="3.6.0" />
     <PackageReference Include="HtmlAgilityPack" Version="1.11.46" />
     <PackageReference Include="Iyzipay" Version="2.1.46" />
     <PackageReference Include="MediatR" Version="11.1.0" />

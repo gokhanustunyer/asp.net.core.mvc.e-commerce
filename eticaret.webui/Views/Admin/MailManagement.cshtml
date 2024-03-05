@@ -1,3 +1,143 @@
-﻿@{
+﻿@using eticaret.entity.EntityRefrences.AudienceReferences
+@model List<UserSegmentReference>
+@{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Müşteri Segmentleri";
+
+    string activeUrl = Context.Request.Path + Context.Request.QueryString;
+    if (activeUrl.Contains("page="))
+    {
+        activeUrl = System.Text.RegularExpressions.Regex.Replace(activeUrl, @"\?page=\d+", "");
+        activeUrl = System.Text.RegularExpressions.Regex.Replace(activeUrl, @"&page=\d+", "");
+
+        activeUrl = System.Text.RegularExpressions.Regex.Replace(activeUrl, @"\?pageSize=\d+", "");
+        activeUrl = System.Text.RegularExpressions.Regex.Replace(activeUrl, @"&pageSize=\d+", "");
+    }
+    string pageUrl = activeUrl + (activeUrl.Contains("?") ? "&" : "?") + "page=";
+
+    string segmentSearchValue = Context.Request.Query["segmentOrEmail"].ToString() ?? "";
+    string? activePageAsStr = Context.Request.Query["page"];
+    int activePage = (activePageAsStr != null && activePageAsStr != "") ? Int32.Parse(activePageAsStr) : 1;
 }
+
+@section Styles{
+    <link rel="stylesheet" href="~/css/admin/upload-button.css">
+}
+@section Scripts{
+    <script>
+        $('#chooseFile').bind('change', function () {
+            var filename = $("#chooseFile").val();
+            if (/^\s*$/.test(filename)) {
+                $(".file-upload").removeClass('active');
+                $("#noFile").text("No file chosen...");
+            }
+            else {
+                $(".file-upload").addClass('active');
+                $("#noFile").text(filename.replace("C:\\fakepath\\", ""));
+            }
+        });
+    </script>
+
+    <script>
+        function pageSizeChanged(activeUrl) 
+        {
+            var selection = document.getElementById("pageSize");
+            var value = selection.value;
+            var pageSize = selection.options[selection.selectedIndex].text;
+
+            var splitter = '@activeUrl'.includes("?") ? "&" : "?";
+            var activeUrl = '@activeUrl' + splitter + 'pageSize=' + pageSize;
+            window.open(activeUrl, '_self');
+        }
+    </script>
+}
+
+<div class="econtent-65"></div>
+<div class="row">
+    <div class="col">
+        <h2>Müşteri Segmentleri</h2>
+    </div>
+    <form class="col" method="post" style="text-align:right" enctype="multipart/form-data" action="/admin/uploadAudience">
+        <div class="file-upload">
+            <div class="file-select">
+                <div class="file-select-name" id="noFile">Henüz Dosya Seçilmedi...</div>
+                <div class="file-select-button" id="fileName"><i class="mdi mdi-plus"></i> Dosyadan Yükle</div>
+                <input type="file" name="audienceData" id="chooseFile" accept=".csv, .xlsx">
+            </div>
+        </div>
+        <button class="mt-2 btn btn-success text-white">Gönder</button>
+    </form>
+</div>
+
+
+<form method="get" class="input-group mb-3" style="padding: 0;margin-top: 1rem;">
+    <input id="segmentOrEmail" type="text" placeholder="Segmente veya email'e göre ara" class="form-control" name="segmentOrEmail" value="@segmentSearchValue">
+    <button style="cursor:pointer;border:none;padding:0" class="input-group-append">
+        <span class="input-group-text" id="searchfilterres">
+            <i class="mdi mdi-magnify"></i>
+        </span>
+    </button>
+
+<table class="table table-hover" style="background-color:#fff">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Tam İsim</th>
+            <th scope="col">Email</th>
+            <th scope="col">Segment</th>
+@*             <th scope="col"></th>
+            <th scope="col"></th> *@
+        </tr>
+    </thead>
+    <tbody>
+        @for (var i = 0; i < @Model.Count; i++)
+        {
+            <tr>
+                <td>@Model[i].UserId</td>
+                <td>@Model[i].Name @Model[i].Surname</td>
+                <td>@Model[i].Email</td>
+                <td>@Model[i].SegmentTitle</td>
+@*                 <td><a href="/admin/commentsandrates/@Model[i].Id" class="btn btn-sm btn-primary">Görüntüle</a></td>
+                <td>
+                    <a href="/admin/editProduct/@Model[i].Id"
+                        class="btn btn-sm btn-primary">Düzenle</a>
+                    <form method="post" action="/admin/deleteProduct" onclick="OpenComfirmModal('Uyarı!', 'Bu ürünü silmek istediğinize emin misiniz? Bu işlem geri alınamaz bunun yerine ürünü deaktive etmek istiyor olabilirsiniz.', 'deleteProductForm@(i)', 'Warning')" id="deleteProductForm@(i)" style="display:inline">
+                        <input hidden value="@Model[i].Id" name="Id">
+                        <div class="btn btn-sm btn-primary">
+                            <i class="mdi mdi-delete"></i>
+                        </div>
+                    </form>
+                </td> *@
+            </tr>
+        }
+    </tbody>
+</table>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+@*         <select style="width:4%" id="pageSize" class="form-select" name="pageSize" onchange="pageSizeChanged()">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+        </select> *@
+        <li class="page-item" style="margin-left:1rem">
+            <a class="page-link" href="@(pageUrl + (activePage - 1).ToString())" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+            </a>
+        </li>
+        @for (int i = (activePage - 2 < 1) ? 1 : activePage - 2; i < activePage + 3; i++)
+        {
+            <li class="page-item"><a class="page-link" href="@(pageUrl + i.ToString())">@i</a></li>
+        }
+        <li class="page-item">
+            <a class="page-link" href="@(pageUrl + (activePage + 1).ToString())" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+</form>

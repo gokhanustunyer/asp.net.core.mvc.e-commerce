@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.data\\eticaret.data.csproj": {}
+    "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.data\\eticaret.data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.data\\eticaret.data.csproj": {
+    "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.data\\eticaret.data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.data\\eticaret.data.csproj",
+        "projectUniqueName": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.data\\eticaret.data.csproj",
         "projectName": "eticaret.data",
-        "projectPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.data\\eticaret.data.csproj",
+        "projectPath": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.data\\eticaret.data.csproj",
         "packagesPath": "C:\\Users\\gokha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.data\\obj\\",
+        "outputPath": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gokha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\eticaret.entity.csproj": {
-                "projectPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\eticaret.entity.csproj"
+              "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.entity\\eticaret.entity.csproj": {
+                "projectPath": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.entity\\eticaret.entity.csproj"
               }
             }
           }
@@ -89,14 +89,14 @@
         }
       }
     },
-    "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\eticaret.entity.csproj": {
+    "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.entity\\eticaret.entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\eticaret.entity.csproj",
+        "projectUniqueName": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.entity\\eticaret.entity.csproj",
         "projectName": "eticaret.entity",
-        "projectPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\eticaret.entity.csproj",
+        "projectPath": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.entity\\eticaret.entity.csproj",
         "packagesPath": "C:\\Users\\gokha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\obj\\",
+        "outputPath": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gokha\\AppData\\Roaming\\NuGet\\NuGet.Config",

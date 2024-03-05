@@ -33,6 +33,9 @@ using eticaret.business.Features.Commands.Discount.CreateDiscountCode;
 using eticaret.business.Features.Commands.Discount.EditDiscountCode;
 using eticaret.business.Features.Commands.Discount.CreateCampaign;
 using eticaret.business.Features.Commands.Discount.EditCampaign;
+using eticaret.business.Features.Commands.Audience.UploadAudience;
+using AngleSharp.Io;
+using eticaret.business.Features.Queries.Audience;
 
 namespace eticaret.webui.Controllers
 {
@@ -101,6 +104,7 @@ namespace eticaret.webui.Controllers
             {
                 return AddProduct();
             }
+            createProductCommandRequest.PublisherAsString = User.Identity.Name;
             TempData["Alert"] = JsonConvert.SerializeObject((await _mediator.Send(createProductCommandRequest)).Notice);
             return Redirect("/admin/addproduct");
         }
@@ -318,9 +322,9 @@ namespace eticaret.webui.Controllers
             var response = await _filterService.GetFiltersByFilterBoxId(filterBoxId);
             return Ok(response);
         }
-        [HttpPost] public async Task<IActionResult> GetFilterByCategory([FromForm] string[] CategoryIds)
+        [HttpPost] public async Task<IActionResult> GetFilterByCategory(string CategoryIds)
         {
-            var model = await _filterService.GetFilterByCategoryAsync(CategoryIds.ToList());
+            var model = await _filterService.GetFilterByCategoryAsync(CategoryIds.Split(',').ToList());
             return Ok(model);
         }
         [HttpGet] public async Task<IActionResult> FilterProducts(string id)
@@ -428,9 +432,10 @@ namespace eticaret.webui.Controllers
             var model = _discountService.GetAll();
             return View(model);
         }
-        [HttpGet] public async Task<IActionResult> MailManagement()
+        [HttpGet] public async Task<IActionResult> MailManagement([FromQuery] GetUsersAndSegmentsQueryRequest getUsersAndSegmentsQueryRequest)
         {
-            return View();
+            var response = await _mediator.Send(getUsersAndSegmentsQueryRequest);
+            return View(response.UserSegmentReferences);
         }
         [HttpGet] public IActionResult CreateDiscountCode()
         {
@@ -501,6 +506,12 @@ namespace eticaret.webui.Controllers
         {
             await _discountService.RemoveProductFromCampaignAsync(productId, campaignId);
             return Redirect("/admin/editCampaign");
+        }
+        [HttpPost]
+        public async Task<IActionResult> UploadAudience(UploadAudienceCommandRequest uploadAudienceCommandRequest)
+        {
+            var response = await _mediator.Send(uploadAudienceCommandRequest);
+            return Redirect("/admin/mainManagement");
         }
     }
 }

@@ -24,4 +24,8 @@
     <ProjectReference Include="..\eticaret.entity\eticaret.entity.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

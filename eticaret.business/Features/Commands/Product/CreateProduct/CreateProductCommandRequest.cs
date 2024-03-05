@@ -16,6 +16,7 @@ namespace eticaret.business.Features.Commands.Product.CreateProduct
     {
         [Required(ErrorMessage = "İsim Alanı Zorunludur")]
         public string Name { get; set; }
+        public string? PublisherAsString { get; set; }
         public string? Description { get; set; }
         public string? ShortDescription { get; set; }
 
@@ -24,7 +25,7 @@ namespace eticaret.business.Features.Commands.Product.CreateProduct
         public string? RelatedProductIds { get; set; }
         public int? Stock { get; set; }
         public string OptionsAsJsonString { get; set; }
-        public List<string> filterIds { get; set; }
+        public string? filterIds { get; set; }
         public Guid[]? categoryIds { get; set; }
         public ICollection<et.Category.Category>? Categories { get; set; }
         public IFormFileCollection? postedFiles { get; set; }

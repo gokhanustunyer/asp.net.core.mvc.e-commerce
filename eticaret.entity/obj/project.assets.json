@@ -1904,11 +1904,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\eticaret.entity.csproj",
+      "projectUniqueName": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.entity\\eticaret.entity.csproj",
       "projectName": "eticaret.entity",
-      "projectPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\eticaret.entity.csproj",
+      "projectPath": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.entity\\eticaret.entity.csproj",
       "packagesPath": "C:\\Users\\gokha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\obj\\",
+      "outputPath": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.entity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gokha\\AppData\\Roaming\\NuGet\\NuGet.Config",

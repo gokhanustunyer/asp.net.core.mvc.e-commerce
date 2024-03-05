@@ -11,7 +11,7 @@
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
     transform: translateX(200%);
     visibility: hidden;
-    z-index: 10000;
+    z-index: 1000000000;
 }
 
     .alerts.active {

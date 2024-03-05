@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = eticaret.business
-build_property.ProjectDir = C:\Users\gokha\OneDrive\Masaüstü\Masaüstü\ETicaretFiles\ETicaret\eticaret.business\
+build_property.ProjectDir = C:\Users\gokha\Desktop\eticaret\asp.net.core.mvc.e-commerce\eticaret.business\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

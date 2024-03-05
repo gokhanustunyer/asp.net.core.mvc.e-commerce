@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using et = eticaret.entity;
 
 
 namespace eticaret.entity.Identity
 {
-    public class Address: et.BaseEntity.BaseEntity
+    public class Address: BaseEntity.BaseEntity
     {
         public AppUser User { get; set; }
         public string? PhoneNumber { get; set; }

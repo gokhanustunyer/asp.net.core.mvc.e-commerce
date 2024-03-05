@@ -70,6 +70,7 @@ namespace eticaret.business.Concrete.Service
             List<Order> lastOrders = new();
             List<ProductComment> productComments = new();
             int DailyVisitCount, DailyRegisterCount, DailyOrderCount; double DailySalary;
+            
             List<Order> orders = _orderRepository.Table
                                                 .Include(o => o.OrderItem)
                                                 .Where(o => 

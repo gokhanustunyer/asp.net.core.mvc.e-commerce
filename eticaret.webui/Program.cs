@@ -9,15 +9,15 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddCookieSettings();
 builder.Services.AddBusinessServices();
 builder.Services.AddDataServices();
-builder.Services.AddAuthentication().AddFacebook(options =>
-{
-    options.AppId = builder.Configuration["ExternalLogins:Facebook:AppId"];
-    options.AppSecret = builder.Configuration["ExternalLogins:Facebook:AppSecret"];
-}).AddGoogle(optitons =>
-{
-    optitons.ClientId = builder.Configuration["ExternalLogins:Google:AppId"];
-    optitons.ClientSecret = builder.Configuration["ExternalLogins:Google:AppSecret"];
-});
+//builder.Services.AddAuthentication().AddFacebook(options =>
+//{
+//    options.AppId = builder.Configuration["ExternalLogins:Facebook:AppId"];
+//    options.AppSecret = builder.Configuration["ExternalLogins:Facebook:AppSecret"];
+//}).AddGoogle(optitons =>
+//{
+//    optitons.ClientId = builder.Configuration["ExternalLogins:Google:AppId"];
+//    optitons.ClientSecret = builder.Configuration["ExternalLogins:Google:AppSecret"];
+//});
 
 var app = builder.Build();
 if (!app.Environment.IsDevelopment())

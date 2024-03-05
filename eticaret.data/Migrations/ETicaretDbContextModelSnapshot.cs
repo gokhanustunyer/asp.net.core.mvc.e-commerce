@@ -19,6 +19,21 @@ namespace eticaret.data.Migrations
                 .HasAnnotation("ProductVersion", "6.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("AppUserUserSegment", b =>
+                {
+                    b.Property<Guid>("SegmentsId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("UsersId")
+                        .HasColumnType("varchar(255)");
+
+                    b.HasKey("SegmentsId", "UsersId");
+
+                    b.HasIndex("UsersId");
+
+                    b.ToTable("AppUserUserSegment");
+                });
+
             modelBuilder.Entity("CampaignProduct", b =>
                 {
                     b.Property<Guid>("CampaignsId")
@@ -92,6 +107,27 @@ namespace eticaret.data.Migrations
                     b.HasIndex("ProductsId");
 
                     b.ToTable("DiscountCodeProduct");
+                });
+
+            modelBuilder.Entity("eticaret.entity.Audience.UserSegment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("SegmentTitle")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserSegments");
                 });
 
             modelBuilder.Entity("eticaret.entity.Cargo.Shipping", b =>
@@ -1220,6 +1256,21 @@ namespace eticaret.data.Migrations
                         .HasColumnType("int");
 
                     b.HasDiscriminator().HasValue("ProductImage");
+                });
+
+            modelBuilder.Entity("AppUserUserSegment", b =>
+                {
+                    b.HasOne("eticaret.entity.Audience.UserSegment", null)
+                        .WithMany()
+                        .HasForeignKey("SegmentsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("eticaret.entity.Identity.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("UsersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("CampaignProduct", b =>

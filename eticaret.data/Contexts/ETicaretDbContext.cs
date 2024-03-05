@@ -39,6 +39,7 @@ namespace eticaret.data.Contexts
         public DbSet<SupportMailResponseModel> SupportMailResponses { get; set; }
         public DbSet<et.Log.PageLog> PageLogs { get; set; }
         public DbSet<et.Cargo.Shipping> ShippingCompanies { get; set; }
+        public DbSet<et.Audience.UserSegment> UserSegments { get; set; }
         public ETicaretDbContext(DbContextOptions options)
             : base (options) {  }
 

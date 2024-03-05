@@ -26,9 +26,9 @@ namespace eticaret.data.Services.Concrete
             {
                 List<Tuple<int, string>> result = new();
                 string con_string = _configuration["ConnectionStrings:Cities"];
-                SqlConnection connection = new SqlConnection(con_string);
+                MySqlConnection connection = new MySqlConnection(con_string);
                 connection.Open();
-                var command = new SqlCommand("select * from dbo.sehirler order by plakano;", connection);
+                var command = new MySqlCommand("select * from iller;", connection);
                 using var reader = command.ExecuteReader();
                 while (reader.Read())
                     result.Add(new Tuple<int, string>(reader.GetInt32(0), reader.GetString(1)));
@@ -40,9 +40,9 @@ namespace eticaret.data.Services.Concrete
         {
             List<Tuple<int, string>> result = new();
             string con_string = _configuration["ConnectionStrings:Cities"];
-            SqlConnection connection = new SqlConnection(con_string);
+            MySqlConnection connection = new MySqlConnection(con_string);
             connection.Open();
-            var command = new SqlCommand($"select * from dbo.Ilceler where SehirId={id}", connection);
+            var command = new MySqlCommand($"select * from ilceler where il_id={id}", connection);
             using var reader = command.ExecuteReader();
             while (reader.Read())
                 result.Add(new Tuple<int, string>(reader.GetInt32(0), reader.GetString(2)));
@@ -50,22 +50,22 @@ namespace eticaret.data.Services.Concrete
             return result;
         }
         public string GetCityById(int id)
-            => GetOneByQuery($"select * from dbo.Sehirler where SehirId={id}", 1);
+            => GetOneByQuery($"select * from iller where id={id}", 1);
         
 
         public string GetDistrictById(int id)
-            => GetOneByQuery($"select * from dbo.Ilceler where ilceId={id}", 2);
+            => GetOneByQuery($"select * from ilceler where id={id}", 2);
 
         public string GetNeighborhoodById(int id)
-            => GetOneByQuery($"select * from dbo.SemtMah where SemtMahId={id}", 2);
+            => GetOneByQuery($"select * from mahalleler where id={id}", 2);
 
         public List<Tuple<int, string>> GetNeighborhoodsByDistrictId(int id)
         {
             List<Tuple<int, string>> result = new();
             string con_string = _configuration["ConnectionStrings:Cities"];
-            SqlConnection connection = new SqlConnection(con_string);
+            MySqlConnection connection = new MySqlConnection(con_string);
             connection.Open();
-            var command = new SqlCommand($"select * from dbo.SemtMah where ilceId={id}", connection);
+            var command = new MySqlCommand($"select * from mahalleler m left join semtler s on s.id=m.semt_id where s.ilce_id={id}", connection);
             using var reader = command.ExecuteReader();
             while (reader.Read())
                 result.Add(new Tuple<int, string>(reader.GetInt32(0), reader.GetString(2)));
@@ -75,17 +75,17 @@ namespace eticaret.data.Services.Concrete
 
         public bool IsValid(string city, string district, string neighborhood)
         {
-            SqlConnection connection;
-            SqlCommand       command;
+            MySqlConnection connection;
+            MySqlCommand       command;
             string        con_string;
             int     id=-1, counter=0;
 
             con_string = _configuration["ConnectionStrings:Cities"];
-            connection = new SqlConnection(con_string);
+            connection = new MySqlConnection(con_string);
             connection.Open();
 
 
-            command = new SqlCommand($"select * from dbo.Sehirler where SehirAdi='{city}'", connection);
+            command = new MySqlCommand($"select * from iller where il_adi='{city}'", connection);
             using (var reader = command.ExecuteReader())
             {
                 while (reader.Read())
@@ -97,7 +97,7 @@ namespace eticaret.data.Services.Concrete
             }
 
 
-            command = new SqlCommand($"select * from dbo.Ilceler where SehirId={id} and IlceAdi='{district}'", connection);
+            command = new MySqlCommand($"select * from ilceler where il_id={id} and ilce_adi='{district}'", connection);
             counter = 0;
             using (var reader = command.ExecuteReader())
             {
@@ -110,8 +110,8 @@ namespace eticaret.data.Services.Concrete
             }
 
 
-            command = new SqlCommand($"select * from dbo.SemtMah where ilceId='{id}' and MahalleAdi='{neighborhood}'", connection);
-            counter = 0;
+            //command = new SqlCommand($"select * from dbo.SemtMah where ilceId='{id}' and MahalleAdi='{neighborhood}'", connection);
+            //counter = 0;
 
             return true;
         }
@@ -133,12 +133,12 @@ namespace eticaret.data.Services.Concrete
         private string GetOneByQuery(string query, int index)
         {
             string result = "", con_string;
-            SqlConnection connection;
-            SqlCommand command;
+            MySqlConnection connection;
+            MySqlCommand command;
             con_string = _configuration["ConnectionStrings:Cities"];
-            connection = new SqlConnection(con_string);
+            connection = new MySqlConnection(con_string);
             connection.Open();
-            command = new SqlCommand(query, connection);
+            command = new MySqlCommand(query, connection);
 
             using var reader = command.ExecuteReader();
             while (reader.Read())

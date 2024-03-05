@@ -1,0 +1,2445 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\custom-select.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\custom-select.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\favicon.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\logo-icon.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\logo-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\logo-light-icon.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\logo-light-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\logo-light-text.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\logo-light-text.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\logo-text.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\logo-text.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\1-old.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\1-old.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\1.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\1.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\2.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\2.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\3.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\3.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\4.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\5.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\6.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\7.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\8.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\agent.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\agent.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\agent2.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\agent2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\d1.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\d1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\d2.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\d2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\d3.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\d3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\d4.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\d4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\d5.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\d5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\images\\users\\profile.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\users\\profile.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\chartist-plugin-tooltips\\dist\\chartist-plugin-tooltip.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\chartist-plugin-tooltips\\dist\\chartist-plugin-tooltip.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\chartist-plugin-tooltips\\dist\\chartist-plugin-tooltip.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\chartist-plugin-tooltips\\dist\\chartist-plugin-tooltip.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\chartist\\dist\\chartist.min.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\chartist\\dist\\chartist.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\chartist\\dist\\chartist.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\chartist\\dist\\chartist.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\chartjs\\chart-geo.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\chartjs\\chart-geo.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\chartjs\\chart.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\chartjs\\chart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\jquery\\dist\\core.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\jquery\\dist\\core.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\jquery\\dist\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\jquery\\dist\\jquery.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\perfect-scrollbar\\dist\\css\\perfect-scrollbar.min.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\perfect-scrollbar\\dist\\css\\perfect-scrollbar.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\perfect-scrollbar\\dist\\js\\perfect-scrollbar.jquery.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\perfect-scrollbar\\dist\\js\\perfect-scrollbar.jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\perfect-scrollbar\\dist\\js\\perfect-scrollbar.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\perfect-scrollbar\\dist\\js\\perfect-scrollbar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\perfect-scrollbar\\dist\\perfect-scrollbar.common.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\perfect-scrollbar\\dist\\perfect-scrollbar.common.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\perfect-scrollbar\\dist\\perfect-scrollbar.esm.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\perfect-scrollbar\\dist\\perfect-scrollbar.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\perfect-scrollbar\\dist\\perfect-scrollbar.jquery.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\perfect-scrollbar\\dist\\perfect-scrollbar.jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\perfect-scrollbar\\dist\\perfect-scrollbar.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\perfect-scrollbar\\dist\\perfect-scrollbar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\popper.js\\dist\\esm\\popper-utils.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\popper.js\\dist\\esm\\popper-utils.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\popper.js\\dist\\esm\\popper.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\popper.js\\dist\\esm\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\popper.js\\dist\\popper-utils.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\popper.js\\dist\\popper-utils.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\popper.js\\dist\\popper.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\popper.js\\dist\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\popper.js\\dist\\umd\\popper-utils.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\popper.js\\dist\\umd\\popper-utils.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\popper.js\\dist\\umd\\popper.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\popper.js\\dist\\umd\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\treetable\\bootstrap-treefy.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\treetable\\bootstrap-treefy.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\assets\\libs\\treetable\\bootstrap-treefy.min.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\libs\\treetable\\bootstrap-treefy.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\css\\fa-brands.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\css\\fa-brands.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\css\\fa-brands.min.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\css\\fa-brands.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\css\\fa-regular.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\css\\fa-regular.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\css\\fa-regular.min.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\css\\fa-regular.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\css\\fa-solid.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\css\\fa-solid.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\css\\fa-solid.min.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\css\\fa-solid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\css\\fontawesome-all.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\css\\fontawesome-all.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\css\\fontawesome-all.min.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\css\\fontawesome-all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\css\\fontawesome.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\less\\_animated.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\less\\_animated.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\less\\_bordered-pulled.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\less\\_bordered-pulled.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\less\\_core.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\less\\_core.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\less\\_fixed-width.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\less\\_fixed-width.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\less\\_icons.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\less\\_icons.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\less\\_larger.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\less\\_larger.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\less\\_list.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\less\\_list.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\less\\_mixins.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\less\\_mixins.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\less\\_rotated-flipped.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\less\\_rotated-flipped.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\less\\_screen-reader.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\less\\_screen-reader.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\less\\_stacked.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\less\\_stacked.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\less\\_variables.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\less\\_variables.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\less\\fa-brands.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\less\\fa-brands.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\less\\fa-regular.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\less\\fa-regular.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\less\\fa-solid.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\less\\fa-solid.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\less\\fontawesome.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\less\\fontawesome.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\scss\\_animated.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\scss\\_animated.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\scss\\_bordered-pulled.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\scss\\_bordered-pulled.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\scss\\_core.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\scss\\_core.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\scss\\_fixed-width.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\scss\\_fixed-width.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\scss\\_icons.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\scss\\_icons.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\scss\\_larger.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\scss\\_larger.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\scss\\_list.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\scss\\_list.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\scss\\_rotated-flipped.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\scss\\_rotated-flipped.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\scss\\_screen-reader.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\scss\\_screen-reader.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\scss\\_stacked.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\scss\\_stacked.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\scss\\fa-brands.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\scss\\fa-brands.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\scss\\fa-regular.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\scss\\fa-regular.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\scss\\fa-solid.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\scss\\fa-solid.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\scss\\fontawesome.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\scss\\fontawesome.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\material-design-iconic-font\\css\\material-design-iconic-font.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\material-design-iconic-font\\css\\material-design-iconic-font.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\material-design-iconic-font\\css\\material-design-iconic-font.min.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\material-design-iconic-font\\css\\material-design-iconic-font.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\material-design-iconic-font\\css\\materialdesignicons.min.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\material-design-iconic-font\\css\\materialdesignicons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.eot",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.eot"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.svg",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.svg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.ttf",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.woff",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.woff"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.woff2",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.woff2"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.eot",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.svg",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.ttf",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.woff",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.woff2",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\themify-icons\\fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\themify-icons\\fonts\\themify.eot"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\themify-icons\\fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\themify-icons\\fonts\\themify.svg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\themify-icons\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\themify-icons\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\themify-icons\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\themify-icons\\fonts\\themify.woff"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\themify-icons\\ie7\\ie7.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\themify-icons\\ie7\\ie7.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\themify-icons\\ie7\\ie7.js",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\themify-icons\\ie7\\ie7.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\themify-icons\\themify-icons.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\themify-icons\\themify-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\themify-icons\\themify-icons.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\themify-icons\\themify-icons.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\css\\weather-icons-core.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\css\\weather-icons-core.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\css\\weather-icons-variables.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\css\\weather-icons-variables.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\css\\weather-icons-wind.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\css\\weather-icons-wind.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\css\\weather-icons-wind.min.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\css\\weather-icons-wind.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\css\\weather-icons.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\css\\weather-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\css\\weather-icons.min.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\css\\weather-icons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.eot",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.svg",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.ttf",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.woff",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.woff2",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\css\\variables-beaufort.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\css\\variables-beaufort.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\css\\variables-day.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\css\\variables-day.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\css\\variables-direction.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\css\\variables-direction.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\css\\variables-misc.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\css\\variables-misc.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\css\\variables-moon.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\css\\variables-moon.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\css\\variables-neutral.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\css\\variables-neutral.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\css\\variables-night.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\css\\variables-night.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\css\\variables-time.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\css\\variables-time.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\css\\variables-wind-names.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\css\\variables-wind-names.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-beaufort.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-beaufort.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-day.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-day.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-direction.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-direction.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-misc.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-misc.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-moon-aliases.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-moon-aliases.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-moon.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-moon.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-neutral.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-neutral.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-night.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-night.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-time.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-time.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-wind-aliases.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-wind-aliases.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-wind-degrees.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-wind-degrees.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-wind.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-classes\\classes-wind.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-variables\\variables-beaufort.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-variables\\variables-beaufort.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-variables\\variables-day.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-variables\\variables-day.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-variables\\variables-direction.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-variables\\variables-direction.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-variables\\variables-misc.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-variables\\variables-misc.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-variables\\variables-moon.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-variables\\variables-moon.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-variables\\variables-neutral.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-variables\\variables-neutral.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-variables\\variables-night.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-variables\\variables-night.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-variables\\variables-time.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-variables\\variables-time.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-variables\\variables-wind-names.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\icon-variables\\variables-wind-names.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\mappings\\wi-forecast-io.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\mappings\\wi-forecast-io.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\mappings\\wi-owm.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\mappings\\wi-owm.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\mappings\\wi-wmo4680.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\mappings\\wi-wmo4680.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\mappings\\wi-yahoo.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\mappings\\wi-yahoo.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\weather-icons-classes.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\weather-icons-classes.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\weather-icons-core.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\weather-icons-core.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\weather-icons-variables.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\weather-icons-variables.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\weather-icons-wind.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\weather-icons-wind.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\weather-icons-wind.min.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\weather-icons-wind.min.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\weather-icons.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\weather-icons.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\less\\weather-icons.min.less",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\less\\weather-icons.min.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-beaufort.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-beaufort.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-day.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-day.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-direction.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-direction.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-misc.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-misc.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-moon-aliases.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-moon-aliases.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-moon.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-moon.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-neutral.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-neutral.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-night.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-night.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-time.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-time.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind-aliases.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind-aliases.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind-degrees.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind-degrees.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-beaufort.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-beaufort.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-day.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-day.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-direction.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-direction.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-misc.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-misc.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-moon.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-moon.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-neutral.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-neutral.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-night.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-night.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-time.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-time.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-wind-names.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-wind-names.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\mappings\\wi-forecast-io.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\mappings\\wi-forecast-io.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\mappings\\wi-owm.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\mappings\\wi-owm.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\mappings\\wi-wmo4680.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\mappings\\wi-wmo4680.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\mappings\\wi-yahoo.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\mappings\\wi-yahoo.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\weather-icons-classes.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\weather-icons-classes.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\weather-icons-core.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\weather-icons-core.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\weather-icons-variables.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\weather-icons-variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\weather-icons-wind.min.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\weather-icons-wind.min.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\weather-icons-wind.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\weather-icons-wind.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\weather-icons.min.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\weather-icons.min.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\icons\\weather-icons\\sass\\weather-icons.scss",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\icons\\weather-icons\\sass\\weather-icons.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\style.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\css\\style.min.css",
+      "PackagePath": "staticwebassets\\admin\\dist\\css\\style.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\js\\app-style-switcher.js",
+      "PackagePath": "staticwebassets\\admin\\dist\\js\\app-style-switcher.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\js\\custom.js",
+      "PackagePath": "staticwebassets\\admin\\dist\\js\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\js\\discount\\DiscountCode.js",
+      "PackagePath": "staticwebassets\\admin\\dist\\js\\discount\\DiscountCode.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\js\\discount\\DiscountCodeDOMManager.js",
+      "PackagePath": "staticwebassets\\admin\\dist\\js\\discount\\DiscountCodeDOMManager.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\js\\discount\\EditDiscountCode.js",
+      "PackagePath": "staticwebassets\\admin\\dist\\js\\discount\\EditDiscountCode.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\js\\filters\\FiltersPage.js",
+      "PackagePath": "staticwebassets\\admin\\dist\\js\\filters\\FiltersPage.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\js\\filters\\filterEdit.js",
+      "PackagePath": "staticwebassets\\admin\\dist\\js\\filters\\filterEdit.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\js\\mail\\Inbox.js",
+      "PackagePath": "staticwebassets\\admin\\dist\\js\\mail\\Inbox.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\js\\pages\\dashboards\\dashboard1.js",
+      "PackagePath": "staticwebassets\\admin\\dist\\js\\pages\\dashboards\\dashboard1.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\js\\product\\Filters.js",
+      "PackagePath": "staticwebassets\\admin\\dist\\js\\product\\Filters.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\js\\product\\Relateds.js",
+      "PackagePath": "staticwebassets\\admin\\dist\\js\\product\\Relateds.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\js\\sidebarmenu.js",
+      "PackagePath": "staticwebassets\\admin\\dist\\js\\sidebarmenu.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\js\\statistics\\adminchart.js",
+      "PackagePath": "staticwebassets\\admin\\dist\\js\\statistics\\adminchart.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\js\\statistics\\statistic.js",
+      "PackagePath": "staticwebassets\\admin\\dist\\js\\statistics\\statistic.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\dist\\js\\waves.js",
+      "PackagePath": "staticwebassets\\admin\\dist\\js\\waves.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\admin\\style.css",
+      "PackagePath": "staticwebassets\\admin\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\admin\\addProduct.css",
+      "PackagePath": "staticwebassets\\css\\admin\\addProduct.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\admin\\admin.css",
+      "PackagePath": "staticwebassets\\css\\admin\\admin.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\admin\\froala_editor.pkgd.min.css",
+      "PackagePath": "staticwebassets\\css\\admin\\froala_editor.pkgd.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\admin\\upload-button.css",
+      "PackagePath": "staticwebassets\\css\\admin\\upload-button.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\common\\alert.css",
+      "PackagePath": "staticwebassets\\css\\common\\alert.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\dropdown.css",
+      "PackagePath": "staticwebassets\\css\\dropdown.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\forms.css",
+      "PackagePath": "staticwebassets\\css\\forms.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\ma.css",
+      "PackagePath": "staticwebassets\\css\\ma.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\product-details.css",
+      "PackagePath": "staticwebassets\\css\\product-details.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\product-edit.css",
+      "PackagePath": "staticwebassets\\css\\product-edit.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\product-page.css",
+      "PackagePath": "staticwebassets\\css\\product-page.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\register.css",
+      "PackagePath": "staticwebassets\\css\\register.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\sassR.css",
+      "PackagePath": "staticwebassets\\css\\sassR.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\spinner.css",
+      "PackagePath": "staticwebassets\\css\\spinner.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\ui\\accessdenied.css",
+      "PackagePath": "staticwebassets\\css\\ui\\accessdenied.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\ui\\checkout.css",
+      "PackagePath": "staticwebassets\\css\\ui\\checkout.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\ui\\creditcart.css",
+      "PackagePath": "staticwebassets\\css\\ui\\creditcart.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\ui\\index.css",
+      "PackagePath": "staticwebassets\\css\\ui\\index.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\ui\\layout.css",
+      "PackagePath": "staticwebassets\\css\\ui\\layout.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\ui\\lightbox.min.css",
+      "PackagePath": "staticwebassets\\css\\ui\\lightbox.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\ui\\maintenence.css",
+      "PackagePath": "staticwebassets\\css\\ui\\maintenence.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\ui\\notfound.css",
+      "PackagePath": "staticwebassets\\css\\ui\\notfound.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\ui\\product-cart.css",
+      "PackagePath": "staticwebassets\\css\\ui\\product-cart.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\ui\\product-details.css",
+      "PackagePath": "staticwebassets\\css\\ui\\product-details.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\ui\\product-list-page.css",
+      "PackagePath": "staticwebassets\\css\\ui\\product-list-page.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\ui\\userinfo.css",
+      "PackagePath": "staticwebassets\\css\\ui\\userinfo.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\ui\\utilities.css",
+      "PackagePath": "staticwebassets\\css\\ui\\utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\ui\\zoom.css",
+      "PackagePath": "staticwebassets\\css\\ui\\zoom.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\user-cart.css",
+      "PackagePath": "staticwebassets\\css\\user-cart.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\css\\utilities.css",
+      "PackagePath": "staticwebassets\\css\\utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\Montserrat-Black.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\Montserrat-Black.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\Montserrat-BlackItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\Montserrat-BlackItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\Montserrat-Bold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\Montserrat-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\Montserrat-BoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\Montserrat-BoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\Montserrat-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\Montserrat-ExtraBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\Montserrat-ExtraBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\Montserrat-ExtraBoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\Montserrat-ExtraLight.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\Montserrat-ExtraLight.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\Montserrat-ExtraLightItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\Montserrat-ExtraLightItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\Montserrat-Italic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\Montserrat-Italic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\Montserrat-Light.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\Montserrat-Light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\Montserrat-LightItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\Montserrat-LightItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\Montserrat-Medium.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\Montserrat-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\Montserrat-MediumItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\Montserrat-MediumItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\Montserrat-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\Montserrat-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\Montserrat-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\Montserrat-SemiBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\Montserrat-SemiBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\Montserrat-SemiBoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\Montserrat-Thin.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\Montserrat-Thin.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\Montserrat-ThinItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\Montserrat-ThinItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Montserrat\\OFL.txt",
+      "PackagePath": "staticwebassets\\fonts\\Montserrat\\OFL.txt"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Playlist\\Playlist Caps.otf",
+      "PackagePath": "staticwebassets\\fonts\\Playlist\\Playlist Caps.otf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Playlist\\Playlist Ornament.otf",
+      "PackagePath": "staticwebassets\\fonts\\Playlist\\Playlist Ornament.otf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\Playlist\\Playlist Script.otf",
+      "PackagePath": "staticwebassets\\fonts\\Playlist\\Playlist Script.otf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\HELP-US-OUT.txt",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\HELP-US-OUT.txt"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\css\\font-awesome.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\animated.less",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\less\\animated.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\bordered-pulled.less",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\less\\bordered-pulled.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\core.less",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\less\\core.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\fixed-width.less",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\less\\fixed-width.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\font-awesome.less",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\less\\font-awesome.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\icons.less",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\less\\icons.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\larger.less",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\less\\larger.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\list.less",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\less\\list.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\mixins.less",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\less\\mixins.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\path.less",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\less\\path.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\rotated-flipped.less",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\less\\rotated-flipped.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\screen-reader.less",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\less\\screen-reader.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\stacked.less",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\less\\stacked.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\variables.less",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\less\\variables.less"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_animated.scss",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\scss\\_animated.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_bordered-pulled.scss",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\scss\\_bordered-pulled.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_core.scss",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\scss\\_core.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_fixed-width.scss",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\scss\\_fixed-width.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_icons.scss",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\scss\\_icons.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_larger.scss",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\scss\\_larger.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_list.scss",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\scss\\_list.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_path.scss",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\scss\\_path.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_rotated-flipped.scss",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\scss\\_rotated-flipped.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_screen-reader.scss",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\scss\\_screen-reader.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_stacked.scss",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\scss\\_stacked.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\font-awesome.scss",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome-4.7.0\\scss\\font-awesome.scss"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\iconic\\css\\material-design-iconic-font.css",
+      "PackagePath": "staticwebassets\\fonts\\iconic\\css\\material-design-iconic-font.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\iconic\\css\\material-design-iconic-font.min.css",
+      "PackagePath": "staticwebassets\\fonts\\iconic\\css\\material-design-iconic-font.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.eot",
+      "PackagePath": "staticwebassets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.eot"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.svg",
+      "PackagePath": "staticwebassets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.svg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.ttf",
+      "PackagePath": "staticwebassets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.ttf"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.woff",
+      "PackagePath": "staticwebassets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.woff"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.woff2",
+      "PackagePath": "staticwebassets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.woff2"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\arite_beyaz.png",
+      "PackagePath": "staticwebassets\\img\\arite_beyaz.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\cintage.jpeg",
+      "PackagePath": "staticwebassets\\img\\cintage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\footer\\appstore.png",
+      "PackagePath": "staticwebassets\\img\\footer\\appstore.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\footer\\basket.png",
+      "PackagePath": "staticwebassets\\img\\footer\\basket.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\footer\\buy.png",
+      "PackagePath": "staticwebassets\\img\\footer\\buy.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\footer\\checkmark.webp",
+      "PackagePath": "staticwebassets\\img\\footer\\checkmark.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\footer\\heart.png",
+      "PackagePath": "staticwebassets\\img\\footer\\heart.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\footer\\logo_transparent.png",
+      "PackagePath": "staticwebassets\\img\\footer\\logo_transparent.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\footer\\next.png",
+      "PackagePath": "staticwebassets\\img\\footer\\next.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\footer\\playstore.png",
+      "PackagePath": "staticwebassets\\img\\footer\\playstore.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\footer\\prev.png",
+      "PackagePath": "staticwebassets\\img\\footer\\prev.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\footer\\return.png",
+      "PackagePath": "staticwebassets\\img\\footer\\return.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\footer\\safety.jpg",
+      "PackagePath": "staticwebassets\\img\\footer\\safety.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\footer\\search.webp",
+      "PackagePath": "staticwebassets\\img\\footer\\search.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\footer\\serch.png",
+      "PackagePath": "staticwebassets\\img\\footer\\serch.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\footer\\sliderLeft.png",
+      "PackagePath": "staticwebassets\\img\\footer\\sliderLeft.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\footer\\sliderRight.png",
+      "PackagePath": "staticwebassets\\img\\footer\\sliderRight.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\footer\\user.png",
+      "PackagePath": "staticwebassets\\img\\footer\\user.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\icons\\basket.png",
+      "PackagePath": "staticwebassets\\img\\icons\\basket.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\icons\\heart.png",
+      "PackagePath": "staticwebassets\\img\\icons\\heart.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\icons\\logout.png",
+      "PackagePath": "staticwebassets\\img\\icons\\logout.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\icons\\search.png",
+      "PackagePath": "staticwebassets\\img\\icons\\search.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\icons\\search.webp",
+      "PackagePath": "staticwebassets\\img\\icons\\search.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\icons\\user-outline.png",
+      "PackagePath": "staticwebassets\\img\\icons\\user-outline.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\icons\\user.png",
+      "PackagePath": "staticwebassets\\img\\icons\\user.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\arite_beyaz.png",
+      "PackagePath": "staticwebassets\\img\\index\\arite_beyaz.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\bg1.jpg",
+      "PackagePath": "staticwebassets\\img\\index\\bg1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\bg2.jpg",
+      "PackagePath": "staticwebassets\\img\\index\\bg2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\bg2.webp",
+      "PackagePath": "staticwebassets\\img\\index\\bg2.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\bg3.jpg",
+      "PackagePath": "staticwebassets\\img\\index\\bg3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\c1.avif",
+      "PackagePath": "staticwebassets\\img\\index\\c1.avif"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\c1.webp",
+      "PackagePath": "staticwebassets\\img\\index\\c1.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\c2.jpg",
+      "PackagePath": "staticwebassets\\img\\index\\c2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\c3.avif",
+      "PackagePath": "staticwebassets\\img\\index\\c3.avif"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\c3.jpg",
+      "PackagePath": "staticwebassets\\img\\index\\c3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\cintage.jpeg",
+      "PackagePath": "staticwebassets\\img\\index\\cintage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\cloths.jpeg",
+      "PackagePath": "staticwebassets\\img\\index\\cloths.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\contact.jpg",
+      "PackagePath": "staticwebassets\\img\\index\\contact.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\contact3.jpg",
+      "PackagePath": "staticwebassets\\img\\index\\contact3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\logo_transparent.png",
+      "PackagePath": "staticwebassets\\img\\index\\logo_transparent.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\prs\\1-2.webp",
+      "PackagePath": "staticwebassets\\img\\index\\prs\\1-2.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\prs\\product1.jpg",
+      "PackagePath": "staticwebassets\\img\\index\\prs\\product1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\prs\\product2.jpg",
+      "PackagePath": "staticwebassets\\img\\index\\prs\\product2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\prs\\product3.jpg",
+      "PackagePath": "staticwebassets\\img\\index\\prs\\product3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\prs\\product4.jpg",
+      "PackagePath": "staticwebassets\\img\\index\\prs\\product4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\prs\\product5.jpg",
+      "PackagePath": "staticwebassets\\img\\index\\prs\\product5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\prs\\product6.jpg",
+      "PackagePath": "staticwebassets\\img\\index\\prs\\product6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\prs\\product7.jpg",
+      "PackagePath": "staticwebassets\\img\\index\\prs\\product7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\index\\v1.jpg",
+      "PackagePath": "staticwebassets\\img\\index\\v1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\logo_transparent.png",
+      "PackagePath": "staticwebassets\\img\\logo_transparent.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\maintenance\\bg01.jpg",
+      "PackagePath": "staticwebassets\\img\\maintenance\\bg01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\maintenance\\bg02.jpg",
+      "PackagePath": "staticwebassets\\img\\maintenance\\bg02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\maintenance\\bg03.jpg",
+      "PackagePath": "staticwebassets\\img\\maintenance\\bg03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\maintenance\\bg04.jpg",
+      "PackagePath": "staticwebassets\\img\\maintenance\\bg04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\maintenance\\icons\\favicon.ico",
+      "PackagePath": "staticwebassets\\img\\maintenance\\icons\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\maintenance\\icons\\logo.png",
+      "PackagePath": "staticwebassets\\img\\maintenance\\icons\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\maintenance\\icons\\video-16-9.jpg",
+      "PackagePath": "staticwebassets\\img\\maintenance\\icons\\video-16-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\no image.jpg",
+      "PackagePath": "staticwebassets\\img\\no image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\no-image.png",
+      "PackagePath": "staticwebassets\\img\\no-image.png"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\img\\vintage.jpg",
+      "PackagePath": "staticwebassets\\img\\vintage.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\admin\\admin.js",
+      "PackagePath": "staticwebassets\\js\\admin\\admin.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\admin\\adminchart.js",
+      "PackagePath": "staticwebassets\\js\\admin\\adminchart.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\admin\\froala_editor.pkgd.min.js",
+      "PackagePath": "staticwebassets\\js\\admin\\froala_editor.pkgd.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\admin\\image.upload.js",
+      "PackagePath": "staticwebassets\\js\\admin\\image.upload.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\admin\\nonPosts.js",
+      "PackagePath": "staticwebassets\\js\\admin\\nonPosts.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\admin\\productEdit.js",
+      "PackagePath": "staticwebassets\\js\\admin\\productEdit.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\admin\\statistic.js",
+      "PackagePath": "staticwebassets\\js\\admin\\statistic.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\common\\alert.js",
+      "PackagePath": "staticwebassets\\js\\common\\alert.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\dialog.js",
+      "PackagePath": "staticwebassets\\js\\dialog.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\getFav.js",
+      "PackagePath": "staticwebassets\\js\\getFav.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\jquery.js",
+      "PackagePath": "staticwebassets\\js\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\pDetails.js",
+      "PackagePath": "staticwebassets\\js\\pDetails.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\setFav.js",
+      "PackagePath": "staticwebassets\\js\\setFav.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\ui\\address.js",
+      "PackagePath": "staticwebassets\\js\\ui\\address.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\ui\\cart.js",
+      "PackagePath": "staticwebassets\\js\\ui\\cart.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\ui\\checkout.js",
+      "PackagePath": "staticwebassets\\js\\ui\\checkout.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\ui\\country.js",
+      "PackagePath": "staticwebassets\\js\\ui\\country.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\ui\\getUserAddressForCheckout.js",
+      "PackagePath": "staticwebassets\\js\\ui\\getUserAddressForCheckout.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\ui\\getUserAddressesForEdit.js",
+      "PackagePath": "staticwebassets\\js\\ui\\getUserAddressesForEdit.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\ui\\jquery.js",
+      "PackagePath": "staticwebassets\\js\\ui\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\ui\\lightbox-plus-jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\ui\\lightbox-plus-jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\ui\\lightbox.min.js",
+      "PackagePath": "staticwebassets\\js\\ui\\lightbox.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\ui\\maintenence.js",
+      "PackagePath": "staticwebassets\\js\\ui\\maintenence.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\ui\\products.js",
+      "PackagePath": "staticwebassets\\js\\ui\\products.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\ui\\rate.js",
+      "PackagePath": "staticwebassets\\js\\ui\\rate.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\ui\\scroller.js",
+      "PackagePath": "staticwebassets\\js\\ui\\scroller.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\ui\\swiper.js",
+      "PackagePath": "staticwebassets\\js\\ui\\swiper.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\ui\\user.js",
+      "PackagePath": "staticwebassets\\js\\ui\\user.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\ui\\userPage.js",
+      "PackagePath": "staticwebassets\\js\\ui\\userPage.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\js\\ui\\zoom.js",
+      "PackagePath": "staticwebassets\\js\\ui\\zoom.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\datatable\\datatables.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatable\\datatables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\datatable\\datatables.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatable\\datatables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\quill\\quill.css",
+      "PackagePath": "staticwebassets\\lib\\quill\\quill.css"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\lib\\quill\\quill.min.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\quill.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\02c0643a-f766-4b2d-be0d-f555052dbfb3.jpg",
+      "PackagePath": "staticwebassets\\product-images\\02c0643a-f766-4b2d-be0d-f555052dbfb3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\0dc0c4d6-9f29-4361-b784-a3e5568747ea.webp",
+      "PackagePath": "staticwebassets\\product-images\\0dc0c4d6-9f29-4361-b784-a3e5568747ea.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\11b0a24b-de99-49b2-9e9f-2c6a2fdb2509.jpg",
+      "PackagePath": "staticwebassets\\product-images\\11b0a24b-de99-49b2-9e9f-2c6a2fdb2509.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\15e6d32d-6a2d-4731-824c-34be69559ff9.webp",
+      "PackagePath": "staticwebassets\\product-images\\15e6d32d-6a2d-4731-824c-34be69559ff9.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\18000a67-3668-4632-953b-da48799b8e56.webp",
+      "PackagePath": "staticwebassets\\product-images\\18000a67-3668-4632-953b-da48799b8e56.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\2414d9d0-620d-482a-bae1-1b5bb8a6770a.webp",
+      "PackagePath": "staticwebassets\\product-images\\2414d9d0-620d-482a-bae1-1b5bb8a6770a.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\2424fe29-4c25-474d-a223-98e2fd92f7eb.webp",
+      "PackagePath": "staticwebassets\\product-images\\2424fe29-4c25-474d-a223-98e2fd92f7eb.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\24c51963-2070-4e02-a9f3-d645c8978115.webp",
+      "PackagePath": "staticwebassets\\product-images\\24c51963-2070-4e02-a9f3-d645c8978115.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\29f453e4-4b12-4e7e-bacc-c6642bf7fe80.webp",
+      "PackagePath": "staticwebassets\\product-images\\29f453e4-4b12-4e7e-bacc-c6642bf7fe80.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\2a887282-077a-4e40-8437-65e775f83183.webp",
+      "PackagePath": "staticwebassets\\product-images\\2a887282-077a-4e40-8437-65e775f83183.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\2b8deb6e-6e00-4956-b900-410ecc0bcf0b.jpg",
+      "PackagePath": "staticwebassets\\product-images\\2b8deb6e-6e00-4956-b900-410ecc0bcf0b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\2c1884f4-b106-495e-88b3-b94efb9871a7.jpg",
+      "PackagePath": "staticwebassets\\product-images\\2c1884f4-b106-495e-88b3-b94efb9871a7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\2f22ff4f-55cf-4c97-887f-118030cf498a.webp",
+      "PackagePath": "staticwebassets\\product-images\\2f22ff4f-55cf-4c97-887f-118030cf498a.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\3318efb8-91e4-4b4f-9ec7-4f2d9976ff04.webp",
+      "PackagePath": "staticwebassets\\product-images\\3318efb8-91e4-4b4f-9ec7-4f2d9976ff04.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\35ec35a7-4fc4-4f14-88af-3bb4291cff82.webp",
+      "PackagePath": "staticwebassets\\product-images\\35ec35a7-4fc4-4f14-88af-3bb4291cff82.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\38086b7a-c0ff-4839-8cb4-94fe94c0f43f.jpg",
+      "PackagePath": "staticwebassets\\product-images\\38086b7a-c0ff-4839-8cb4-94fe94c0f43f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\3a9bbcf1-625c-4f65-9863-38cd67251efe.webp",
+      "PackagePath": "staticwebassets\\product-images\\3a9bbcf1-625c-4f65-9863-38cd67251efe.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\3c776239-4764-4cce-b251-ce8c1496ad78.webp",
+      "PackagePath": "staticwebassets\\product-images\\3c776239-4764-4cce-b251-ce8c1496ad78.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\3d2e8920-ec76-4fa5-990e-338a86ec482c.webp",
+      "PackagePath": "staticwebassets\\product-images\\3d2e8920-ec76-4fa5-990e-338a86ec482c.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\3ebe3ff4-1f8a-4668-b199-bd1832f73d37.webp",
+      "PackagePath": "staticwebassets\\product-images\\3ebe3ff4-1f8a-4668-b199-bd1832f73d37.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\421ed66c-fb66-4167-a7c6-21958e7a56a9.webp",
+      "PackagePath": "staticwebassets\\product-images\\421ed66c-fb66-4167-a7c6-21958e7a56a9.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\444192b2-d4ab-4b6d-b9bb-7fe69693e945.jpg",
+      "PackagePath": "staticwebassets\\product-images\\444192b2-d4ab-4b6d-b9bb-7fe69693e945.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\4457d49c-ba63-4318-b2e1-0b96c89660f1.webp",
+      "PackagePath": "staticwebassets\\product-images\\4457d49c-ba63-4318-b2e1-0b96c89660f1.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\4d051f01-b521-48a4-9d0c-e8657755f344.jpg",
+      "PackagePath": "staticwebassets\\product-images\\4d051f01-b521-48a4-9d0c-e8657755f344.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\5079c210-402e-408c-ad64-ee0e39b41b16.webp",
+      "PackagePath": "staticwebassets\\product-images\\5079c210-402e-408c-ad64-ee0e39b41b16.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\513511e3-fff2-45de-859b-85b254d3237a.webp",
+      "PackagePath": "staticwebassets\\product-images\\513511e3-fff2-45de-859b-85b254d3237a.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\530bb6e8-f6c7-4101-a773-ed763c4be4bc.webp",
+      "PackagePath": "staticwebassets\\product-images\\530bb6e8-f6c7-4101-a773-ed763c4be4bc.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\53b9c566-63dc-4819-b686-c85e91c38484.jpg",
+      "PackagePath": "staticwebassets\\product-images\\53b9c566-63dc-4819-b686-c85e91c38484.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\55e8e9d2-4be3-4112-8f6d-fc0bf60fb6eb.jpeg",
+      "PackagePath": "staticwebassets\\product-images\\55e8e9d2-4be3-4112-8f6d-fc0bf60fb6eb.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\565e4b9f-bced-4071-be83-adaf6e0f66b7.webp",
+      "PackagePath": "staticwebassets\\product-images\\565e4b9f-bced-4071-be83-adaf6e0f66b7.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\5b7e3f58-ff5c-4652-b9ec-c8e477f59acc.webp",
+      "PackagePath": "staticwebassets\\product-images\\5b7e3f58-ff5c-4652-b9ec-c8e477f59acc.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\5bc76de8-e347-4e8b-b5fb-7d100fad79b1.webp",
+      "PackagePath": "staticwebassets\\product-images\\5bc76de8-e347-4e8b-b5fb-7d100fad79b1.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\619ca0de-ea4a-4b42-ae57-1d5fcaf58af9.jpg",
+      "PackagePath": "staticwebassets\\product-images\\619ca0de-ea4a-4b42-ae57-1d5fcaf58af9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\651f98ee-9043-42c5-b8f0-56534eeae33d.jpg",
+      "PackagePath": "staticwebassets\\product-images\\651f98ee-9043-42c5-b8f0-56534eeae33d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\695bf37c-a416-4ab0-ae28-3aefc106fb5e.webp",
+      "PackagePath": "staticwebassets\\product-images\\695bf37c-a416-4ab0-ae28-3aefc106fb5e.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\6b0ef19d-759d-4b4e-a574-d21e9775148f.webp",
+      "PackagePath": "staticwebassets\\product-images\\6b0ef19d-759d-4b4e-a574-d21e9775148f.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\6d23c685-188d-4393-b93f-e3c831c9cf58.webp",
+      "PackagePath": "staticwebassets\\product-images\\6d23c685-188d-4393-b93f-e3c831c9cf58.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\746f03ee-4647-420a-9c3e-dd7e847ed3bc.webp",
+      "PackagePath": "staticwebassets\\product-images\\746f03ee-4647-420a-9c3e-dd7e847ed3bc.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\75fded5b-edc1-46b9-b557-befa86a558d0.webp",
+      "PackagePath": "staticwebassets\\product-images\\75fded5b-edc1-46b9-b557-befa86a558d0.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\76ff0bf7-7b95-4d0f-8654-17f6b8832a62.webp",
+      "PackagePath": "staticwebassets\\product-images\\76ff0bf7-7b95-4d0f-8654-17f6b8832a62.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\7a290413-d20f-4260-a613-97d381c41c3a.jpg",
+      "PackagePath": "staticwebassets\\product-images\\7a290413-d20f-4260-a613-97d381c41c3a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\81d62cb7-06d7-4e9a-b7d0-88e44204646f.webp",
+      "PackagePath": "staticwebassets\\product-images\\81d62cb7-06d7-4e9a-b7d0-88e44204646f.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\837f928a-5794-4ba0-a131-2e1991872db6.webp",
+      "PackagePath": "staticwebassets\\product-images\\837f928a-5794-4ba0-a131-2e1991872db6.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\862202b7-f66d-4719-a945-469b0024e23d.jpg",
+      "PackagePath": "staticwebassets\\product-images\\862202b7-f66d-4719-a945-469b0024e23d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\88cd1cbe-c207-4f5b-8001-6de67a832e62.webp",
+      "PackagePath": "staticwebassets\\product-images\\88cd1cbe-c207-4f5b-8001-6de67a832e62.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\8d106df7-eddf-41a3-b0a9-211a96563d6a.webp",
+      "PackagePath": "staticwebassets\\product-images\\8d106df7-eddf-41a3-b0a9-211a96563d6a.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\8fca268d-23fd-4db9-a93e-836face2addd.webp",
+      "PackagePath": "staticwebassets\\product-images\\8fca268d-23fd-4db9-a93e-836face2addd.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\94550dca-bc6d-4880-9c80-b042cf3ab116.webp",
+      "PackagePath": "staticwebassets\\product-images\\94550dca-bc6d-4880-9c80-b042cf3ab116.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\95d10366-9637-49ad-acfe-a1184f7f3b46.webp",
+      "PackagePath": "staticwebassets\\product-images\\95d10366-9637-49ad-acfe-a1184f7f3b46.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\969b7713-ac3a-4142-8d95-87288785c850.webp",
+      "PackagePath": "staticwebassets\\product-images\\969b7713-ac3a-4142-8d95-87288785c850.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\992500d9-f5d6-46f6-89e5-d7f50bf6d512.webp",
+      "PackagePath": "staticwebassets\\product-images\\992500d9-f5d6-46f6-89e5-d7f50bf6d512.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\9f7cd890-218c-4abc-97c9-39555a189455.webp",
+      "PackagePath": "staticwebassets\\product-images\\9f7cd890-218c-4abc-97c9-39555a189455.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\a4a7a8bf-1f71-42c1-b8b2-f653c9c4f0f1.webp",
+      "PackagePath": "staticwebassets\\product-images\\a4a7a8bf-1f71-42c1-b8b2-f653c9c4f0f1.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\a6be89f3-a5c2-4bb1-b1a9-aa32f8eee357.webp",
+      "PackagePath": "staticwebassets\\product-images\\a6be89f3-a5c2-4bb1-b1a9-aa32f8eee357.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\a76430f3-20e0-474a-b271-92816d2f0e18.webp",
+      "PackagePath": "staticwebassets\\product-images\\a76430f3-20e0-474a-b271-92816d2f0e18.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\a77403b5-da25-485f-a497-aadfc1ed97fc.webp",
+      "PackagePath": "staticwebassets\\product-images\\a77403b5-da25-485f-a497-aadfc1ed97fc.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\af393c1b-1ee7-45d5-8ac0-dd632648c855.webp",
+      "PackagePath": "staticwebassets\\product-images\\af393c1b-1ee7-45d5-8ac0-dd632648c855.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\afdfeebc-7f85-4f1d-977d-56ff4479b7f3.jpg",
+      "PackagePath": "staticwebassets\\product-images\\afdfeebc-7f85-4f1d-977d-56ff4479b7f3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\b1c52737-9566-436a-b83f-9cb31ac572eb.webp",
+      "PackagePath": "staticwebassets\\product-images\\b1c52737-9566-436a-b83f-9cb31ac572eb.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\b30170e0-5d2e-494d-a4f2-72d2b8452e41.webp",
+      "PackagePath": "staticwebassets\\product-images\\b30170e0-5d2e-494d-a4f2-72d2b8452e41.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\b3c363ac-062a-4c35-9664-195d0a7efd0e.jpg",
+      "PackagePath": "staticwebassets\\product-images\\b3c363ac-062a-4c35-9664-195d0a7efd0e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\b5daa541-265b-4fb9-ac4e-307dbc9bd22d.webp",
+      "PackagePath": "staticwebassets\\product-images\\b5daa541-265b-4fb9-ac4e-307dbc9bd22d.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\bacef022-73eb-4a31-8876-c4d3461f19c6.webp",
+      "PackagePath": "staticwebassets\\product-images\\bacef022-73eb-4a31-8876-c4d3461f19c6.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\bc927a9a-4630-45ba-9bc9-b1ba34504951.webp",
+      "PackagePath": "staticwebassets\\product-images\\bc927a9a-4630-45ba-9bc9-b1ba34504951.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\bef84c68-df6d-4e71-b0f3-72e9945ed3af.webp",
+      "PackagePath": "staticwebassets\\product-images\\bef84c68-df6d-4e71-b0f3-72e9945ed3af.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\c22188e8-7091-442e-94d5-441e4bca4ffa.webp",
+      "PackagePath": "staticwebassets\\product-images\\c22188e8-7091-442e-94d5-441e4bca4ffa.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\c2278036-1df5-460c-91fd-93c1d3a80d0f.webp",
+      "PackagePath": "staticwebassets\\product-images\\c2278036-1df5-460c-91fd-93c1d3a80d0f.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\c2ac8e55-93d7-49dc-9985-6503eef01a57.jpg",
+      "PackagePath": "staticwebassets\\product-images\\c2ac8e55-93d7-49dc-9985-6503eef01a57.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\c2bfeb29-e13a-466f-ac04-71b2d33bd96c.jpg",
+      "PackagePath": "staticwebassets\\product-images\\c2bfeb29-e13a-466f-ac04-71b2d33bd96c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\c522b092-bfb4-45fc-8fc1-1e26c525f0e3.webp",
+      "PackagePath": "staticwebassets\\product-images\\c522b092-bfb4-45fc-8fc1-1e26c525f0e3.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\c8c76528-e212-4f0a-9624-4a4f125d4f0e.webp",
+      "PackagePath": "staticwebassets\\product-images\\c8c76528-e212-4f0a-9624-4a4f125d4f0e.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\ca89ecb8-78cd-4581-9493-a2ccfc8ca279.webp",
+      "PackagePath": "staticwebassets\\product-images\\ca89ecb8-78cd-4581-9493-a2ccfc8ca279.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\cd483e42-55ed-4df7-9ead-d336f6eb6820.webp",
+      "PackagePath": "staticwebassets\\product-images\\cd483e42-55ed-4df7-9ead-d336f6eb6820.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\ddf14a95-7318-4ad6-9df5-65c88b5152bf.webp",
+      "PackagePath": "staticwebassets\\product-images\\ddf14a95-7318-4ad6-9df5-65c88b5152bf.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\ee01d290-2068-4808-ba89-75a4e1fd83d6.webp",
+      "PackagePath": "staticwebassets\\product-images\\ee01d290-2068-4808-ba89-75a4e1fd83d6.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\f07bc9a7-57f2-4962-804e-6244d2cfd479.webp",
+      "PackagePath": "staticwebassets\\product-images\\f07bc9a7-57f2-4962-804e-6244d2cfd479.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\f9117f1f-b304-46b8-91da-c465e180a759.jpg",
+      "PackagePath": "staticwebassets\\product-images\\f9117f1f-b304-46b8-91da-c465e180a759.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\f95cf635-4588-47a0-99a7-a69804a42b1a.webp",
+      "PackagePath": "staticwebassets\\product-images\\f95cf635-4588-47a0-99a7-a69804a42b1a.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\f9758f0d-0788-4d6c-a743-5b3f3901cef1.webp",
+      "PackagePath": "staticwebassets\\product-images\\f9758f0d-0788-4d6c-a743-5b3f3901cef1.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\product-images\\fdf96b03-57fe-4f6a-8959-a8f6fd8f41fe.webp",
+      "PackagePath": "staticwebassets\\product-images\\fdf96b03-57fe-4f6a-8959-a8f6fd8f41fe.webp"
+    },
+    {
+      "Id": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.webui\\wwwroot\\sitemap.xml",
+      "PackagePath": "staticwebassets\\sitemap.xml"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.eticaret.webui.props",
+      "PackagePath": "build\\eticaret.webui.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.eticaret.webui.props",
+      "PackagePath": "buildMultiTargeting\\eticaret.webui.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.eticaret.webui.props",
+      "PackagePath": "buildTransitive\\eticaret.webui.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.eticaret.webui.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

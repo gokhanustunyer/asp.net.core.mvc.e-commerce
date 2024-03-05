@@ -25,7 +25,7 @@ namespace eticaret.business.Features.Commands.Product.EditProduct
         public List<et.Category.Category> AllCategories { get; set; }
         public IFormFileCollection DescFiles { get; set; }
         public string RelatedProductIds { get; set; }
-        public List<string> FilterIds { get; set; }
+        public string? FilterIds { get; set; }
         public string Path { get; set; }
         public Guid[] categoryIds { get; set; }
         public string id { get; set; }

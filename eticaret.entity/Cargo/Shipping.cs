@@ -7,7 +7,7 @@ using et = eticaret.entity;
 
 namespace eticaret.entity.Cargo
 {
-    public class Shipping: et.BaseEntity.BaseEntity
+    public class Shipping: BaseEntity.BaseEntity
     {
         public string Name { get; set; }
         public string? Description { get; set; }

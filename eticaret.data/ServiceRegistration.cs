@@ -1,4 +1,5 @@
 ﻿using eticaret.data.Abstract;
+using eticaret.data.Abstract.Audience;
 using eticaret.data.Abstract.Cart;
 using eticaret.data.Abstract.Category;
 using eticaret.data.Abstract.Discount;
@@ -9,6 +10,7 @@ using eticaret.data.Abstract.Order;
 using eticaret.data.Abstract.PageStrings;
 using eticaret.data.Abstract.Product;
 using eticaret.data.Abstract.Shipping;
+using eticaret.data.Concrete.Audience;
 using eticaret.data.Concrete.Cart;
 using eticaret.data.Concrete.Category;
 using eticaret.data.Concrete.Discount;
@@ -52,6 +54,7 @@ namespace eticaret.data
             services.AddScoped<IPageLogRepository, PageLogRepository>();
             services.AddScoped<IOrderItemRepository, OrderItemRepository>();
             services.AddScoped<IDiscountRepository, DiscountRepository>();
+            services.AddScoped<IAudienceRepository, AudienceRepository>();
         }
     }
 }

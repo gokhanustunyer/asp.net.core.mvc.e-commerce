@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Hy/Y2t7Es988P2cij9D7PIjSiqSztoi3bQvu3siTI9QFEWnwF6kVN5YjQMmmbcJgKfF3dcSi9is44EMU6FKtGQ==",
+  "dgSpecHash": "O4N377jkOxL1UtLXtGm24mtjAy+2sKdk1A6Ab36vYJc4EacuV5fYupaqTzOtfy2lGLIiwaaF9Bcx7YiKrcbi6Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gokha\\OneDrive\\Masaüstü\\Masaüstü\\ETicaretFiles\\ETicaret\\eticaret.entity\\eticaret.entity.csproj",
+  "projectFilePath": "C:\\Users\\gokha\\Desktop\\eticaret\\asp.net.core.mvc.e-commerce\\eticaret.entity\\eticaret.entity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gokha\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\gokha\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

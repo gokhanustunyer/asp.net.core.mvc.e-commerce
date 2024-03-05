@@ -85,7 +85,7 @@ namespace eticaret.business.Features.Commands.Cart.Checkout
                                                  .FirstOrDefault(ps =>
                                                  ps.SizeId.ToString() ==
                                                  cart.CartItems[i].SizeId).Price,2) * cart.CartItems[i].Quantity;
-                if (product.Campaigns != null)
+                if (product.Campaigns != null && product.Campaigns.Count > 0)
                 {
                     Campaign maxOffer = product.Campaigns[0];
                     foreach(Campaign campaign in product.Campaigns)
@@ -186,7 +186,7 @@ namespace eticaret.business.Features.Commands.Cart.Checkout
             totalPrice = (cart.DiscountCode != null) ? (cart.DiscountCode.DiscountRate == 0) ? totalPrice - cart.DiscountCode.DiscountNumber : totalPrice * (1 - (cart.DiscountCode.DiscountRate / 100)) : totalPrice;
             totalPrice += shippingCompany.Price;
             totalPrice = Math.Round(totalPrice, 2);
-            et.Order.Order order = new()
+            Order order = new()
             {
                 City = selectedAddress.City,
                 District = selectedAddress.District,

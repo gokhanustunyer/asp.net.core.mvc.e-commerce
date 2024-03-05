@@ -286,6 +286,10 @@ namespace eticaret.business.Concrete.Service
             {
                 products = products.OrderByDescending(p => p.CreateDate).ToList();
             }
+            if (order == "old" || order == null)
+            {
+                products = products.OrderBy(p => p.CreateDate).ToList();
+            }
             else if (order == "grow")
             {
                 products = products.OrderBy(p => p.Price).ToList();
@@ -613,9 +617,14 @@ namespace eticaret.business.Concrete.Service
             }
             else
             {
-                string mainImageId = product.MainImageId.ToString();
-                var mainImage = await _productImageRepository.GetByIdAsync(mainImageId);
-                productListModel.MainImageUrl = $"{_configuration[$"StoragePaths:{mainImage.Storage}"]}{mainImage.Path}";
+                if (product.MainImageId != null)
+                {
+                    string mainImageId = product.MainImageId.ToString();
+                    var mainImage = await _productImageRepository.GetByIdAsync(mainImageId);
+                    productListModel.MainImageUrl = $"{_configuration[$"StoragePaths:{mainImage.Storage}"]}{mainImage.Path}";
+                }
+                else
+                    productListModel.MainImageUrl = "";
             }
             if (product.Rates != null)
             {

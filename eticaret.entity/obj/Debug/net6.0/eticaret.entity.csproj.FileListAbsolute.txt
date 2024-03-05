@@ -22,3 +22,16 @@ C:\Users\gokha\OneDrive\Masaüstü\Masaüstü\ETicaretFiles\ETicaret\eticaret.en
 C:\Users\gokha\OneDrive\Masaüstü\Masaüstü\ETicaretFiles\ETicaret\eticaret.entity\obj\Debug\net6.0\refint\eticaret.entity.dll
 C:\Users\gokha\OneDrive\Masaüstü\Masaüstü\ETicaretFiles\ETicaret\eticaret.entity\obj\Debug\net6.0\eticaret.entity.pdb
 C:\Users\gokha\OneDrive\Masaüstü\Masaüstü\ETicaretFiles\ETicaret\eticaret.entity\obj\Debug\net6.0\ref\eticaret.entity.dll
+C:\Users\gokha\Desktop\eticaret\asp.net.core.mvc.e-commerce\eticaret.entity\bin\Debug\net6.0\eticaret.entity.deps.json
+C:\Users\gokha\Desktop\eticaret\asp.net.core.mvc.e-commerce\eticaret.entity\bin\Debug\net6.0\eticaret.entity.dll
+C:\Users\gokha\Desktop\eticaret\asp.net.core.mvc.e-commerce\eticaret.entity\bin\Debug\net6.0\eticaret.entity.pdb
+C:\Users\gokha\Desktop\eticaret\asp.net.core.mvc.e-commerce\eticaret.entity\obj\Debug\net6.0\eticaret.entity.csproj.AssemblyReference.cache
+C:\Users\gokha\Desktop\eticaret\asp.net.core.mvc.e-commerce\eticaret.entity\obj\Debug\net6.0\eticaret.entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gokha\Desktop\eticaret\asp.net.core.mvc.e-commerce\eticaret.entity\obj\Debug\net6.0\eticaret.entity.AssemblyInfoInputs.cache
+C:\Users\gokha\Desktop\eticaret\asp.net.core.mvc.e-commerce\eticaret.entity\obj\Debug\net6.0\eticaret.entity.AssemblyInfo.cs
+C:\Users\gokha\Desktop\eticaret\asp.net.core.mvc.e-commerce\eticaret.entity\obj\Debug\net6.0\eticaret.entity.csproj.CoreCompileInputs.cache
+C:\Users\gokha\Desktop\eticaret\asp.net.core.mvc.e-commerce\eticaret.entity\obj\Debug\net6.0\eticaret.entity.sourcelink.json
+C:\Users\gokha\Desktop\eticaret\asp.net.core.mvc.e-commerce\eticaret.entity\obj\Debug\net6.0\eticaret.entity.dll
+C:\Users\gokha\Desktop\eticaret\asp.net.core.mvc.e-commerce\eticaret.entity\obj\Debug\net6.0\refint\eticaret.entity.dll
+C:\Users\gokha\Desktop\eticaret\asp.net.core.mvc.e-commerce\eticaret.entity\obj\Debug\net6.0\eticaret.entity.pdb
+C:\Users\gokha\Desktop\eticaret\asp.net.core.mvc.e-commerce\eticaret.entity\obj\Debug\net6.0\ref\eticaret.entity.dll

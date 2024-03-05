@@ -55,8 +55,10 @@
     getFiltersBySelectedCategories() {
         const checkedCategories = [];
         const allCategories = document.querySelectorAll(".cat");
-        allCategories.forEach(category => {
-            if (category.checked) {
+        allCategories.forEach(category =>
+        {
+            if (category.checked)
+            {
                 checkedCategories.push(category.value);
             }
         });
