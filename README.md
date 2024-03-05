@@ -1,16 +1,22 @@
-Project achitecture and techs: ASP.NET Core MVC, N-Tier Architecture, JavaScript, HTML, CSS, AJAX, CQRS Pattern, Generic Repository, Entity 
+Project achitecture and techs: 
+<br/>
+ASP.NET Core MVC, N-Tier Architecture, JavaScript, HTML, CSS, AJAX, CQRS Pattern, Generic Repository, Entity 
 Framework Core (Main dB operations with MySQL), ADO.NET (World Cities dB operations with MsSQL), ASP.NET Identity, External Authentication 
 (Facebook, Google), Azure integration for storage, Local storage structure, Mail Senders, Auto Mapper, Iyzico Integration for payment, Built-in IoC 
 Container
 <br/>
+<br/>
 Pages and Fuctionality:
+<br/>
 <br/>
 Authentication and Authorization: Registration, internal-external login, Email Confirmation, Forgot-Reset Password, Change Email, Role Control 
 System
 <br/>
+<br/>
 User: Address CRUD, Cart, Cart Item, Orders, Payments, Product comment (if user already bought), Favorite system (local storage)
 Product list page: filter system from URL (Get method), n-ary Category Tree structure, product sort by date and price
 Product Details page: product details, similar products, last visited products
+<br/>
 <br/>
 Admin: product CRUD, category CRUD, product filter CRUD, role CRUD (This link authorized for super admin), Shipping Company CRUD, 
 Campaign CRUD (able to specify for a category or product or bundle), Product Comment and Rates CRUD, Discount Code CRUD (able to specify for 
